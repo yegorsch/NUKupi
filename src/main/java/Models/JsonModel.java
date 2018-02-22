@@ -1,5 +1,6 @@
 package Models;
 
-abstract class JsonInitilizable {
-   abstract void InitializeWith(String JSONString);
+abstract class JsonModel {
+   abstract void initializeWith(String JSONString);
+   abstract String toJSON();
 }

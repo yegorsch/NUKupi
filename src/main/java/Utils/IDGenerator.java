@@ -1,3 +1,4 @@
+package Utils;
 
 import org.apache.commons.lang.RandomStringUtils;
 
@@ -5,7 +6,7 @@ public class IDGenerator {
 
     private static IDGenerator ourInstance = new IDGenerator();
 
-    public static final int DEFAULT_LENGTH = 10;
+    public static final int DEFAULT_LENGTH = 15;
 
     public static IDGenerator getInstance() {
         return ourInstance;
