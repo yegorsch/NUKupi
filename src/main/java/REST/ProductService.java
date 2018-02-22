@@ -49,6 +49,7 @@ public class ProductService {
             products.add(new Product(jsonString));
         } catch (Exception e) {
             // crash and burn
+            System.out.println(e.getMessage());
             throw new IOException("Error parsing JSON request string");
         }
     }

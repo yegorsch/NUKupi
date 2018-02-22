@@ -19,6 +19,7 @@ enum Category {
     OTHER;
 }
 
+
 public class Product extends JsonModel {
 
     private String title;
@@ -29,7 +30,8 @@ public class Product extends JsonModel {
     private PaymentType paymentType;
     private Category category;
     // Price could be like "2 chocolates"
-    private String price;
+    private double price;
+    private String units;
     private String ID;
 
 
@@ -38,13 +40,15 @@ public class Product extends JsonModel {
     private static final String JSON_EMAIL = "email";
     private static final String JSON_TYPE = "paymentType";
     private static final String JSON_PRICE = "price";
+    private static final String JSON_UNITS = "units";
 
-    public Product(String title, String description, String authorEmail, PaymentType paymentType, String price) {
+    public Product(String title, String description, String authorEmail, PaymentType paymentType, double price, String units) {
         this.title = title;
         this.description = description;
         this.authorEmail = authorEmail;
         this.paymentType = paymentType;
         this.price = price;
+        this.units = units;
         images = new ArrayList<String>();
         ID = IDGenerator.generateIDWithDefaultLength();
     }
@@ -65,7 +69,8 @@ public class Product extends JsonModel {
         this.authorEmail = "";
         this.paymentType = PaymentType.REGULAR;
         this.category = Category.OTHER;
-        this.price = "";
+        this.price = 0;
+        this.units = "тг.";
         images = new ArrayList<String>();
         ID = IDGenerator.generateIDWithDefaultLength();
     }
@@ -78,7 +83,8 @@ public class Product extends JsonModel {
         this.authorEmail = (String) jsonObject.get(JSON_EMAIL);
         // Images - hz
         this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
-        this.price = (String) jsonObject.get(JSON_PRICE);
+        this.price = (Double) jsonObject.get(JSON_PRICE);
+        this.units = (String) jsonObject.get(JSON_UNITS);
     }
 
     public String toJSON() {
@@ -125,11 +131,11 @@ public class Product extends JsonModel {
         this.paymentType = paymentType;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -144,4 +150,14 @@ public class Product extends JsonModel {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public String getUnits() {
+        return units;
+    }
+
+    public void setUnits(String units) {
+        this.units = units;
+    }
+
+
 }
