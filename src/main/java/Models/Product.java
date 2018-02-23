@@ -81,7 +81,7 @@ public class Product extends JsonModel {
         this.title = (String) jsonObject.get(JSON_TITLE);
         this.description = (String) jsonObject.get(JSON_DESC);
         this.authorEmail = (String) jsonObject.get(JSON_EMAIL);
-        // Images - hz
+        // Images - ?
         this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
         this.price = (Double) jsonObject.get(JSON_PRICE);
         this.units = (String) jsonObject.get(JSON_UNITS);

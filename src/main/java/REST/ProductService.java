@@ -5,10 +5,9 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Map;
 
 // URL: http://localhost:8080/rest/products
 @Path("products")
@@ -26,7 +25,10 @@ public class ProductService {
     }
 
     @GET
-    public String getItems() {
+    public String getItems(@QueryParam("first") int numberOfItems) {
+        if (numberOfItems > 0) {
+            return new Gson().toJson(products.subList(0, numberOfItems));
+        }
         return new Gson().toJson(products);
     }
 
@@ -44,14 +46,26 @@ public class ProductService {
 
     @POST
     @Consumes("application/json")
-    public void addProduct(String jsonString) throws IOException {
+    public Response addProduct(String jsonString) throws IOException {
         try {
             products.add(new Product(jsonString));
         } catch (Exception e) {
-            // crash and burn
             System.out.println(e.getMessage());
-            throw new IOException("Error parsing JSON request string");
+            return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         }
+        return Response.status(Response.Status.OK).build();
+    }
+
+    @DELETE
+    @Consumes("application/json")
+    public Response deleteProduct(String jsonString) {
+        ArrayList<String> list = new Gson().fromJson(jsonString, new TypeToken<ArrayList<String>>() {
+        }.getType());
+        for (String id : list) {
+            System.out.println("Item re");
+            products.removeIf((Product p) -> p.getID().equals(id));
+        }
+        return Response.status(Response.Status.OK).build();
     }
 
 }
