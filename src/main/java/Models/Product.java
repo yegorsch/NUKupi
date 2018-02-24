@@ -123,8 +123,8 @@ public class Product extends JsonModel {
         this.authorEmail = authorEmail;
     }
 
-    public PaymentType getPaymentType() {
-        return paymentType;
+    public String getPaymentType() {
+        return paymentType.name();
     }
 
     public void setPaymentType(PaymentType paymentType) {
@@ -143,8 +143,8 @@ public class Product extends JsonModel {
         return ID;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getCategory() {
+        return category.name();
     }
 
     public void setCategory(Category category) {
