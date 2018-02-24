@@ -6,8 +6,9 @@ import com.google.gson.reflect.TypeToken;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 
 // URL: http://localhost:8080/rest/products
 @Path("products")
@@ -24,15 +25,17 @@ public class ProductService {
         }
     }
 
-//    @GET
-//    public String getItems(@QueryParam("first") int numberOfItems) {
-//        if (numberOfItems > 0) {
-//            return new Gson().toJson(products.subList(0, numberOfItems));
-//        }
-//        return new Gson().toJson(products);
-//    }
+    @GET
+    public String getItems(@QueryParam("first") int numberOfItems) {
+        if (numberOfItems > 0) {
+            return new Gson().toJson(products.subList(0, numberOfItems));
+        }
+        return new Gson().toJson(products);
+    }
 
-    /** Retrieve all products **/
+    /**
+     * Retrieve all products
+     **/
 
     @GET
     @Path("/all")
@@ -42,127 +45,48 @@ public class ProductService {
         return b.build();
     }
 
-    /**Retrieve products by title **/
+    /**
+     * Filtering path
+     */
 
     @GET
-    @Path("/title")
-    public Response getProductByTitle(@QueryParam("thetitle") String title) {
+    @Path("/filter")
+    public Response mainFilterer(@QueryParam("title") String title,
+                                      @QueryParam("category") String category,
+                                      @QueryParam("type") String type,
+                                      @QueryParam("price") double price,
+                                      @QueryParam("units") String units,
+                                      @QueryParam("email") String email) {
         ArrayList<Product> reqProds = new ArrayList<Product>();
-        if (!title.equals(null)) {
-            for (Product p : products) {
-                if (p.getTitle().toLowerCase().contains(title.toLowerCase()) || p.getDescription().toLowerCase().contains(title.toLowerCase())) {
-                    reqProds.add(p);
-                }
-            }
-        }
-        if (reqProds.size()!=0) {
-            Gson gson = new Gson();
-            Response.ResponseBuilder b = Response.ok(gson.toJson(reqProds));
-            return b.build();
-        } else {
-            Response.ResponseBuilder b = Response.ok("No products with such a title.");
-            return b.build();
-        }
-    }
+        Filterer filterer = new Filterer(products);
+        // By title
+        reqProds.addAll(filterer.getProductByTitle(title));
+        // Category
+        reqProds.addAll(filterer.getProductByCategory(category));
+        // Type, price units
+        reqProds.addAll(filterer.getProductByPrice(type, price, units));
+        // Email
+        reqProds.addAll(filterer.getProductByUser(email));
 
-    /** Retrieve products by categories **/
+        ArrayList<Product> uniqueList = new ArrayList<>(new HashSet<Product>(reqProds));
+        return Response.ok(new Gson().toJson(uniqueList)).build();
+    }
 
     @GET
-    @Path("/categories")
-    public Response getProductByCategory(@QueryParam("category") String category) {
-        ArrayList<Product> reqProds = new ArrayList<Product>();
-        if (!category.equals(null)) {
-            for (Product p : products) {
-                if (p.getCategory().equals(category)) {
-                    reqProds.add(p);
-                }
+    @Path("{ id : [A-Za-z0-9_]+}")
+    public String getProduct(@PathParam("id") String id) {
+        System.out.println(id);
+        for (Product p : products) {
+            if (p.getID().equals(id)) {
+                return p.toJSON();
             }
         }
-        if (reqProds.size()!=0) {
-            Gson gson = new Gson();
-            Response.ResponseBuilder b = Response.ok(gson.toJson(reqProds));
-            return b.build();
-        } else {
-            Response.ResponseBuilder b = Response.ok("No products in this category.");
-            return b.build();
-        }
+        return "";
     }
-
-    /** Retrieve products by price filters **/
-
-    @GET
-    @Path("/payment")
-    public Response getProductByPrice(@QueryParam("type") String type, @QueryParam("price") double price, @QueryParam("units") String units) {
-        ArrayList<Product> reqProds = new ArrayList<Product>();
-        if (type.equals("FREE")) {
-            for (Product p : products) {
-                if (p.getPaymentType().equals("FREE")) {
-                    reqProds.add(p);
-                }
-            }
-        } else if (type.equals("EXCHANGE")) {
-            for (Product p : products) {
-                if (p.getPaymentType().equals("EXCHANGE")) {
-                    reqProds.add(p);
-                }
-            }
-        } else if (type.equals("REGULAR") && price>=0 && !units.equals(null)) {
-            for (Product p : products) {
-                if (p.getPaymentType().equals("REGULAR") && p.getPrice()<=price && p.getUnits().equals(units)) {
-                    reqProds.add(p);
-                }
-            }
-        }
-        if(reqProds.size()!=0) {
-            Gson gson = new Gson();
-            Response.ResponseBuilder b = Response.ok(gson.toJson(reqProds));
-            b.header("header-name", "value");
-            return b.build();
-        } else {
-            Response.ResponseBuilder b = Response.ok("No matching result found.");
-            return b.build();
-        }
-    }
-
-    /** Retrieve products owned by particular user (change email for user id) **/
-
-    @GET
-    @Path("/author")
-    public Response getProductByUser(@QueryParam("authoremail") String authoremail) {
-        System.out.println(authoremail);
-        ArrayList<Product> reqProds = new ArrayList<Product>();
-        if (!authoremail.equals(null)) {
-            for (Product p : products) {
-                if (p.getAuthorEmail().equals(authoremail)) {
-                    reqProds.add(p);
-                }
-            }
-        }
-        if (reqProds.size()!=0) {
-            Gson gson = new Gson();
-            Response.ResponseBuilder b = Response.ok(gson.toJson(reqProds));
-            return b.build();
-        } else {
-            Response.ResponseBuilder b = Response.ok("User does not own any products.");
-            return b.build();
-        }
-    }
-
-//    @GET
-//    @Path("{ id : [A-Za-z0-9_]+}")
-//    public String getProduct(@PathParam("id") String id) {
-//        System.out.println(id);
-//        for (Product p : products) {
-//            if (p.getID().equals(id)) {
-//                return p.toJSON();
-//            }
-//        }
-//        return "";
-//    }
 
     @POST
     @Consumes("application/json")
-    public Response addProduct(String jsonString) throws IOException {
+    public Response addProduct(String jsonString) {
         try {
             products.add(new Product(jsonString));
         } catch (Exception e) {
@@ -178,7 +102,6 @@ public class ProductService {
         ArrayList<String> list = new Gson().fromJson(jsonString, new TypeToken<ArrayList<String>>() {
         }.getType());
         for (String id : list) {
-            System.out.println("Item re");
             products.removeIf((Product p) -> p.getID().equals(id));
         }
         return Response.status(Response.Status.OK).build();
