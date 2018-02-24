@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 
-enum PaymentType {
-    FREE,
-    EXCHANGE,
-    REGULAR
-}
+//enum PaymentType {
+//    FREE,
+//    EXCHANGE,
+//    REGULAR
+//}
 
 enum Category {
     OTHER;
@@ -29,28 +29,28 @@ public class Product extends JsonModel {
     private String authorEmail;
 
     private ArrayList<String> images;
-    private PaymentType paymentType;
+    // private PaymentType paymentType;
     private Category category;
     // Price could be like "2 chocolates"
     private double price;
-    private String units;
+    // private String units;
     private String ID;
 
 
     private static final String JSON_TITLE = "title";
     private static final String JSON_DESC = "description";
     private static final String JSON_EMAIL = "email";
-    private static final String JSON_TYPE = "paymentType";
+    //private static final String JSON_TYPE = "paymentType";
     private static final String JSON_PRICE = "price";
-    private static final String JSON_UNITS = "units";
+    //private static final String JSON_UNITS = "units";
 
-    public Product(String title, String description, String authorEmail, PaymentType paymentType, double price, String units) {
+    public Product(String title, String description, String authorEmail, double price) { //PaymentType paymentType, String units) {
         this.title = title;
         this.description = description;
         this.authorEmail = authorEmail;
-        this.paymentType = paymentType;
+        //this.paymentType = paymentType;
         this.price = price;
-        this.units = units;
+        //this.units = units;
         images = new ArrayList<String>();
         ID = IDGenerator.generateIDWithDefaultLength();
     }
@@ -69,10 +69,10 @@ public class Product extends JsonModel {
         this.title = "";
         this.description = "";
         this.authorEmail = "";
-        this.paymentType = PaymentType.REGULAR;
+        //this.paymentType = PaymentType.REGULAR;
         this.category = Category.OTHER;
         this.price = 0;
-        this.units = "тг.";
+        //this.units = "тг.";
         images = new ArrayList<String>();
         ID = IDGenerator.generateIDWithDefaultLength();
     }
@@ -84,9 +84,9 @@ public class Product extends JsonModel {
         this.description = (String) jsonObject.get(JSON_DESC);
         this.authorEmail = (String) jsonObject.get(JSON_EMAIL);
         // Images - ?
-        this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
+        //this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
         this.price = (Double) jsonObject.get(JSON_PRICE);
-        this.units = (String) jsonObject.get(JSON_UNITS);
+        //this.units = (String) jsonObject.get(JSON_UNITS);
     }
 
     public String toJSON() {
@@ -125,13 +125,13 @@ public class Product extends JsonModel {
         this.authorEmail = authorEmail;
     }
 
-    public String getPaymentType() {
-        return paymentType.name();
-    }
-
-    public void setPaymentType(PaymentType paymentType) {
-        this.paymentType = paymentType;
-    }
+//    public String getPaymentType() {
+//        return paymentType.name();
+//    }
+//
+//    public void setPaymentType(PaymentType paymentType) {
+//        this.paymentType = paymentType;
+//    }
 
     public double getPrice() {
         return price;
@@ -153,13 +153,13 @@ public class Product extends JsonModel {
         this.category = category;
     }
 
-    public String getUnits() {
-        return units;
-    }
-
-    public void setUnits(String units) {
-        this.units = units;
-    }
+//    public String getUnits() {
+//        return units;
+//    }
+//
+//    public void setUnits(String units) {
+//        this.units = units;
+//    }
 
     @Override
     public boolean equals(Object o) {
