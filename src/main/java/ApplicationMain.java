@@ -1,3 +1,4 @@
+import REST.ImageService;
 import REST.ProductService;
 
 import javax.ws.rs.ApplicationPath;
@@ -13,11 +14,13 @@ public class ApplicationMain extends Application {
 
     public ApplicationMain() {
         singletons.add(new ProductService());
+        singletons.add(new ImageService());
     }
 
-    @Override
     public Set<Class<?>> getClasses() {
-        return empty;
+        final Set<Class<?>> resources = new HashSet<Class<?>>();
+
+        return resources;
     }
 
     @Override

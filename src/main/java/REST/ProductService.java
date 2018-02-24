@@ -1,13 +1,13 @@
 package REST;
 
 import Models.Product;
+import Utils.Filterer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 
 // URL: http://localhost:8080/rest/products

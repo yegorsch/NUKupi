@@ -8,6 +8,7 @@ import java.lang.ref.SoftReference;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Objects;
 
 enum PaymentType {
     FREE,
@@ -26,6 +27,7 @@ public class Product extends JsonModel {
     private String description;
     // TODO: change it to user reference when we have it.
     private String authorEmail;
+
     private ArrayList<String> images;
     private PaymentType paymentType;
     private Category category;
@@ -159,5 +161,18 @@ public class Product extends JsonModel {
         this.units = units;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(ID, product.ID);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(ID);
+    }
 
 }

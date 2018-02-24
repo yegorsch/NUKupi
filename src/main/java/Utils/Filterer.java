@@ -1,4 +1,4 @@
-package REST;
+package Utils;
 
 import Models.Product;
 
