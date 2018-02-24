@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Isotronic",
+    "description": "cupidatat",
+    "authorEmail": "mcfaddenkirby@isotronic.com",
+    "images": [
+      "5a916aed5990f25ca96e1fd9"
+    ],
+    "category": "BOOKS",
+    "price": 105.9785,
+    "ID": "5a916aed3df56cb2e3d02ea6"
+  },
+  {
+    "title": "Xymonk",
+    "description": "Lorem",
+    "authorEmail": "mcfaddenkirby@xymonk.com",
+    "images": [
+      "5a916aed6d2297506ebb9550"
+    ],
+    "category": "BOOKS",
+    "price": 421.2726,
+    "ID": "5a916aedd623000436543a29"
+  }
+]

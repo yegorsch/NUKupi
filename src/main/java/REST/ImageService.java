@@ -22,6 +22,12 @@ public class ImageService {
         images = new ArrayList<Image>();
     }
 
+    /**
+     * Takes id of the image and returns its byte data
+     *
+     * @param id
+     * @return bytes[] of the image
+     */
     @GET
     public Response download(@QueryParam("id") String id) {
         if (id == null) {
@@ -40,6 +46,13 @@ public class ImageService {
         return Response.noContent().build();
     }
 
+    /**
+     * Uploads image to the server
+     *
+     * @param stream
+     * @return JSON of type {"date": unix_date,"size": byte_size_long,"id":"UNIQUE ID"}
+     * @throws IOException
+     */
     @POST
     @Path("/upload")
     @Consumes(MediaType.MEDIA_TYPE_WILDCARD)
@@ -54,6 +67,13 @@ public class ImageService {
             return Response.status(400).build();
         }
     }
+
+    /**
+     * Deletes products from json array with ids
+     *
+     * @param jsonString array of ids
+     * @return OK
+     */
 
     @DELETE
     @Consumes("application/json")

@@ -16,11 +16,6 @@ import java.util.Objects;
 //    REGULAR
 //}
 
-enum Category {
-    OTHER;
-}
-
-
 public class Product extends JsonModel {
 
     private String title;
@@ -30,7 +25,7 @@ public class Product extends JsonModel {
 
     private ArrayList<String> images;
     // private PaymentType paymentType;
-    private Category category;
+    private String category;
     // Price could be like "2 chocolates"
     private double price;
     // private String units;
@@ -70,7 +65,7 @@ public class Product extends JsonModel {
         this.description = "";
         this.authorEmail = "";
         //this.paymentType = PaymentType.REGULAR;
-        this.category = Category.OTHER;
+        this.category = "OTHER";
         this.price = 0;
         //this.units = "тг.";
         images = new ArrayList<String>();
@@ -146,10 +141,10 @@ public class Product extends JsonModel {
     }
 
     public String getCategory() {
-        return category.name();
+        return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 

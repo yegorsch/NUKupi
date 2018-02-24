@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Krog",
+    "description": "nostrud, Krog",
+    "authorEmail": "mcfaddenkirby@krog.com",
+    "images": [
+      "5a916aed90372d7bda669b7e"
+    ],
+    "category": "OTHER",
+    "price": 289.8722,
+    "ID": "5a916aed0d50b1cd0afbd166"
+  },
+  {
+    "title": "Qot",
+    "description": "consectetur",
+    "authorEmail": "mcfaddenkirby@qot.com",
+    "images": [
+      "5a916aed2a4b435ad828857d"
+    ],
+    "category": "OTHER",
+    "price": 686.7152,
+    "ID": "5a916aed8d0458e3e8500560"
+  },
+  {
+    "title": "Keeg",
+    "description": "pariatur",
+    "authorEmail": "mcfaddenkirby@keeg.com",
+    "images": [
+      "5a916aed709fea0336377ba6"
+    ],
+    "category": "OTHER",
+    "price": 767.5232,
+    "ID": "5a916aed64b97a21c014f40b"
+  }
+]

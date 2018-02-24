@@ -1,14 +1,15 @@
 package REST;
 
 import Models.Product;
-//import Utils.Filterer;
+import Utils.Filterer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
-import java.util.HashSet;
+
+//import Utils.Filterer;
 
 // URL: http://localhost:8080/rest/products
 @Path("products")
@@ -44,35 +45,7 @@ public class ProductService {
         Response.ResponseBuilder b = Response.ok(gson.toJson(products));
         return b.build();
     }
-
-//    /**
-//     * Filtering path
-//     */
-//
-//    @GET
-//    @Path("/filter")
-//    public Response mainFilterer(@QueryParam("title") String title,
-//                                      @QueryParam("category") String category,
-//                                      @QueryParam("type") String type,
-//                                      @QueryParam("price") double price,
-//                                      @QueryParam("units") String units,
-//                                      @QueryParam("email") String email) {
-//        ArrayList<Product> reqProds = new ArrayList<Product>();
-//        Filterer filterer = new Filterer(products);
-//        // By title
-//        reqProds.addAll(filterer.getProductByTitle(title));
-//        // Category
-//        reqProds.addAll(filterer.getProductByCategory(category));
-//        // Type, price units
-//        reqProds.addAll(filterer.getProductByPrice(type, price, units));
-//        // Email
-//        reqProds.addAll(filterer.getProductByUser(email));
-//
-//        ArrayList<Product> uniqueList = new ArrayList<>(new HashSet<Product>(reqProds));
-//        return Response.ok(new Gson().toJson(uniqueList)).build();
-//    }
-
-
+    
     /**
      * Filters
      */
@@ -85,33 +58,9 @@ public class ProductService {
         System.out.println(title);
         System.out.println(price);
         System.out.println(category);
-        ArrayList<Product> reqProds = new ArrayList<>();
-        if(title==null && category==null) {
-            for (Product p : products) {
-                if (p.getPrice()<=price) {
-                    reqProds.add(p);
-                }
-            }
-        } else if (title==null && category!=null) {
-            for (Product p : products) {
-                if (p.getPrice()<=price && p.getCategory().equals(category)) {
-                    reqProds.add(p);
-                }
-            }
-        } else if (title!=null && category==null) {
-            for (Product p : products) {
-                if (p.getPrice()<=price && p.getTitle().toLowerCase().contains(title.toLowerCase())) {
-                    reqProds.add(p);
-                }
-            }
-        } else {
-            for (Product p : products) {
-                if (p.getPrice()<=price && p.getCategory().equals(category) && p.getTitle().toLowerCase().contains(title.toLowerCase())) {
-                    reqProds.add(p);
-                }
-            }
-        }
-        return Response.ok(new Gson().toJson(reqProds)).build();
+        ArrayList<Product> result = new Filterer(products).filter(title, price, category);
+
+        return Response.ok(new Gson().toJson(result)).build();
     }
 
     /**
