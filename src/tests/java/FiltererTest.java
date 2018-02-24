@@ -1,6 +1,7 @@
-package Utils;
+package java;
 
 import Models.Product;
+import Utils.Filterer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import junit.framework.TestCase;
@@ -75,7 +76,7 @@ public class FiltererTest extends TestCase {
     public void testFilterByTitle() {
         try {
             ArrayList<Product> test = getModels("src/tests/Utils/jsonFilteredByTitle_Electronic.txt");
-            assertEquals(test, new Filterer(products).filter("Electonic", 0, null));
+            assertEquals(test, new Filterer(products).filter("Electronic", 0, null));
         } catch (IOException e) {
             e.printStackTrace();
         }
