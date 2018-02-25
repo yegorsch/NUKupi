@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Isotronic",
+    "description": "cupidatat",
+    "authorEmail": "mcfaddenkirby@isotronic.com",
+    "images": [
+      "5a916aed5990f25ca96e1fd9"
+    ],
+    "category": "BOOKS",
+    "price": 105.9785,
+    "ID": "5a916aed3df56cb2e3d02ea6"
+  },
+  {
+    "title": "Krog",
+    "description": "nostrud, Krog",
+    "authorEmail": "mcfaddenkirby@krog.com",
+    "images": [
+      "5a916aed90372d7bda669b7e"
+    ],
+    "category": "OTHER",
+    "price": 289.8722,
+    "ID": "5a916aed0d50b1cd0afbd166"
+  },
+  {
+    "title": "Xymonk",
+    "description": "Lorem",
+    "authorEmail": "mcfaddenkirby@xymonk.com",
+    "images": [
+      "5a916aed6d2297506ebb9550"
+    ],
+    "category": "BOOKS",
+    "price": 421.2726,
+    "ID": "5a916aedd623000436543a29"
+  }
+]

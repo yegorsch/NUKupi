@@ -83,4 +83,13 @@ public class FiltererTest extends TestCase {
         }
     }
 
+    public void testFilterByPrice() {
+        try {
+            ArrayList<Product> test = getModels("src/test/Utils/jsonFilteredByPrice.txt");
+            assertEquals(test, new Filterer(products).filter(null, 500, null));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
