@@ -69,11 +69,11 @@ public class ProductService {
 
     @GET
     @Path("/myproducts")
-    public Response getProductByUser(@QueryParam("email") String email) {
+    public Response getProductByUser(@QueryParam("id") String id) {
         ArrayList<Product> reqProds = new ArrayList<>();
-        if (email != null) {
+        if (id != null) {
             for (Product p : products) {
-                if (p.getAuthorID().equals(email)) {
+                if (p.getAuthorID().equals(id)) {
                     reqProds.add(p);
                 }
             }
