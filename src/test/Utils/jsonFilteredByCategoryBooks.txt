@@ -2,7 +2,7 @@
   {
     "title": "Isotronic",
     "description": "cupidatat",
-    "authorEmail": "mcfaddenkirby@isotronic.com",
+    "authorID": "mcfaddenkirby@isotronic.com",
     "images": [
       "5a916aed5990f25ca96e1fd9"
     ],
@@ -13,7 +13,7 @@
   {
     "title": "Xymonk",
     "description": "Lorem",
-    "authorEmail": "mcfaddenkirby@xymonk.com",
+    "authorID": "mcfaddenkirby@xymonk.com",
     "images": [
       "5a916aed6d2297506ebb9550"
     ],

@@ -4,7 +4,6 @@ import Utils.IDGenerator;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.lang.ref.SoftReference;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Map;
@@ -21,8 +20,7 @@ public class Product extends JsonModel {
     private String title;
     private String description;
     // TODO: change it to user reference when we have it.
-    private String authorEmail;
-
+    private String authorID;
     private ArrayList<String> images;
     // private PaymentType paymentType;
     private String category;
@@ -35,19 +33,30 @@ public class Product extends JsonModel {
     private static final String JSON_TITLE = "title";
     private static final String JSON_DESC = "description";
     private static final String JSON_EMAIL = "email";
-    //private static final String JSON_TYPE = "paymentType";
     private static final String JSON_PRICE = "price";
-    //private static final String JSON_UNITS = "units";
 
-    public Product(String title, String description, String authorEmail, double price) { //PaymentType paymentType, String units) {
+    public Product(String title, String description, String authorID, double price, String category) {
         this.title = title;
         this.description = description;
-        this.authorEmail = authorEmail;
+        this.authorID = authorID;
         //this.paymentType = paymentType;
         this.price = price;
         //this.units = units;
         images = new ArrayList<String>();
+        this.category = category;
         ID = IDGenerator.generateIDWithDefaultLength();
+    }
+
+    public Product(String ID, String title, String description, String authorID, double price, String category) {
+        this.title = title;
+        this.description = description;
+        this.authorID = authorID;
+        //this.paymentType = paymentType;
+        this.price = price;
+        //this.units = units;
+        images = new ArrayList<String>();
+        this.ID = ID;
+        this.category = category;
     }
 
     public Product() {
@@ -63,7 +72,7 @@ public class Product extends JsonModel {
     private void emptyInit() {
         this.title = "";
         this.description = "";
-        this.authorEmail = "";
+        this.authorID = "";
         //this.paymentType = PaymentType.REGULAR;
         this.category = "OTHER";
         this.price = 0;
@@ -73,11 +82,12 @@ public class Product extends JsonModel {
     }
 
     protected void initializeWith(String JSONString) {
-        Type type = new TypeToken<Map<String, Object>>(){}.getType();
-        Map<String, Object> jsonObject =  new Gson().fromJson(JSONString, type);
+        Type type = new TypeToken<Map<String, Object>>() {
+        }.getType();
+        Map<String, Object> jsonObject = new Gson().fromJson(JSONString, type);
         this.title = (String) jsonObject.get(JSON_TITLE);
         this.description = (String) jsonObject.get(JSON_DESC);
-        this.authorEmail = (String) jsonObject.get(JSON_EMAIL);
+        this.authorID = (String) jsonObject.get(JSON_EMAIL);
         // Images - ?
         //this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
         this.price = (Double) jsonObject.get(JSON_PRICE);
@@ -112,21 +122,13 @@ public class Product extends JsonModel {
         this.description = description;
     }
 
-    public String getAuthorEmail() {
-        return authorEmail;
+    public String getAuthorID() {
+        return authorID;
     }
 
-    public void setAuthorEmail(String authorEmail) {
-        this.authorEmail = authorEmail;
+    public void setAuthorID(String authorID) {
+        this.authorID = authorID;
     }
-
-//    public String getPaymentType() {
-//        return paymentType.name();
-//    }
-//
-//    public void setPaymentType(PaymentType paymentType) {
-//        this.paymentType = paymentType;
-//    }
 
     public double getPrice() {
         return price;
@@ -140,6 +142,11 @@ public class Product extends JsonModel {
         return ID;
     }
 
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+
     public String getCategory() {
         return category;
     }
@@ -147,14 +154,6 @@ public class Product extends JsonModel {
     public void setCategory(String category) {
         this.category = category;
     }
-
-//    public String getUnits() {
-//        return units;
-//    }
-//
-//    public void setUnits(String units) {
-//        this.units = units;
-//    }
 
     @Override
     public boolean equals(Object o) {

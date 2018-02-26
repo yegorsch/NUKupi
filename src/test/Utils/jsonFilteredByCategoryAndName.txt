@@ -2,7 +2,7 @@
   {
     "title": "Krog",
     "description": "nostrud, Krog",
-    "authorEmail": "mcfaddenkirby@krog.com",
+    "authorID": "mcfaddenkirby@krog.com",
     "images": [
       "5a916aed90372d7bda669b7e"
     ],
@@ -13,7 +13,7 @@
   {
     "title": "Keeg",
     "description": "pariatur",
-    "authorEmail": "mcfaddenkirby@keeg.com",
+    "authorID": "mcfaddenkirby@keeg.com",
     "images": [
       "5a916aed709fea0336377ba6"
     ],

@@ -17,11 +17,22 @@ public class Image extends JsonModel {
     private double size; //in bytes
     private byte[] data;
 
+    private static final String JSON_ID = "id";
+    private static final String JSON_DATE = "date";
+    private static final String JSON_SIZE = "size";
+
     public Image() {
         ID = IDGenerator.generateIDWithLength(15);
         dateAdded = Instant.now().getEpochSecond();
         size = 0;
         data = new byte[0];
+    }
+
+    public Image(String ID, long dateAdded, double size, byte[] data) {
+        this.ID = ID;
+        this.dateAdded = dateAdded;
+        this.size = size;
+        this.data = data;
     }
 
     public double getSize() {
@@ -35,6 +46,10 @@ public class Image extends JsonModel {
 
     public String getID() {
         return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public long getDateAdded() {
@@ -72,9 +87,9 @@ public class Image extends JsonModel {
     @Override
     public String toJSON() {
         HashMap<String, Object> obj = new HashMap<>();
-        obj.put("id",getID());
-        obj.put("date", getDateAdded());
-        obj.put("size", getSize());
+        obj.put(JSON_ID,getID());
+        obj.put(JSON_DATE, getDateAdded());
+        obj.put(JSON_SIZE, getSize());
         return new Gson().toJson(obj);
     }
 

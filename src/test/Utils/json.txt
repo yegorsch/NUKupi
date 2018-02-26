@@ -2,7 +2,7 @@
   {
     "title": "Isotronic",
     "description": "cupidatat",
-    "authorEmail": "mcfaddenkirby@isotronic.com",
+    "authorID": "mcfaddenkirby@isotronic.com",
     "images": [
       "5a916aed5990f25ca96e1fd9"
     ],
@@ -13,7 +13,7 @@
   {
     "title": "Electonic",
     "description": "exercitation, Electonic",
-    "authorEmail": "mcfaddenkirby@electonic.com",
+    "authorID": "mcfaddenkirby@electonic.com",
     "images": [
       "5a916aedb7394ffeb2cb75b2"
     ],
@@ -24,7 +24,7 @@
   {
     "title": "Krog",
     "description": "nostrud, Krog",
-    "authorEmail": "mcfaddenkirby@krog.com",
+    "authorID": "mcfaddenkirby@krog.com",
     "images": [
       "5a916aed90372d7bda669b7e"
     ],
@@ -35,7 +35,7 @@
   {
     "title": "Xymonk",
     "description": "Lorem",
-    "authorEmail": "mcfaddenkirby@xymonk.com",
+    "authorID": "mcfaddenkirby@xymonk.com",
     "images": [
       "5a916aed6d2297506ebb9550"
     ],
@@ -46,7 +46,7 @@
   {
     "title": "Qot",
     "description": "consectetur",
-    "authorEmail": "mcfaddenkirby@qot.com",
+    "authorID": "mcfaddenkirby@qot.com",
     "images": [
       "5a916aed2a4b435ad828857d"
     ],
@@ -57,7 +57,7 @@
   {
     "title": "Keeg",
     "description": "pariatur",
-    "authorEmail": "mcfaddenkirby@keeg.com",
+    "authorID": "mcfaddenkirby@keeg.com",
     "images": [
       "5a916aed709fea0336377ba6"
     ],

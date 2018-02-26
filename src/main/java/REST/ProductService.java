@@ -73,7 +73,7 @@ public class ProductService {
         ArrayList<Product> reqProds = new ArrayList<>();
         if (email != null) {
             for (Product p : products) {
-                if (p.getAuthorEmail().equals(email)) {
+                if (p.getAuthorID().equals(email)) {
                     reqProds.add(p);
                 }
             }
