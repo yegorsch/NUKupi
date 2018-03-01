@@ -1,5 +1,6 @@
 package REST;
 
+import DB.DatabaseClient;
 import Models.Image;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -17,9 +18,11 @@ import java.util.ArrayList;
 public class ImageService {
 
     ArrayList<Image> images;
+    private DatabaseClient dbc;
 
     public ImageService() {
         images = new ArrayList<Image>();
+        dbc = new DatabaseClient();
     }
 
     /**
@@ -44,6 +47,8 @@ public class ImageService {
             }
         }
         return Response.noContent().build();
+
+        //ArrayList<Image> images = dbc.runQueryGetImages(id);
     }
 
     /**
@@ -66,6 +71,8 @@ public class ImageService {
         } else {
             return Response.status(400).build();
         }
+
+        //dbc.runQueryInsertImage(ADD STUFF HERE);
     }
 
     /**
@@ -84,6 +91,11 @@ public class ImageService {
             images.removeIf((Image p) -> p.getID().equals(id));
         }
         return Response.status(Response.Status.OK).build();
+
+        /*if (dbc.runQueryDeleteImage(id))
+            return Response.status(Response.Status.OK).build();
+        else
+            return Response.status(Response.Status.NOT_ACCEPTABLE).build();*/
     }
 
 

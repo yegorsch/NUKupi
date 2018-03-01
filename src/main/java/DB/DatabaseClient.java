@@ -1,6 +1,8 @@
 package DB;
 
+import Models.Image;
 import Models.Product;
+import javassist.bytecode.ByteArray;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -140,11 +142,136 @@ public class DatabaseClient {
         return products;
     }
 
+    public ArrayList<Product> getAllProducts(String title, int price, String category) {
+        ArrayList<Product> products = new ArrayList<Product>();
+
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = null;
+            if (category == null)
+                rs = stmt.executeQuery(
+                        "select product_id, title, description, price, category, p_user_id " +
+                                "from product " + "where title like '%" + title + "%' and price <= "
+                                + price + ";");
+            else if (title == null)
+                rs = stmt.executeQuery(
+                        "select product_id, title, description, price, category, p_user_id " +
+                                "from product " + "where category like '%" + category + "%' and price <= "
+                                + price + ";");
+            else if (title != null && category != null)
+                rs = stmt.executeQuery(
+                        "select product_id, title, description, price, category, p_user_id " +
+                                "from product " + "where title like '%" + title + "%' and category like '%" +
+                                category + "%' and price <= "
+                                + price + ";");
+
+            while (rs.next()) {
+                products.add(new Product(rs.getString("product_id"), rs.getString("title"),
+                        rs.getString("description"), rs.getString("p_user_id"),
+                        rs.getInt("price"), rs.getString("category")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+
+    public ArrayList<Product> runQueryProductsByFilter(String title, int price, String category) {
+        ArrayList<Product> products = new ArrayList<Product>();
+
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = null;
+            if (category == null)
+                rs = stmt.executeQuery(
+                        "select product_id, title, description, price, category, p_user_id " +
+                                "from product " + "where title like '%" + title + "%' and price <= "
+                                + price + ";");
+            else if (title == null)
+                rs = stmt.executeQuery(
+                        "select product_id, title, description, price, category, p_user_id " +
+                                "from product " + "where category like '%" + category + "%' and price <= "
+                                + price + ";");
+            else if (title != null && category != null)
+                rs = stmt.executeQuery(
+                        "select product_id, title, description, price, category, p_user_id " +
+                                "from product " + "where title like '%" + title + "%' and category like '%" +
+                                category + "%' and price <= "
+                                + price + ";");
+
+            while (rs.next()) {
+                products.add(new Product(rs.getString("product_id"), rs.getString("title"),
+                        rs.getString("description"), rs.getString("p_user_id"),
+                        rs.getInt("price"), rs.getString("category")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+
     public boolean runQueryDeleteProduct(String product_id) {
         try {
             Statement stmt = conn.createStatement();
             int count = stmt.executeUpdate(
                     "delete from product where product_id='" + product_id + "';"
+            );
+            if (count > 0) {
+                return true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+
+    }
+
+    public boolean runQueryInsertImage(String image_id, Double size, Long date, byte[] bytes, String i_product_id) {
+        try {
+            Statement stmt = conn.createStatement();
+            int count = stmt.executeUpdate(
+                    "insert into image values ('" + image_id + "',"
+                            + size + "," + date + ","
+                            + bytes + ",'" + i_product_id
+                            + "');"
+            );
+            if (count > 0) {
+                return true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public ArrayList<Image> runQueryGetImages(String image_id) {
+        ArrayList<Image> images = new ArrayList<Image>();
+
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select image_id, size, date, bytes, i_product_id " +
+                            "from image " + "where image_id='" + image_id + "'" + ";"
+            );
+
+            while (rs.next()) {
+                images.add(new Image(rs.getString("image_id"), rs.getLong("date"),
+                        rs.getDouble("size"), rs.getBytes("bytes"),
+                        rs.getString("product_id")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return images;
+    }
+
+    public boolean runQueryDeleteImage(String image_id) {
+        try {
+            Statement stmt = conn.createStatement();
+            int count = stmt.executeUpdate(
+                    "delete from image where image_id='" + image_id + "';"
             );
             if (count > 0) {
                 return true;

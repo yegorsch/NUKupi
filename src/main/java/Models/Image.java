@@ -35,6 +35,14 @@ public class Image extends JsonModel {
         this.data = data;
     }
 
+    public Image(String ID, long dateAdded, double size, byte[] data, String product_id) {
+        this.ID = ID;
+        this.dateAdded = dateAdded;
+        this.size = size;
+        this.data = data;
+        //ADD product_id
+    }
+
     public double getSize() {
         return size;
     }
