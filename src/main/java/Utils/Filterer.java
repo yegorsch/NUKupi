@@ -18,7 +18,7 @@ public class Filterer {
      * Retrieve products by params
      **/
 
-    public ArrayList<Product> filter(String title, double price, String category) {
+    public ArrayList<Product> filter(String title, int price, String category) {
         List<Product> reqProds = (List<Product>) products.clone();
         if (title != null) {
             reqProds = products.stream().filter(

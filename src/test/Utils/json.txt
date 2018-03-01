@@ -7,18 +7,18 @@
       "5a916aed5990f25ca96e1fd9"
     ],
     "category": "BOOKS",
-    "price": 105.9785,
+    "price": 105,
     "ID": "5a916aed3df56cb2e3d02ea6"
   },
   {
     "title": "Electonic",
     "description": "exercitation, Electonic",
-    "authorID": "mcfaddenkirby@electonic.com",
+    "email": "mcfaddenkirby@electonic.com",
     "images": [
       "5a916aedb7394ffeb2cb75b2"
     ],
     "category": "FOOD",
-    "price": 851.0732,
+    "price": 851,
     "ID": "5a916aede93d14fc8b35da60"
   },
   {
@@ -29,7 +29,7 @@
       "5a916aed90372d7bda669b7e"
     ],
     "category": "OTHER",
-    "price": 289.8722,
+    "price": 289,
     "ID": "5a916aed0d50b1cd0afbd166"
   },
   {
@@ -40,7 +40,7 @@
       "5a916aed6d2297506ebb9550"
     ],
     "category": "BOOKS",
-    "price": 421.2726,
+    "price": 421,
     "ID": "5a916aedd623000436543a29"
   },
   {

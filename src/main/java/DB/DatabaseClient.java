@@ -14,7 +14,7 @@ public class DatabaseClient {
     String password = "C1Q1VT02";
     String dbms = "mysql";
     String serverName = "46.101.171.158";
-    String portNumber = "80";gi
+    String portNumber = "80";
     String dbname = "ospanov_bakhtiyar";
 
     Connection conn = null;
@@ -142,39 +142,6 @@ public class DatabaseClient {
         return products;
     }
 
-    public ArrayList<Product> getAllProducts(String title, int price, String category) {
-        ArrayList<Product> products = new ArrayList<Product>();
-
-        try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = null;
-            if (category == null)
-                rs = stmt.executeQuery(
-                        "select product_id, title, description, price, category, p_user_id " +
-                                "from product " + "where title like '%" + title + "%' and price <= "
-                                + price + ";");
-            else if (title == null)
-                rs = stmt.executeQuery(
-                        "select product_id, title, description, price, category, p_user_id " +
-                                "from product " + "where category like '%" + category + "%' and price <= "
-                                + price + ";");
-            else if (title != null && category != null)
-                rs = stmt.executeQuery(
-                        "select product_id, title, description, price, category, p_user_id " +
-                                "from product " + "where title like '%" + title + "%' and category like '%" +
-                                category + "%' and price <= "
-                                + price + ";");
-
-            while (rs.next()) {
-                products.add(new Product(rs.getString("product_id"), rs.getString("title"),
-                        rs.getString("description"), rs.getString("p_user_id"),
-                        rs.getInt("price"), rs.getString("category")));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return products;
-    }
 
     public ArrayList<Product> runQueryProductsByFilter(String title, int price, String category) {
         ArrayList<Product> products = new ArrayList<Product>();

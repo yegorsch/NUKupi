@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Isotronic",
+    "description": "cupidatat",
+    "authorID": "mcfaddenkirby@isotronic.com",
+    "images": [
+      "5a916aed5990f25ca96e1fd9"
+    ],
+    "category": "BOOKS",
+    "price": 105.9785,
+    "ID": "5a916aed3df56cb2e3d02ea6"
+  },
+  {
+    "title": "Electonic",
+    "description": "exercitation, Electonic",
+    "authorID": "mcfaddenkirby@electonic.com",
+    "images": [
+      "5a916aedb7394ffeb2cb75b2"
+    ],
+    "category": "FOOD",
+    "price": 851.0732,
+    "ID": "5a916aede93d14fc8b35da60"
+  },
+  {
+    "title": "Krog",
+    "description": "nostrud, Krog",
+    "authorID": "mcfaddenkirby@krog.com",
+    "images": [
+      "5a916aed90372d7bda669b7e"
+    ],
+    "category": "OTHER",
+    "price": 289.8722,
+    "ID": "5a916aed0d50b1cd0afbd166"
+  },
+  {
+    "title": "Xymonk",
+    "description": "Lorem",
+    "authorID": "mcfaddenkirby@xymonk.com",
+    "images": [
+      "5a916aed6d2297506ebb9550"
+    ],
+    "category": "BOOKS",
+    "price": 421.2726,
+    "ID": "5a916aedd623000436543a29"
+  },
+  {
+    "title": "Qot",
+    "description": "consectetur",
+    "authorID": "mcfaddenkirby@qot.com",
+    "images": [
+      "5a916aed2a4b435ad828857d"
+    ],
+    "category": "OTHER",
+    "price": 686.7152,
+    "ID": "5a916aed8d0458e3e8500560"
+  },
+  {
+    "title": "Keeg",
+    "description": "pariatur",
+    "authorID": "mcfaddenkirby@keeg.com",
+    "images": [
+      "5a916aed709fea0336377ba6"
+    ],
+    "category": "OTHER",
+    "price": 767.5232,
+    "ID": "5a916aed64b97a21c014f40b"
+  }
+]

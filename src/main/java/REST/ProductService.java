@@ -62,8 +62,9 @@ public class ProductService {
         System.out.println(title);
         System.out.println(price);
         System.out.println(category);
-/*        ArrayList<Product> result = new Filterer(products).filter(title, price, category);*/
-        ArrayList<Product> result = dbc.runQueryProductsByFilter(title, price, category);
+        /*        ArrayList<Product> result = new Filterer(products).filter(title, price, category);*/
+        ArrayList<Product> result = dbc.runQueryProductsAll();
+        result = new Filterer(result).filter(title, price, category);
         return Response.ok(new Gson().toJson(result)).build();
     }
 
@@ -96,19 +97,16 @@ public class ProductService {
     @POST
     @Consumes("application/json")
     public Response addProduct(String jsonString) {
+        Product p;
         try {
-            products.add(new Product(jsonString));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return Response.status(Response.Status.NOT_ACCEPTABLE).build();
+            p = new Product(jsonString);
+        } catch (Exception e){
+            return Response.status(400).build();
         }
-        return Response.status(Response.Status.OK).build();
-
-       /* if (dbc.runQueryInsertProduct(ADD STUFF HERE))
+        if (dbc.runQueryInsertProduct(p.getID(), p.getTitle(), p.getDescription(),p.getPrice(), p.getCategory(), p.getAuthorID()))
             return Response.status(Response.Status.OK).build();
         else
-            return Response.status(Response.Status.NOT_ACCEPTABLE).build();*/
-
+            return Response.status(Response.Status.NOT_ACCEPTABLE).build();
     }
 
     @DELETE

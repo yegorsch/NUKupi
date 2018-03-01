@@ -32,8 +32,10 @@ public class Product extends JsonModel {
 
     private static final String JSON_TITLE = "title";
     private static final String JSON_DESC = "description";
-    private static final String JSON_EMAIL = "email";
+    private static final String JSON_ID = "ID";
+    private static final String JSON_IMAGES = "images";
     private static final String JSON_PRICE = "price";
+    private static final String JSON_CATEGORY = "category";
 
     public Product(String title, String description, String authorID, int price, String category) {
         this.title = title;
@@ -72,12 +74,14 @@ public class Product extends JsonModel {
     private void emptyInit() {
         this.title = "";
         this.description = "";
-        this.authorID = "";
+        // TODO: FOR GODS SAKE PLS FIX THIS BULLSHIT
+        this.authorID = "1";
         //this.paymentType = PaymentType.REGULAR;
         this.category = "OTHER";
         this.price = 0;
         //this.units = "тг.";
         images = new ArrayList<String>();
+
         ID = IDGenerator.generateIDWithDefaultLength();
     }
 
@@ -87,10 +91,11 @@ public class Product extends JsonModel {
         Map<String, Object> jsonObject = new Gson().fromJson(JSONString, type);
         this.title = (String) jsonObject.get(JSON_TITLE);
         this.description = (String) jsonObject.get(JSON_DESC);
-        this.authorID = (String) jsonObject.get(JSON_EMAIL);
-        // Images - ?
+        this.images = (ArrayList<String>) jsonObject.get(JSON_IMAGES);
+        this.category = (String) jsonObject.get(JSON_CATEGORY);
         //this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
-        this.price = (Integer) jsonObject.get(JSON_PRICE);
+        Double price = (Double) jsonObject.get(JSON_PRICE);
+        this.price = price.intValue();
         //this.units = (String) jsonObject.get(JSON_UNITS);
     }
 

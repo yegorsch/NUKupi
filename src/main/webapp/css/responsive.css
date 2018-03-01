@@ -1,0 +1,380 @@
+
+
+/* #Media Queries
+================================================== */
+@media only screen and (min-width: 1201px) and (max-width: 1700px) {
+	
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	footer input{
+		max-width: 225px;
+	}
+	footer button.btnsubmit{
+		width: 140px;
+	}
+	.footersocial i{
+		margin-right: 10px;
+	}
+	.innerimg{
+		min-height: 293px;
+	}
+	.innerimgnew{
+		min-height: 270px;
+	}
+}
+
+@media only screen and (min-width: 960px) and (max-width: 991px) {
+	li a {
+		padding: 5px;
+	}
+	h1 {
+		font-size: 54px;
+		line-height: 65px;
+		letter-spacing: 3px;
+	}
+	h2{
+		font-size: 26px;
+	}
+	p.headp{
+		line-height: 35px;
+		letter-spacing: 1px;
+		font-size: 24px;
+	}
+	input{
+		max-width: 515px;
+	}
+	.innerimg{
+		min-height: 335px;
+	}
+	.innerimgnew{
+		min-height: 200px;
+	}
+	#banner{
+		padding: 250px 0;
+	}
+	.innercounter{
+		margin: 30px 0;
+	}
+	h5 {		
+		font-size: 24px;
+	}
+	.innercontent span {		
+		font-size: 16px;
+	}
+	p.innerp {
+		font-size: 14px;
+		padding: 20px 0 30px;
+	}
+	#getboat{
+		padding: 100px 0;
+	}
+	footer input{
+		max-width: 220px;
+	}
+	footer button.btnsubmit{
+		width: 120px;
+	}
+	article{
+		min-height: 230px;
+	}
+	footer article.contact{
+		padding-top: 30px;
+	}
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+	
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	li a{
+		padding: 5px;
+	}
+	h1 {
+		font-size: 54px;
+		line-height: 65px;
+		letter-spacing: 2px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	.innerimg{
+		min-height: 335px;
+	}
+	.innerimgnew{
+		min-height: 200px;
+	}
+	h5 {		
+		font-size: 24px;
+	}
+	.innercontent span {		
+		font-size: 16px;
+	}
+	p.headp{
+		line-height: 35px;
+		letter-spacing: 1px;
+		font-size: 24px;
+	}
+	input{
+		max-width: 420px;
+	}
+	button.btnsubmit{
+		width: 170px;
+	}
+	#banner{
+		padding: 250px 0;
+	}
+	form {
+		padding-top: 65px;
+	}
+	.innercounter{
+		margin: 30px 0;
+	}
+	p.innerp {
+		font-size: 14px;
+		padding: 20px 0;
+	}
+	button.explore{
+		margin-top: 70px;
+	}
+	#destination, #featured {
+		padding: 80px 0 80px;
+	}
+	#getboat{
+		padding: 100px 0;
+	}
+	footer input{
+		max-width: 220px;
+	}
+	footer button.btnsubmit{
+		width: 120px;
+	}
+	article{
+		min-height: 230px;
+	}
+	footer article.contact{
+		padding-top: 30px;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	.logo img{
+		display: block;
+		margin: 0 auto 15px;
+	}
+	ul {
+		float: none;
+		padding: 30px 10px 10px;
+		text-align: center;
+	}	
+	li a{
+		padding: 0;
+		margin: 0 6px;
+	}
+	a.signup{		
+		padding: 10px 20px;
+	}
+	#destination, #featured{
+		padding:50px 0;
+	}
+	#getboat{
+		padding: 70px 0;
+	}
+	footer article{
+		padding-top: 40px;
+		text-align: center;
+	}
+
+	footer p.innerp{
+		padding: 5px 0 0;
+	}
+	footer p.link.innerp{		
+		padding-top: 15px;
+	}
+	footer{
+		padding: 0 0 30px;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	h1 {
+		font-size: 50px;
+		line-height: 50px;
+		letter-spacing: 1px;
+	}
+	h2{
+		font-size: 20px;
+	}
+	p.headp{
+		line-height: 35px;
+		letter-spacing: 1px;
+		font-size: 20px;
+	}
+	input{
+		max-width: 305px;
+		font-size: 12px;
+	}
+	button.btnsubmit{
+		width: 140px;
+		letter-spacing: 0px;
+		font-size: 12px;
+	}
+	#banner{
+		padding: 250px 0 200px;
+	}
+	p.counterp{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	p.innerp{
+		padding: 20px 0;
+	}
+	.innercounter{
+		margin: 30px 0;
+	}
+	.maincounter{
+		margin-top: -50px;
+	}
+	.innerimg{
+		min-height: 210px;
+	}
+	.innerimgnew{
+		min-height: 266px;
+	}
+	h5 {		
+		font-size: 24px;
+	}
+	.innercontent span {		
+		font-size: 16px;
+	}
+	h3{
+		font-size: 26px;
+	}
+	button.explore{
+		margin-top: 50px;
+	}
+	#destination, #featured{
+		padding:50px 0;
+	}
+	#getboat{
+		padding: 70px 0;
+	}
+	footer article{
+		padding-top: 50px;
+		text-align: center;
+	}
+	footer p.innerp{
+		padding: 5px 0 0;
+	}
+	footer{
+		padding: 0 0 50px;
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	header {
+		padding-top: 10px;
+	}
+	header.sticky{
+		padding: 10px 0 0; 
+	}
+	li a {
+		margin: 10px 2px;
+		display: block;
+		font-size: 14px;
+	}
+	li{
+		width: 49%;
+	}
+	ul {
+		padding: 5px;
+	}
+	h1 {
+		font-size: 32px;
+		line-height: 35px;
+		letter-spacing: 0;
+	}
+	p.headp{
+		line-height: 16px;
+		letter-spacing: 0px;
+		font-size: 14px;
+	}
+	input {
+		max-width: 100%;
+		font-size: 13px;
+		border-radius: 5px;
+		height: 50px;
+	}
+	form {
+		padding-top: 20px;
+	}
+	#banner{
+		padding: 200px 0 60px;
+	}
+	#getboat button.explore{
+		margin-top: 20px;
+	}
+	button.btnsubmit{
+		width:150px;
+		letter-spacing: 0px;
+		font-size: 15px;
+		border-radius: 5px;
+		margin-top: 10px;
+		line-height: 48px;
+		height: 50px;
+	}
+	h2 {
+		font-size: 18px;
+		line-height: 12px;
+	}
+	p.counterp {
+		font-size: 11px;
+		line-height: 10px;
+	}
+	.innercounter {
+		margin: 20px 0;
+	}
+	.maincounter {
+		margin-top: -40px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	p.innerp {
+		padding: 10px 0;
+		font-size: 15px;
+	}
+	.innercontent span{
+		font-size: 13px;
+	}
+	h5{
+		font-size: 20px;
+	}
+	button.explore{
+		font-size: 12px;
+		margin-top: 30px;
+	}
+	#destination, #featured{
+		padding:30px 0;
+	}
+	.footersocial i{
+		margin: 0 10px;
+	}
+	footer p.innerp{
+		font-size: 13px;
+	}
+	.innerimg{
+		min-height: 125px;
+	}
+	.innerimgnew{
+		min-height: 160px;
+	}
+}
+
