@@ -25,7 +25,7 @@ public class Product extends JsonModel {
     // private PaymentType paymentType;
     private String category;
     // Price could be like "2 chocolates"
-    private double price;
+    private int price;
     // private String units;
     private String ID;
 
@@ -35,7 +35,7 @@ public class Product extends JsonModel {
     private static final String JSON_EMAIL = "email";
     private static final String JSON_PRICE = "price";
 
-    public Product(String title, String description, String authorID, double price, String category) {
+    public Product(String title, String description, String authorID, int price, String category) {
         this.title = title;
         this.description = description;
         this.authorID = authorID;
@@ -47,7 +47,7 @@ public class Product extends JsonModel {
         ID = IDGenerator.generateIDWithDefaultLength();
     }
 
-    public Product(String ID, String title, String description, String authorID, double price, String category) {
+    public Product(String ID, String title, String description, String authorID, int price, String category) {
         this.title = title;
         this.description = description;
         this.authorID = authorID;
@@ -90,7 +90,7 @@ public class Product extends JsonModel {
         this.authorID = (String) jsonObject.get(JSON_EMAIL);
         // Images - ?
         //this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
-        this.price = (Double) jsonObject.get(JSON_PRICE);
+        this.price = (Integer) jsonObject.get(JSON_PRICE);
         //this.units = (String) jsonObject.get(JSON_UNITS);
     }
 
@@ -130,11 +130,11 @@ public class Product extends JsonModel {
         this.authorID = authorID;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

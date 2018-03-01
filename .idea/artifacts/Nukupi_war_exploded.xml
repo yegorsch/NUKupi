@@ -57,6 +57,7 @@
           <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.0.0" />
           <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.0.0" />
           <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.0.0" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.37-bin" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -1,3 +1,4 @@
+import DB.DatabaseClient;
 import REST.ImageService;
 import REST.ProductService;
 

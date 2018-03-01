@@ -1,5 +1,6 @@
 package REST;
 
+import DB.DatabaseClient;
 import Models.Product;
 import Utils.Filterer;
 import com.google.gson.Gson;
@@ -15,9 +16,11 @@ import java.util.ArrayList;
 @Path("products")
 public class ProductService {
 
+    private DatabaseClient dbc;
     ArrayList<Product> products;
 
     public ProductService() {
+        dbc = new DatabaseClient();
         products = new ArrayList<Product>();
         for (int i = 0; i < 10; i++) {
             Product p = new Product();
@@ -41,11 +44,12 @@ public class ProductService {
     @GET
     @Path("/all")
     public Response getAllProducts() {
+        ArrayList<Product> prod = dbc.runQueryProductsAll();
         Gson gson = new Gson();
-        Response.ResponseBuilder b = Response.ok(gson.toJson(products));
+        Response.ResponseBuilder b = Response.ok(gson.toJson(prod));
         return b.build();
     }
-    
+
     /**
      * Filters
      */
@@ -53,13 +57,13 @@ public class ProductService {
     @GET
     @Path("/filters")
     public Response getProductByFilters(@QueryParam("title") String title,
-                                        @QueryParam("price") double price,
+                                        @QueryParam("price") int price,
                                         @QueryParam("category") String category) {
         System.out.println(title);
         System.out.println(price);
         System.out.println(category);
-        ArrayList<Product> result = new Filterer(products).filter(title, price, category);
-
+/*        ArrayList<Product> result = new Filterer(products).filter(title, price, category);*/
+        ArrayList<Product> result = dbc.runQueryProductsByFilter(title, price, category);
         return Response.ok(new Gson().toJson(result)).build();
     }
 
@@ -70,13 +74,9 @@ public class ProductService {
     @GET
     @Path("/myproducts")
     public Response getProductByUser(@QueryParam("id") String id) {
-        ArrayList<Product> reqProds = new ArrayList<>();
+        ArrayList<Product> reqProds = null;
         if (id != null) {
-            for (Product p : products) {
-                if (p.getAuthorID().equals(id)) {
-                    reqProds.add(p);
-                }
-            }
+            reqProds = dbc.runQueryProductsByUser(id);
         }
         return Response.ok(new Gson().toJson(reqProds)).build();
     }
@@ -103,6 +103,12 @@ public class ProductService {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         }
         return Response.status(Response.Status.OK).build();
+
+       /* if (dbc.runQueryInsertProduct(ADD STUFF HERE))
+            return Response.status(Response.Status.OK).build();
+        else
+            return Response.status(Response.Status.NOT_ACCEPTABLE).build();*/
+
     }
 
     @DELETE
@@ -110,8 +116,13 @@ public class ProductService {
     public Response deleteProduct(String jsonString) {
         ArrayList<String> list = new Gson().fromJson(jsonString, new TypeToken<ArrayList<String>>() {
         }.getType());
-        for (String id : list) {
+/*        for (String id : list) {
             products.removeIf((Product p) -> p.getID().equals(id));
+        }
+        return Response.status(Response.Status.OK).build();*/
+        for (String id : list) {
+            if (!dbc.runQueryDeleteProduct(id))
+                return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         }
         return Response.status(Response.Status.OK).build();
     }
