@@ -40,7 +40,7 @@
       <script>
         function addProduct() {
             var serv_request = new XMLHttpRequest();
-            serv_request.open('POST', 'http://188.166.91.64:8080/Nukupi_war/rest/products', false);
+            serv_request.open('POST', '/Nukupi/rest/products', false);
             serv_request.setRequestHeader("Content-type", "application/json");
             var name = document.getElementById("product-name").value;
             var description = document.getElementById("product-description").value;
@@ -204,7 +204,7 @@
     var mydata = JSON;
     var curQuery = {currTitle:"",
                     currentCat:"",
-                    initialUrl:"http://188.166.91.64:8080/Nukupi_war/rest/products/filters",
+                    initialUrl:"/Nukupi/rest/products/filters",
                     curUrl: "",
                     defPrice: document.getElementById("myRange").defaultValue};
     
