@@ -39,7 +39,6 @@ public class ProductDatabaseClient extends DatabaseClient {
         ProductCollection products = new ProductCollection();
         try {
             Statement stmt = conn.createStatement();
-            Statement imageStmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(
                     "select product_id, title, description, price, category, p_user_id, group_concat(image_id) as image_ids" +
                             " from product " +
@@ -64,7 +63,7 @@ public class ProductDatabaseClient extends DatabaseClient {
         }
         return products;
     }
-
+//TODO: FIX SQL INJECTION
     public ProductCollection runQueryProductsByUser(String p_user_id) {
         ProductCollection products = new ProductCollection();
 
@@ -86,7 +85,7 @@ public class ProductDatabaseClient extends DatabaseClient {
         return products;
     }
 
-
+    //TODO: FIX SQL INJECTION
     public ProductCollection runQueryProductsByFilter(String title, int price, String category) {
         ProductCollection products = new ProductCollection();
 
@@ -120,7 +119,7 @@ public class ProductDatabaseClient extends DatabaseClient {
         }
         return products;
     }
-
+    //TODO: FIX SQL INJECTION
     public boolean runQueryDeleteProduct(String product_id) {
         try {
             Statement stmt = conn.createStatement();
