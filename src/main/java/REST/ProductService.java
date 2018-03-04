@@ -57,7 +57,7 @@ public class ProductService {
             }
         }
         Gson gson = new Gson();
-        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(prodpaged) + ", \"size\":" + prodpaged.size()+"}");
+        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(prodpaged) + ", \"size\":" + prod.size()+"}");
         return b.build();
     }
 
@@ -92,7 +92,7 @@ public class ProductService {
             }
         }
         Gson gson = new Gson();
-        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(prodpaged) + ", \"size\":" + prodpaged.size()+"}");
+        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(prodpaged) + ", \"size\":" + prod.size()+"}");
         return b.build();
     }
 
