@@ -16,16 +16,18 @@ public class Image extends JsonModel {
     private long dateAdded; // Unix time in seconds
     private double size; //in bytes
     private byte[] data;
+    private String productID;
 
     private static final String JSON_ID = "id";
     private static final String JSON_DATE = "date";
     private static final String JSON_SIZE = "size";
 
-    public Image() {
+    public Image(String productID) {
         ID = IDGenerator.generateIDWithLength(15);
         dateAdded = Instant.now().getEpochSecond();
         size = 0;
         data = new byte[0];
+        this.productID = productID;
     }
 
     public Image(String ID, long dateAdded, double size, byte[] data) {
@@ -40,7 +42,7 @@ public class Image extends JsonModel {
         this.dateAdded = dateAdded;
         this.size = size;
         this.data = data;
-        //ADD product_id
+        this.productID = product_id;
     }
 
     public double getSize() {
@@ -101,4 +103,7 @@ public class Image extends JsonModel {
         return new Gson().toJson(obj);
     }
 
+    public String getProductID() {
+        return productID;
+    }
 }

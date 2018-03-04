@@ -9,11 +9,6 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 
-//enum PaymentType {
-//    FREE,
-//    EXCHANGE,
-//    REGULAR
-//}
 
 public class Product extends JsonModel {
 
@@ -21,7 +16,7 @@ public class Product extends JsonModel {
     private String description;
     // TODO: change it to user reference when we have it.
     private String authorID;
-    private ArrayList<String> images;
+    public ArrayList<String> images;
     // private PaymentType paymentType;
     private String category;
     // Price could be like "2 chocolates"
@@ -93,6 +88,7 @@ public class Product extends JsonModel {
         Double price = (Double) jsonObject.get(JSON_PRICE);
         this.price = price.intValue();
         this.authorID = "1";
+        this.images = (ArrayList<String>) jsonObject.get(JSON_IMAGES);
     }
 
     public String toJSON() {
@@ -167,6 +163,18 @@ public class Product extends JsonModel {
     @Override
     public int hashCode() {
         return Objects.hash(ID);
+    }
+
+    public ArrayList<String> getImages() {
+        return images;
+    }
+
+    public void setImages(ArrayList<String> images) {
+        this.images = images;
+    }
+
+    public void addImageID(String id){
+        this.images.add(id);
     }
 
 }

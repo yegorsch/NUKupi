@@ -2,11 +2,11 @@ package DB;
 
 import Models.Image;
 import Models.Product;
-import javassist.bytecode.ByteArray;
+import Models.ProductCollection;
+import com.sun.org.apache.xerces.internal.xs.StringList;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Properties;
+import java.util.*;
 
 public class DatabaseClient {
 
@@ -83,13 +83,14 @@ public class DatabaseClient {
 
     public boolean runQueryInsertProduct(String product_id, String title, String description, int price, String category, String p_user_id) {
         try {
-            Statement stmt = conn.createStatement();
-            int count = stmt.executeUpdate(
-                    "insert into product values ('" + product_id + "','"
-                            + title + "','" + description + "',"
-                            + price + ",'" + category
-                            + "','" + p_user_id + "');"
-            );
+            PreparedStatement stmt = conn.prepareStatement("insert into product values (?, ?, ?, ?, ?, ?)");
+            stmt.setString(1, product_id);
+            stmt.setString(2, title);
+            stmt.setString(3, description);
+            stmt.setString(4, String.valueOf(price));
+            stmt.setString(5, category);
+            stmt.setString(6, p_user_id);
+            int count = stmt.executeUpdate();
             if (count > 0) {
                 return true;
             }
@@ -100,29 +101,38 @@ public class DatabaseClient {
         return false;
     }
 
-    public ArrayList<Product> runQueryProductsAll() {
-        ArrayList<Product> products = new ArrayList<Product>();
-
+    public ProductCollection runQueryProductsAll() {
+        ProductCollection products = new ProductCollection();
         try {
             Statement stmt = conn.createStatement();
+            Statement imageStmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(
-                    "select product_id, title, description, price, category, p_user_id " +
-                            "from product;"
+                    "select product_id, title, description, price, category, p_user_id, group_concat(image_id) as image_ids" +
+                            " from product " +
+                            "left join image on product.product_id = image.i_product_id " +
+                            "group by product_id"
             );
-
             while (rs.next()) {
-                products.add(new Product(rs.getString("product_id"), rs.getString("title"),
+                Product p = new Product(rs.getString("product_id"), rs.getString("title"),
                         rs.getString("description"), rs.getString("p_user_id"),
-                        rs.getInt("price"), rs.getString("category")));
+                        rs.getInt("price"), rs.getString("category"));
+                ArrayList<String> imageIDs = new ArrayList<>();
+                String imageID = rs.getString("image_ids");
+                if (imageID != null) {
+                   imageIDs = new ArrayList<String>(Arrays.asList(imageID.split(",")));
+                }
+                p.setImages(imageIDs);
+                products.add(p);
             }
+            rs.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    public ArrayList<Product> runQueryProductsByUser(String p_user_id) {
-        ArrayList<Product> products = new ArrayList<Product>();
+    public ProductCollection runQueryProductsByUser(String p_user_id) {
+        ProductCollection products = new ProductCollection();
 
         try {
             Statement stmt = conn.createStatement();
@@ -143,8 +153,8 @@ public class DatabaseClient {
     }
 
 
-    public ArrayList<Product> runQueryProductsByFilter(String title, int price, String category) {
-        ArrayList<Product> products = new ArrayList<Product>();
+    public ProductCollection runQueryProductsByFilter(String title, int price, String category) {
+        ProductCollection products = new ProductCollection();
 
         try {
             Statement stmt = conn.createStatement();
@@ -194,60 +204,58 @@ public class DatabaseClient {
 
     }
 
-    public boolean runQueryInsertImage(String image_id, Double size, Long date, byte[] bytes, String i_product_id) {
+    public boolean runQueryInsertImage(Image image) {
         try {
-            Statement stmt = conn.createStatement();
-            int count = stmt.executeUpdate(
-                    "insert into image values ('" + image_id + "',"
-                            + size + "," + date + ","
-                            + bytes + ",'" + i_product_id
-                            + "');"
-            );
+            PreparedStatement stmt = conn.prepareStatement("insert into image values (?,?,?,?,?)");
+            stmt.setString(1, image.getID());
+            stmt.setString(2, String.valueOf(image.getSize()));
+            stmt.setString(3, String.valueOf(image.getDateAdded()));
+            stmt.setBytes(4, image.getData());
+            stmt.setString(5, image.getProductID());
+            int count = stmt.executeUpdate();
             if (count > 0) {
                 return true;
             }
 
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
         return false;
     }
 
-    public ArrayList<Image> runQueryGetImages(String image_id) {
+    public Image runQueryGetImages(String image_id) {
         ArrayList<Image> images = new ArrayList<Image>();
-
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select image_id, size, date, bytes, i_product_id " +
-                            "from image " + "where image_id='" + image_id + "'" + ";"
-            );
-
+            PreparedStatement stmt = conn.prepareStatement("select image_id, size, date, bytes, i_product_id " +
+                    "from image where image_id = (?)");
+            stmt.setString(1, image_id);
+            ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                images.add(new Image(rs.getString("image_id"), rs.getLong("date"),
+                return new Image(rs.getString("image_id"), rs.getLong("date"),
                         rs.getDouble("size"), rs.getBytes("bytes"),
-                        rs.getString("product_id")));
+                        rs.getString("i_product_id"));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return images;
+        return null;
     }
 
     public boolean runQueryDeleteImage(String image_id) {
         try {
-            Statement stmt = conn.createStatement();
-            int count = stmt.executeUpdate(
-                    "delete from image where image_id='" + image_id + "';"
-            );
-            if (count > 0) {
+            PreparedStatement stmt = conn.prepareStatement("delete from image where image_id = (?);");
+            stmt.setString(1, image_id);
+            int status = stmt.executeUpdate();
+            if (status == 0) {
+                return false;
+            } else {
                 return true;
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
-
     }
+
 }

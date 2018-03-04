@@ -1,6 +1,7 @@
 package Utils;
 
 import Models.Product;
+import Models.ProductCollection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +9,9 @@ import java.util.stream.Collectors;
 
 public class Filterer {
 
-    private ArrayList<Product> products;
+    private ProductCollection products;
 
-    public Filterer(ArrayList<Product> p) {
+    public Filterer(ProductCollection p) {
         this.products = p;
     }
 
@@ -18,7 +19,7 @@ public class Filterer {
      * Retrieve products by params
      **/
 
-    public ArrayList<Product> filter(String title, int price, String category) {
+    public ProductCollection filter(String title, int price, String category) {
         List<Product> reqProds = (List<Product>) products.clone();
         if (title != null) {
             reqProds = products.stream().filter(
@@ -32,6 +33,8 @@ public class Filterer {
             reqProds = reqProds.stream().filter(
                     product -> product.getCategory().toLowerCase().contains(category.toLowerCase())).collect(Collectors.toList());
         }
-        return new ArrayList<>(reqProds);
+        ProductCollection collection = new ProductCollection();
+        collection.addAll(reqProds);
+        return collection;
     }
 }

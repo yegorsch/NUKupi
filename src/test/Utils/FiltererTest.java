@@ -1,6 +1,7 @@
 package Utils;
 
 import Models.Product;
+import Models.ProductCollection;
 import Utils.Filterer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 
 public class FiltererTest extends TestCase {
 
-    ArrayList<Product> products;
+    ProductCollection products;
 
     public void setUp() throws Exception {
         super.setUp();
@@ -23,7 +24,7 @@ public class FiltererTest extends TestCase {
 
     }
 
-    private ArrayList<Product> getModels(String fromFile) throws IOException {
+    private ProductCollection getModels(String fromFile) throws IOException {
         File file = new File(fromFile);
         String text = "";
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -32,13 +33,13 @@ public class FiltererTest extends TestCase {
                 text += line;
             }
         }
-        return new Gson().fromJson(text, new TypeToken<ArrayList<Product>>() {
+        return new Gson().fromJson(text, new TypeToken<ProductCollection>() {
         }.getType());
     }
 
     public void testFilterEmpty() {
         try {
-            ArrayList<Product> empty = getModels("src/test/Utils/jsonEmpty.txt");
+            ProductCollection empty = getModels("src/test/Utils/jsonEmpty.txt");
             assertEquals(empty, new Filterer(products).filter("TITLE_NONE", 0, ""));
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,7 +48,7 @@ public class FiltererTest extends TestCase {
 
     public void testFilterByCategoryAndName() {
         try {
-            ArrayList<Product> test = getModels("src/test/Utils/jsonFilteredByCategoryAndName.txt");
+            ProductCollection test = getModels("src/test/Utils/jsonFilteredByCategoryAndName.txt");
             System.out.println();
             assertEquals(test, new Filterer(products).filter("k", 0, "OTHER"));
         } catch (IOException e) {
@@ -57,7 +58,7 @@ public class FiltererTest extends TestCase {
 
     public void testFilterByCategoryBooks() {
         try {
-            ArrayList<Product> test = getModels("src/test/Utils/jsonFilteredByCategoryBooks.txt");
+            ProductCollection test = getModels("src/test/Utils/jsonFilteredByCategoryBooks.txt");
             System.out.println();
             assertEquals(test, new Filterer(products).filter(null, 0, "BOOKS"));
         } catch (IOException e) {
@@ -67,7 +68,7 @@ public class FiltererTest extends TestCase {
 
     public void testFilterByCategoryOther() {
         try {
-            ArrayList<Product> test = getModels("src/test/Utils/jsonFilteredByCategoryOther.txt");
+            ProductCollection test = getModels("src/test/Utils/jsonFilteredByCategoryOther.txt");
             assertEquals(test, new Filterer(products).filter(null, 0, "OTHER"));
         } catch (IOException e) {
             e.printStackTrace();
@@ -76,7 +77,7 @@ public class FiltererTest extends TestCase {
 
     public void testFilterByTitle() {
         try {
-            ArrayList<Product> test = getModels("src/test/Utils/jsonFilteredByTitle_Electronic.txt");
+            ProductCollection test = getModels("src/test/Utils/jsonFilteredByTitle_Electronic.txt");
             assertEquals(test, new Filterer(products).filter("Electonic", 0, null));
         } catch (IOException e) {
             e.printStackTrace();
@@ -85,7 +86,7 @@ public class FiltererTest extends TestCase {
 
     public void testFilterByPrice() {
         try {
-            ArrayList<Product> test = getModels("src/test/Utils/jsonFilteredByPrice.txt");
+            ProductCollection test = getModels("src/test/Utils/jsonFilteredByPrice.txt");
             assertEquals(test, new Filterer(products).filter(null, 500, null));
         } catch (IOException e) {
             e.printStackTrace();

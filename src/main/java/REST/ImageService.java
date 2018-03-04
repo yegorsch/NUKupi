@@ -17,11 +17,9 @@ import java.util.ArrayList;
 @Path("images")
 public class ImageService {
 
-    ArrayList<Image> images;
     private DatabaseClient dbc;
 
     public ImageService() {
-        images = new ArrayList<Image>();
         dbc = new DatabaseClient();
     }
 
@@ -37,42 +35,40 @@ public class ImageService {
             System.out.println("KEY NULL");
             return Response.status(400).build();
         }
-        System.out.println("REQUESTING IMAGE");
-        for (Image i : images) {
-            if (i.getID().equals(id)) {
-                Response.ResponseBuilder response = Response.ok(i.getData());
-                response.header("Content-Disposition", "attachment; filename=image.jpg");
-                System.out.println("Image returned");
-                return response.build();
-            }
+        Image i = dbc.runQueryGetImages(id);
+        if (i != null && i.getID().equals(id)) {
+            Response.ResponseBuilder response = Response.ok(i.getData());
+            response.header("Content-Disposition", "attachment; filename=image.jpg");
+            System.out.println("Image returned");
+            return response.build();
         }
-        return Response.noContent().build();
-
-        //ArrayList<Image> images = dbc.runQueryGetImages(id);
+        return Response.status(400).build();
     }
 
     /**
      * Uploads image to the server
      *
-     * @param stream
+     * @param stream byte stream of image
+     * @param id     product id that is generated at the frontend
      * @return JSON of type {"date": unix_date,"size": byte_size_long,"id":"UNIQUE ID"}
      * @throws IOException
      */
     @POST
-    @Path("/upload")
+    @Path("{ id : [A-Za-z0-9_]+}")
     @Consumes(MediaType.MEDIA_TYPE_WILDCARD)
-    public Response uploadPhoto(InputStream stream) throws IOException {
+    public Response uploadPhoto(InputStream stream, @PathParam("id") String id) throws IOException {
         byte[] result = IOUtils.toByteArray(stream);
         if (result.length > 0) {
-            Image i = new Image();
-            i.setData(result);
-            images.add(i);
-            return Response.ok(i.toJSON()).build();
+            Image image = new Image(id);
+            image.setData(result);
+            if (dbc.runQueryInsertImage(image)) {
+                return Response.ok(image.toJSON()).build();
+            }
+            return Response.status(400).build();
         } else {
             return Response.status(400).build();
         }
 
-        //dbc.runQueryInsertImage(ADD STUFF HERE);
     }
 
     /**
@@ -81,21 +77,15 @@ public class ImageService {
      * @param jsonString array of ids
      * @return OK
      */
-
     @DELETE
     @Consumes("application/json")
-    public Response deleteProduct(String jsonString) {
+    public Response deleteImage(String jsonString) {
         ArrayList<String> list = new Gson().fromJson(jsonString, new TypeToken<ArrayList<String>>() {
         }.getType());
         for (String id : list) {
-            images.removeIf((Image p) -> p.getID().equals(id));
+            dbc.runQueryDeleteImage(id);
         }
         return Response.status(Response.Status.OK).build();
-
-        /*if (dbc.runQueryDeleteImage(id))
-            return Response.status(Response.Status.OK).build();
-        else
-            return Response.status(Response.Status.NOT_ACCEPTABLE).build();*/
     }
 
 
