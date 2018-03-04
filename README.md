@@ -13,7 +13,7 @@ For mac cmd+alt+L
 
 # Adding a product
 
-1. Generate unique product id (length=15)
+1. Generate unique product id (length=15) or use ours at */rest/id*
 1. Make a post request to *http://localhost:8080/Nukupi/rest/products* with json like:
 
     ```json
