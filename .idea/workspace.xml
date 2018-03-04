@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/IDService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/IDService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -925,7 +923,7 @@
       <workItem from="1520149330344" duration="18241000" />
       <workItem from="1520182106140" duration="265000" />
       <workItem from="1520183066258" duration="56000" />
-      <workItem from="1520185719524" duration="107000" />
+      <workItem from="1520185719524" duration="269000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1110,7 +1108,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83882000" />
+    <option name="totallyTimeSpent" value="84044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
