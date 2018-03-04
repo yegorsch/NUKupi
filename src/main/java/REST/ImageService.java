@@ -79,7 +79,7 @@ public class ImageService {
      */
     @DELETE
     @Consumes("application/json")
-    public Response deleteImage(String jsonString) {
+    public Response deleteImages(String jsonString) {
         ArrayList<String> list = new Gson().fromJson(jsonString, new TypeToken<ArrayList<String>>() {
         }.getType());
         for (String id : list) {

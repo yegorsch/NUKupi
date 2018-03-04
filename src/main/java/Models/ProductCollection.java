@@ -1,21 +1,17 @@
 package Models;
 
-import com.google.gson.Gson;
+import com.google.gson.*;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ProductCollection extends ArrayList<Product> {
     public String toJson(){
-        ArrayList<String> list = new ArrayList<>();
-        for (Product p: this){
-            list.add(new Gson().toJson(p, Product.class));
-        }
-        return new Gson().toJson(list);
+        System.out.println(new Gson().toJson(this));
+        return new Gson().toJson(this);
     }
 
-    public void fillImageArraysFrom(HashMap<Integer, String > map) {
-        map.forEach((k,v) -> this.get(k).addImageID(v));
-    }
 
 }
+
