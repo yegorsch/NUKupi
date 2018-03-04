@@ -1,6 +1,7 @@
 package REST;
 
 import DB.DatabaseClient;
+import DB.ImageDatabaseClient;
 import Models.Image;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -17,10 +18,10 @@ import java.util.ArrayList;
 @Path("images")
 public class ImageService {
 
-    private DatabaseClient dbc;
+    private ImageDatabaseClient dbc;
 
     public ImageService() {
-        dbc = new DatabaseClient();
+        dbc = new ImageDatabaseClient();
     }
 
     /**

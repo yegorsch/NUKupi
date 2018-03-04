@@ -1,6 +1,7 @@
 package REST;
 
 import DB.DatabaseClient;
+import DB.ProductDatabaseClient;
 import Models.Product;
 import Models.ProductCollection;
 import Utils.Filterer;
@@ -17,10 +18,10 @@ import java.util.ArrayList;
 @Path("products")
 public class ProductService {
 
-    private DatabaseClient dbc;
+    private ProductDatabaseClient dbc;
 
     public ProductService() {
-        dbc = new DatabaseClient();
+        dbc = new ProductDatabaseClient();
     }
 
     @GET
