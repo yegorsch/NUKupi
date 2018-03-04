@@ -85,6 +85,10 @@ public class ProductDatabaseClient extends DatabaseClient {
         return products;
     }
 
+    /*
+     * Assumed that all filters are present
+     */
+
     //TODO: FIX SQL INJECTION
     public ProductCollection runQueryProductsByFilter(String title, int price, String category) {
         ProductCollection products = new ProductCollection();

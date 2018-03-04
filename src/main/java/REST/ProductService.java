@@ -19,6 +19,9 @@ import java.util.ArrayList;
 public class ProductService {
 
     private ProductDatabaseClient dbc;
+    private int start;
+    private int end;
+    private int prodsize;
 
     public ProductService() {
         dbc = new ProductDatabaseClient();
@@ -32,33 +35,65 @@ public class ProductService {
 
     /**
      * Retrieve all products
-     **/
+     * Assumption that pagenum is never null and all pages contain at least one product
+     */
 
+    @SuppressWarnings("Duplicates")
     @GET
     @Path("/all")
-    public Response getAllProducts() {
+    public Response getAllProducts(@QueryParam("pagenum") int pagenum) {
+        ProductCollection prodpaged = new ProductCollection();
+        start = (pagenum-1)*15;
+        end = pagenum*15;
         ProductCollection prod = dbc.runQueryProductsAll();
+        prodsize = prod.size();
+        if(prodsize<end) {
+            for(int i=start; i<prodsize; i++) {
+                prodpaged.add(prod.get(i));
+            }
+        } else {
+            for(int i=start; i<end; i++) {
+                prodpaged.add(prod.get(i));
+            }
+        }
         Gson gson = new Gson();
-        Response.ResponseBuilder b = Response.ok(gson.toJson(prod));
+        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(prodpaged) + ", \"size\":" + prodpaged.size()+"}");
         return b.build();
     }
 
     /**
      * Filters
+     * Assumption that pagenum is never null and all pages contain at least one product
      */
 
+    @SuppressWarnings("Duplicates")
     @GET
     @Path("/filters")
     public Response getProductByFilters(@QueryParam("title") String title,
                                         @QueryParam("price") int price,
-                                        @QueryParam("category") String category) {
-        System.out.println(title);
-        System.out.println(price);
-        System.out.println(category);
+                                        @QueryParam("category") String category,
+                                        @QueryParam("pagenum") int pagenum) {
         //TODO: USE SQL INSTEAD OF FILTERER, SEE https://stackoverflow.com/questions/10185638/optional-arguments-in-where-clause
-        ProductCollection result = dbc.runQueryProductsAll();
-        result = new Filterer(result).filter(title, price, category);
-        return Response.ok(result.toJson()).build();
+        //ProductCollection result = dbc.runQueryProductsAll();
+        //result = new Filterer(result).filter(title, price, category);
+        //return Response.ok(result.toJson()).build();
+        ProductCollection prodpaged = new ProductCollection();
+        start = (pagenum-1)*15;
+        end = pagenum*15;
+        ProductCollection result = dbc.runQueryProductsByFilter(title, price, category);
+        prodsize = result.size();
+        if(prodsize<end) {
+            for(int i=start; i<prodsize; i++) {
+                prodpaged.add(result.get(i));
+            }
+        } else {
+            for(int i=start; i<end; i++) {
+                prodpaged.add(result.get(i));
+            }
+        }
+        Gson gson = new Gson();
+        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(prodpaged) + ", \"size\":" + prodpaged.size()+"}");
+        return b.build();
     }
 
     /**
