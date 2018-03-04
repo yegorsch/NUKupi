@@ -62,7 +62,6 @@ public class ProductService {
         System.out.println(title);
         System.out.println(price);
         System.out.println(category);
-        /*        ArrayList<Product> result = new Filterer(products).filter(title, price, category);*/
         ArrayList<Product> result = dbc.runQueryProductsAll();
         result = new Filterer(result).filter(title, price, category);
         return Response.ok(new Gson().toJson(result)).build();

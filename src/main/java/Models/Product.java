@@ -32,7 +32,7 @@ public class Product extends JsonModel {
 
     private static final String JSON_TITLE = "title";
     private static final String JSON_DESC = "description";
-    private static final String JSON_ID = "ID";
+    private static final String JSON_PRODUCT_ID = "ID";
     private static final String JSON_IMAGES = "images";
     private static final String JSON_PRICE = "price";
     private static final String JSON_CATEGORY = "category";
@@ -76,12 +76,9 @@ public class Product extends JsonModel {
         this.description = "";
         // TODO: FOR GODS SAKE PLS FIX THIS BULLSHIT
         this.authorID = "1";
-        //this.paymentType = PaymentType.REGULAR;
         this.category = "OTHER";
         this.price = 0;
-        //this.units = "тг.";
         images = new ArrayList<String>();
-
         ID = IDGenerator.generateIDWithDefaultLength();
     }
 
@@ -89,14 +86,13 @@ public class Product extends JsonModel {
         Type type = new TypeToken<Map<String, Object>>() {
         }.getType();
         Map<String, Object> jsonObject = new Gson().fromJson(JSONString, type);
+        this.ID = (String) jsonObject.get(JSON_PRODUCT_ID);
         this.title = (String) jsonObject.get(JSON_TITLE);
         this.description = (String) jsonObject.get(JSON_DESC);
-        this.images = (ArrayList<String>) jsonObject.get(JSON_IMAGES);
         this.category = (String) jsonObject.get(JSON_CATEGORY);
-        //this.paymentType = PaymentType.valueOf((String) jsonObject.get(JSON_TYPE));
         Double price = (Double) jsonObject.get(JSON_PRICE);
         this.price = price.intValue();
-        //this.units = (String) jsonObject.get(JSON_UNITS);
+        this.authorID = "1";
     }
 
     public String toJSON() {
@@ -170,7 +166,6 @@ public class Product extends JsonModel {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(ID);
     }
 
