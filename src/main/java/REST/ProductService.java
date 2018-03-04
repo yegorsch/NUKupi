@@ -26,7 +26,7 @@ public class ProductService {
 
     @GET
     public String getItems(@QueryParam("first") int numberOfItems) {
-    //TODO: ADD PAGINATION
+    //TODO: ADD PAGINATION,
         return "NOT YEt";
     }
 
@@ -55,6 +55,7 @@ public class ProductService {
         System.out.println(title);
         System.out.println(price);
         System.out.println(category);
+        //TODO: USE SQL INSTEAD OF FILTERER, SEE https://stackoverflow.com/questions/10185638/optional-arguments-in-where-clause
         ProductCollection result = dbc.runQueryProductsAll();
         result = new Filterer(result).filter(title, price, category);
         return Response.ok(result.toJson()).build();
@@ -95,6 +96,7 @@ public class ProductService {
         } catch (Exception e){
             return Response.status(400).build();
         }
+        //TODO: SEND PRODUCT MODEL INSTEAD OF EACH PARAMETER
         if (dbc.runQueryInsertProduct(p.getID(), p.getTitle(), p.getDescription(),p.getPrice(), p.getCategory(), p.getAuthorID()))
             return Response.status(Response.Status.OK).build();
         else
