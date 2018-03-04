@@ -1,4 +1,5 @@
 import DB.DatabaseClient;
+import REST.IDService;
 import REST.ImageService;
 import REST.ProductService;
 
@@ -16,6 +17,7 @@ public class ApplicationMain extends Application {
     public ApplicationMain() {
         singletons.add(new ProductService());
         singletons.add(new ImageService());
+        singletons.add(new IDService());
     }
 
     public Set<Class<?>> getClasses() {
