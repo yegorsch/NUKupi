@@ -1,0 +1,15 @@
+
+^squid:S1854"=Remove this useless assignment to local variable "prodpaged".(Ôë€²øÿÿÿÿ8ÓĞ«¢,
+Jsquid:S1068")Remove this unused "start" private field.(‹€®üÿÿÿÿ8ÓĞ«¢,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ï¤î¦8ÓĞ«¢,
+Hsquid:S1068",Remove this unused "prodsize" private field.(ÀŠ–‰8ÓĞ«¢,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ó¸È²şÿÿÿÿ8ÓĞ«¢,
+Hsquid:S1068"'Remove this unused "end" private field.(›¢âÜüÿÿÿÿ8ÓĞ«¢,
+Osquid:S1481".Remove this unused "prodpaged" local variable.(Ôë€²øÿÿÿÿ8ÓĞ«¢,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(™Û¢¨ùÿÿÿÿ8ÓĞ«¢,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ñ¯Œüÿÿÿÿ8ÓĞ«¢,
+Ssquid:S1135"2Complete the task associated to this TODO comment.(´®‘Ãüÿÿÿÿ8ÓĞ«¢,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÔêØŞøÿÿÿÿ8ÓĞ«¢,
+Osquid:S1481".Remove this unused "prodpaged" local variable.(Ôë€²øÿÿÿÿ8ÓĞ«¢,
+^squid:S1854"=Remove this useless assignment to local variable "prodpaged".(Ôë€²øÿÿÿÿ8ÓĞ«¢,
+Ssquid:S1135"2Complete the task associated to this TODO comment.(öÃ«Ôÿÿÿÿÿ8ÓĞ«¢,
