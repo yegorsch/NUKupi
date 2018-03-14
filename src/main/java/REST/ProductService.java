@@ -17,7 +17,6 @@ import java.util.ArrayList;
 public class ProductService {
 
     private ProductDatabaseClient dbc;
-    private int offset;
 
     public ProductService() {
         dbc = new ProductDatabaseClient();
@@ -42,15 +41,13 @@ public class ProductService {
      * Assumption that pagenum is never null and all pages contain at least one product
      */
 
-    @SuppressWarnings("Duplicates")
     @GET
     @Path("/filters")
     public Response getProductByFilters(@QueryParam("title") String title,
                                         @QueryParam("price") int price,
                                         @QueryParam("category") String category,
                                         @QueryParam("pagenum") int pagenum) {
-        offset = 15*(pagenum-1);
-        ProductCollection result = dbc.runQueryProductsByFilter(title, price, category, offset);
+        ProductCollection result = dbc.runQueryProductsByFilter(title, price, category, 15*(pagenum-1));
         return Response.ok(result.toJson()).build();
     }
 
