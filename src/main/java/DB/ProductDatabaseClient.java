@@ -77,7 +77,7 @@ public class ProductDatabaseClient extends DatabaseClient {
      * Assumed that all filters are present
      */
 
-    public ProductCollection runQueryProductsByFilter(String title, int price, String category) {
+    public ProductCollection runQueryProductsByFilter(String title, int price, String category, int offset) {
         ProductCollection products = new ProductCollection();
 
         try {
@@ -90,7 +90,8 @@ public class ProductDatabaseClient extends DatabaseClient {
                     "    (? IS NULL OR price <= ?)\n" +
                     "AND \n" +
                     "    (? IS NULL OR category like ?)\n " +
-                    "group by product_id";
+                    "group by product_id\n" +
+                    "limit " + offset + "," + 15 + "\n";
 
             PreparedStatement stmt = conn.prepareStatement(query);
             if (title == null || title.length() == 0) {
