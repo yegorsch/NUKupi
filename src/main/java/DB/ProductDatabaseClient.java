@@ -3,9 +3,7 @@ package DB;
 import Models.Product;
 import Models.ProductCollection;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -39,25 +37,13 @@ public class ProductDatabaseClient extends DatabaseClient {
         ProductCollection products = new ProductCollection();
         try {
             Statement stmt = conn.createStatement();
-            Statement imageStmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(
                     "select product_id, title, description, price, category, p_user_id, group_concat(image_id) as image_ids" +
                             " from product " +
                             "left join image on product.product_id = image.i_product_id " +
                             "group by product_id"
             );
-            while (rs.next()) {
-                Product p = new Product(rs.getString("product_id"), rs.getString("title"),
-                        rs.getString("description"), rs.getString("p_user_id"),
-                        rs.getInt("price"), rs.getString("category"));
-                ArrayList<String> imageIDs = new ArrayList<>();
-                String imageID = rs.getString("image_ids");
-                if (imageID != null) {
-                    imageIDs = new ArrayList<String>(Arrays.asList(imageID.split(",")));
-                }
-                p.setImages(imageIDs);
-                products.add(p);
-            }
+            fillProducts(products, rs);
             rs.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,6 +51,7 @@ public class ProductDatabaseClient extends DatabaseClient {
         return products;
     }
 
+    //TODO: FIX SQL INJECTION
     public ProductCollection runQueryProductsByUser(String p_user_id) {
         ProductCollection products = new ProductCollection();
 
@@ -86,41 +73,70 @@ public class ProductDatabaseClient extends DatabaseClient {
         return products;
     }
 
+    /*
+     * Assumed that all filters are present
+     */
 
-    public ProductCollection runQueryProductsByFilter(String title, int price, String category) {
+    public ProductCollection runQueryProductsByFilter(String title, int price, String category, int offset) {
         ProductCollection products = new ProductCollection();
 
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = null;
-            if (category == null)
-                rs = stmt.executeQuery(
-                        "select product_id, title, description, price, category, p_user_id " +
-                                "from product " + "where title like '%" + title + "%' and price <= "
-                                + price + ";");
-            else if (title == null)
-                rs = stmt.executeQuery(
-                        "select product_id, title, description, price, category, p_user_id " +
-                                "from product " + "where category like '%" + category + "%' and price <= "
-                                + price + ";");
-            else if (title != null && category != null)
-                rs = stmt.executeQuery(
-                        "select product_id, title, description, price, category, p_user_id " +
-                                "from product " + "where title like '%" + title + "%' and category like '%" +
-                                category + "%' and price <= "
-                                + price + ";");
+            String query = "SELECT *, group_concat(image_id) as image_ids  \n" +
+                    "FROM product\n" +
+                    "left join image on product.product_id = image.i_product_id " +
+                    "WHERE  \n" +
+                    "    (? IS NULL OR title like ?)\n" +
+                    "AND \n" +
+                    "    (? IS NULL OR price <= ?)\n" +
+                    "AND \n" +
+                    "    (? IS NULL OR category like ?)\n " +
+                    "group by product_id\n" +
+                    "limit " + offset + "," + 15 + "\n";
 
-            while (rs.next()) {
-                products.add(new Product(rs.getString("product_id"), rs.getString("title"),
-                        rs.getString("description"), rs.getString("p_user_id"),
-                        rs.getInt("price"), rs.getString("category")));
+            PreparedStatement stmt = conn.prepareStatement(query);
+            if (title == null || title.length() == 0) {
+                stmt.setNull(1, Types.VARCHAR);
+                stmt.setNull(2, Types.VARCHAR);
+            } else {
+                String t = "%" + title + "%";
+                stmt.setString(1, t);
+                stmt.setString(2, t);
             }
+            stmt.setInt(3, price);
+            stmt.setInt(4, price);
+            if (category == null || category.length() == 0) {
+                stmt.setNull(5, Types.VARCHAR);
+                stmt.setNull(6, Types.VARCHAR);
+            } else {
+                String c = "%" + category + "%";
+                stmt.setString(5, c);
+                stmt.setString(6, c);
+            }
+            System.out.println(stmt.toString());
+            ResultSet rs = stmt.executeQuery();
+            fillProducts(products, rs);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return products;
     }
 
+    private void fillProducts(ProductCollection products, ResultSet rs) throws SQLException {
+        while (rs.next()) {
+            Product p = new Product(rs.getString("product_id"), rs.getString("title"),
+                    rs.getString("description"), rs.getString("p_user_id"),
+                    rs.getInt("price"), rs.getString("category"));
+            ArrayList<String> imageIDs = new ArrayList<>();
+            String imageID = rs.getString("image_ids");
+            if (imageID != null) {
+                imageIDs = new ArrayList<String>(Arrays.asList(imageID.split(",")));
+            }
+            p.setImages(imageIDs);
+            products.add(p);
+        }
+    }
+
+    //TODO: FIX SQL INJECTION
     public boolean runQueryDeleteProduct(String product_id) {
         try {
             Statement stmt = conn.createStatement();

@@ -1,10 +1,8 @@
 package REST;
 
-import DB.DatabaseClient;
 import DB.ProductDatabaseClient;
 import Models.Product;
 import Models.ProductCollection;
-import Utils.Filterer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -24,15 +22,10 @@ public class ProductService {
         dbc = new ProductDatabaseClient();
     }
 
-    @GET
-    public String getItems(@QueryParam("first") int numberOfItems) {
-    //TODO: ADD PAGINATION
-        return "NOT YEt";
-    }
-
     /**
      * Retrieve all products
-     **/
+     * Assumption that pagenum is never null and all pages contain at least one product
+     */
 
     @GET
     @Path("/all")
@@ -45,18 +38,16 @@ public class ProductService {
 
     /**
      * Filters
+     * Assumption that pagenum is never null and all pages contain at least one product
      */
 
     @GET
     @Path("/filters")
     public Response getProductByFilters(@QueryParam("title") String title,
                                         @QueryParam("price") int price,
-                                        @QueryParam("category") String category) {
-        System.out.println(title);
-        System.out.println(price);
-        System.out.println(category);
-        ProductCollection result = dbc.runQueryProductsAll();
-        result = new Filterer(result).filter(title, price, category);
+                                        @QueryParam("category") String category,
+                                        @QueryParam("pagenum") int pagenum) {
+        ProductCollection result = dbc.runQueryProductsByFilter(title, price, category, 15*(pagenum-1));
         return Response.ok(result.toJson()).build();
     }
 
@@ -74,28 +65,17 @@ public class ProductService {
         return Response.ok(new Gson().toJson(reqProds)).build();
     }
 
-//    @GET
-//    @Path("{ id : [A-Za-z0-9_]+}")
-//    public String getProduct(@PathParam("id") String id) {
-//        System.out.println(id);
-//        for (Product p : products) {
-//            if (p.getID().equals(id)) {
-//                return p.toJSON();
-//            }
-//        }
-//        return "";
-//    }
-
     @POST
     @Consumes("application/json")
     public Response addProduct(String jsonString) {
         Product p;
         try {
             p = new Product(jsonString);
-        } catch (Exception e){
+        } catch (Exception e) {
             return Response.status(400).build();
         }
-        if (dbc.runQueryInsertProduct(p.getID(), p.getTitle(), p.getDescription(),p.getPrice(), p.getCategory(), p.getAuthorID()))
+        //TODO: SEND PRODUCT MODEL INSTEAD OF EACH PARAMETER
+        if (dbc.runQueryInsertProduct(p.getID(), p.getTitle(), p.getDescription(), p.getPrice(), p.getCategory(), p.getAuthorID()))
             return Response.status(Response.Status.OK).build();
         else
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
