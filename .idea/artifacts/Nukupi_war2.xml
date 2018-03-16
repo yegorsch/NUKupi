@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="Nukupi:war2">
-    <output-path>$PROJECT_DIR$/out/artifacts/Nukupi_war2</output-path>
-    <root id="archive" name="Nukupi_war.war">
-      <element id="artifact" artifact-name="Nukupi:war exploded" />
-    </root>
-  </artifact>
-</component>
