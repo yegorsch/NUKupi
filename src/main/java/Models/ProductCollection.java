@@ -12,6 +12,5 @@ public class ProductCollection extends ArrayList<Product> {
         return new Gson().toJson(this);
     }
 
-
 }
 
