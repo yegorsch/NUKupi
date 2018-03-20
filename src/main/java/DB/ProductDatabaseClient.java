@@ -73,10 +73,6 @@ public class ProductDatabaseClient extends DatabaseClient {
         return products;
     }
 
-    /*
-     * Assumed that all filters are present
-     */
-
     public ProductCollection runQueryProductsByFilter(String title, int price, String category, int offset) {
         ProductCollection products = new ProductCollection();
 
