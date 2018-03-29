@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Image.java" afterPath="$PROJECT_DIR$/src/main/java/Models/Image.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Product.java" afterPath="$PROJECT_DIR$/src/main/java/Models/Product.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/IDService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/IDService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/REST/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/IDGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/Utils/UniqueStringGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#327#328#0" expanded="true" />
@@ -53,32 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UniqueStringGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UniqueStringGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDatabaseClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDatabaseClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="0">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#383#384#0" expanded="true" />
                 <element signature="e#406#407#0" expanded="true" />
-                <marker date="1522338815443" expanded="true" signature="609:774" ph="select user_... user" />
-                <marker date="1522338815443" expanded="true" signature="1190:1232" ph="insert into product... " />
-                <marker date="1522338815443" expanded="true" signature="1995:2013" ph="select * fro... user" />
-                <marker date="1522338815443" expanded="true" signature="1995:2014" ph="select user_... product" />
-                <marker date="1522338815443" expanded="true" signature="2441:2472" ph="select * fro... user" />
-                <marker date="1522338815443" expanded="true" signature="2441:2473" ph="select * fro... user" />
-                <marker date="1522338815443" expanded="true" signature="2441:2483" ph="select * fro... user" />
-                <marker date="1522338815443" expanded="true" signature="2441:2485" ph="select * fro... user" />
+                <marker date="1522340041253" expanded="true" signature="592:710" ph="select user_... user" />
+                <marker date="1522340041253" expanded="true" signature="592:713" ph="select user_... user" />
+                <marker date="1522340041253" expanded="true" signature="1117:1282" ph="select user_... user" />
+                <marker date="1522340041253" expanded="true" signature="1698:1740" ph="insert into product... " />
+                <marker date="1522340041253" expanded="true" signature="2503:2521" ph="select * fro... user" />
+                <marker date="1522340041253" expanded="true" signature="2503:2522" ph="select user_... product" />
+                <marker date="1522340041253" expanded="true" signature="2949:2980" ph="select * fro... user" />
+                <marker date="1522340041253" expanded="true" signature="2949:2981" ph="select * fro... user" />
+                <marker date="1522340041253" expanded="true" signature="2949:2991" ph="select * fro... user" />
+                <marker date="1522340041253" expanded="true" signature="2949:2993" ph="select * fro... user" />
               </folding>
             </state>
           </provider>
@@ -185,14 +171,14 @@
         <option value="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/UserAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/UserCollection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/IDGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Image.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/IDService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/UniqueStringGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
       </list>
     </option>
   </component>
@@ -870,7 +856,7 @@
       <workItem from="1520189170769" duration="5297000" />
       <workItem from="1520219412980" duration="5701000" />
       <workItem from="1520250300259" duration="732000" />
-      <workItem from="1522336216517" duration="3589000" />
+      <workItem from="1522336216517" duration="4468000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1069,7 +1055,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112790000" />
+    <option name="totallyTimeSpent" value="113669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1482,21 +1468,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UniqueStringGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
+        <state relative-caret-position="306">
           <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
           <folding />
         </state>
@@ -1504,19 +1478,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#383#384#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
-            <marker date="1522338815443" expanded="true" signature="609:774" ph="select user_... user" />
-            <marker date="1522338815443" expanded="true" signature="1190:1232" ph="insert into product... " />
-            <marker date="1522338815443" expanded="true" signature="1995:2013" ph="select * fro... user" />
-            <marker date="1522338815443" expanded="true" signature="1995:2014" ph="select user_... product" />
-            <marker date="1522338815443" expanded="true" signature="2441:2472" ph="select * fro... user" />
-            <marker date="1522338815443" expanded="true" signature="2441:2473" ph="select * fro... user" />
-            <marker date="1522338815443" expanded="true" signature="2441:2483" ph="select * fro... user" />
-            <marker date="1522338815443" expanded="true" signature="2441:2485" ph="select * fro... user" />
+            <marker date="1522340041253" expanded="true" signature="592:710" ph="select user_... user" />
+            <marker date="1522340041253" expanded="true" signature="592:713" ph="select user_... user" />
+            <marker date="1522340041253" expanded="true" signature="1117:1282" ph="select user_... user" />
+            <marker date="1522340041253" expanded="true" signature="1698:1740" ph="insert into product... " />
+            <marker date="1522340041253" expanded="true" signature="2503:2521" ph="select * fro... user" />
+            <marker date="1522340041253" expanded="true" signature="2503:2522" ph="select user_... product" />
+            <marker date="1522340041253" expanded="true" signature="2949:2980" ph="select * fro... user" />
+            <marker date="1522340041253" expanded="true" signature="2949:2981" ph="select * fro... user" />
+            <marker date="1522340041253" expanded="true" signature="2949:2991" ph="select * fro... user" />
+            <marker date="1522340041253" expanded="true" signature="2949:2993" ph="select * fro... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
           </folding>
         </state>
       </provider>

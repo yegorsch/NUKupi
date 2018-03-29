@@ -18,6 +18,23 @@ public class UserDatabaseClient extends DatabaseClient {
         super();
     }
 
+    public boolean runQueryEmail(String email) {
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select user_id " +
+                            "from user " +
+                            "where email='" + email + "'" + ";"
+            );
+            if (rs.next() == true) {
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public boolean runQueryLogIn(String email, String password) {
         try {
             Statement stmt = conn.createStatement();

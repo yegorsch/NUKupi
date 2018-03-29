@@ -37,7 +37,6 @@ public class UserService {
     @Path("/login")
     public Response login(@QueryParam("email") String email, @QueryParam("password") String password) {
         if(dbu.runQueryLogIn(email, password)) {
-
             return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
@@ -70,10 +69,14 @@ public class UserService {
         } catch (Exception e) {
             return Response.status(400).build();
         }
-        if (dbu.runQueryInsertUser(u.getUserID(), u.getEmail(), u.getPassword(), u.getName(), u.getType(), u.getPhoneNumber())) {
-            return Response.status(Response.Status.OK).build();
-        } else {
+        if (dbu.runQueryEmail(u.getEmail())) {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
+        } else {
+            if (dbu.runQueryInsertUser(u.getUserID(), u.getEmail(), u.getPassword(), u.getName(), u.getType(), u.getPhoneNumber())) {
+                return Response.status(Response.Status.OK).build();
+            } else {
+                return Response.status(Response.Status.NOT_ACCEPTABLE).build();
+            }
         }
     }
 
