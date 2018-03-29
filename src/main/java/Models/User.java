@@ -1,10 +1,12 @@
 package Models;
 
+import Utils.IDGenerator;
 import com.google.gson.Gson;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Map;
 
 @JsonAdapter(UserAdapter.class)
@@ -24,6 +26,15 @@ public class User extends JsonModel{
     private static final String JSON_TYPE = "type";
     private static final String JSON_PHONE_NUMBER = "phone_number";
 
+    public User(String email, String password, String name, String type, String phoneNumber) {
+        this.userID = IDGenerator.generateIDWithDefaultLength();
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.type = type;
+        this.phoneNumber = phoneNumber;
+    }
+
     public User(String userID, String email, String password, String name, String type, String phoneNumber) {
         this.userID = userID;
         this.email = email;
@@ -33,13 +44,15 @@ public class User extends JsonModel{
         this.phoneNumber = phoneNumber;
     }
 
+    public User() { emptyInit(); }
+
     public User(String JSONSString) {
         emptyInit();
         initializeWith(JSONSString);
     }
 
     private void emptyInit() {
-        this.userID = "";
+        this.userID = IDGenerator.generateIDWithDefaultLength();
         this.email = "";
         this.password = "";
         this.name = "";
