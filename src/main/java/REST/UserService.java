@@ -37,6 +37,7 @@ public class UserService {
     @Path("/login")
     public Response login(@QueryParam("email") String email, @QueryParam("password") String password) {
         if(dbu.runQueryLogIn(email, password)) {
+
             return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();

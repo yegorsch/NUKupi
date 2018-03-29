@@ -65,7 +65,7 @@ public class UserDatabaseClient extends DatabaseClient {
             ResultSet rs = stmt.executeQuery(
                     "select * from user"
             );
-            fillProducts(users, rs);
+            fillUsers(users, rs);
             rs.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -80,7 +80,7 @@ public class UserDatabaseClient extends DatabaseClient {
             ResultSet rs = stmt.executeQuery(
                     "select * from user where email='"+email+"';"
             );
-            fillProducts(users, rs);
+            fillUsers(users, rs);
             rs.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -88,7 +88,7 @@ public class UserDatabaseClient extends DatabaseClient {
         return users;
     }
 
-    private void fillProducts(UserCollection users, ResultSet rs) throws SQLException {
+    private void fillUsers(UserCollection users, ResultSet rs) throws SQLException {
         while (rs.next()) {
             User u = new User(rs.getString("user_id"), rs.getString("email"),
                     rs.getString("password"), rs.getString("name"),
