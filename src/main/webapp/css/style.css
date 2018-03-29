@@ -171,7 +171,8 @@ input{
   font-weight: 400;
   font-size: 14px;
   border-top-left-radius:5px;
-  border-bottom-left-radius:5px; 
+  border-bottom-left-radius:5px;
+  margin: 8px 0;
 }
 input:focus{
   border: 1px solid #e7434e;
@@ -205,6 +206,16 @@ button.btnsubmit:hover{
 }
 form{
   padding-top: 90px;
+}
+/*HERE ------------------------------------------*/
+.add{
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.imageadd{
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 .maincounter{
   width: 100%;
@@ -328,6 +339,14 @@ h5{
   font-weight: 400;
   font-size: 30px;
   color: #fff;
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+h5add{
+  font-weight: 400;
+  font-size: 30px;
+  color: #000000;
   text-align: left;
   padding-bottom: 8px;
 }

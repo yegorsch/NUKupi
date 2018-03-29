@@ -38,7 +38,17 @@
     <!--SLIDER-->
     
       <script>
+          // function requiredInput (){
+          //           console.log("req active");
+          //         var x = document.forms["add"]["product-name"].value;
+          //         if (x == "") {
+          //             alert("Name must be filled out");
+          //             return false;
+          //         }
+          //
+          // }
         function addProduct() {
+            requiredInput();
             var serv_request = new XMLHttpRequest();
             serv_request.open('POST', '/Nukupi/rest/products', false);
             serv_request.setRequestHeader("Content-type", "application/json");
@@ -175,7 +185,7 @@
             <div class="slidecontainer">
 
                 <p>Price filter:</p>
-                <input type="range" min="0" max="10000" value="10000" class="slider" id="myRange">
+                <input type="range" min="0" max="2700000000" value="10000" class="slider" id="myRange">
                 <p><span id="sliderOutputVal">No price filter</span></p>
             </div>
         </div>
@@ -439,15 +449,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">ADD PRODUCT FORM</h5>
+                <h5add class="modal-title" id="exampleModalLabel">ADD PRODUCT FORM</h5add>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
                 <div class="modal-body">
-                    <form>
-                    Enter product name: <input id="product-name" class="form-control" type="text" />
-                    Enter product description: <input id="product-description" class="form-control" type="text" />
-                    Enter product price: <input id="product-price" class="form-control" type="text" />
+                    <form class = "add" name="add">
+                    <input id="product-name" placeholder="Enter your product name" class="form-control" type="text" name = "product-name" required = "required" aria-required="true" />
+                    <input id="product-description" placeholder = "Enter product description" class="form-control" type="text" required/>
+                    <input id="product-price" placeholder = " Enter product price (digits only): " class="form-control" type="number" min = "0" max ="1000000000" oninput="validity.valid||(value='');" required/>
                     <div class="categradio">
                         Select a category:
                         <div class="categradio-1">
@@ -467,8 +477,8 @@
                             <label for="radio4">Other</label>
                         </div>
                     </div>
-                    <div class="input-image">
-                        <form>
+                    <div class="priccenput-image">
+                        <form class = "imageadd">
                     <label>Upload Image</label>
                             <input type="file" id="imgInp" multiple/>
                         </form>
@@ -479,7 +489,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id = "submit-add-form" onclick="addProduct()" class="btn btn-default" data-dismiss="modal">Submit</button>
+                    <button type="submit" id = "submit-add-form" onclick="addProduct()" class="btn btn-default" data-dismiss="modal">Submit</button>
                 </div>
             </div>
         </div>
