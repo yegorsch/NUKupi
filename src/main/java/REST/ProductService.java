@@ -47,6 +47,7 @@ public class ProductService {
                                         @QueryParam("price") int price,
                                         @QueryParam("category") String category,
                                         @QueryParam("pagenum") int pagenum) {
+        System.out.println(pagenum);
         ProductCollection result = dbc.runQueryProductsByFilter(title, price, category, 15*(pagenum-1));
         return Response.ok(result.toJson()).build();
     }
@@ -76,7 +77,7 @@ public class ProductService {
         }
         //TODO: SEND PRODUCT MODEL INSTEAD OF EACH PARAMETER
         if (dbc.runQueryInsertProduct(p.getID(), p.getTitle(), p.getDescription(), p.getPrice(), p.getCategory(), p.getAuthorID()))
-            return Response.status(Response.Status.OK).build();
+            return Response.ok(p.getID()).build(); //NOT SURE
         else
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
     }

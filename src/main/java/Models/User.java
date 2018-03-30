@@ -47,7 +47,7 @@ public class User extends JsonModel{
     public User() { emptyInit(); }
 
     public User(String JSONSString) {
-        emptyInit();
+        //emptyInit();
         initializeWith(JSONSString);
     }
 
@@ -64,11 +64,11 @@ public class User extends JsonModel{
         Type type = new TypeToken<Map<String, Object>>() {
         }.getType();
         Map<String, Object> jsonObject = new Gson().fromJson(JSONString, type);
-        this.userID = (String) jsonObject.get(JSON_USER_ID);
+        this.userID = UniqueStringGenerator.generateIDWithDefaultLength();
         this.email = (String) jsonObject.get(JSON_EMAIL);
-        this.password = (String) jsonObject.get(JSON_PASSWORD);
+        this.password = UniqueStringGenerator.generatePasswordWithDefaultLength();
         this.name = (String) jsonObject.get(JSON_NAME);
-        this.type = (String) jsonObject.get(JSON_TYPE);
+        this.type = "User";
         this.phoneNumber = (String) jsonObject.get(JSON_PHONE_NUMBER);
     }
 

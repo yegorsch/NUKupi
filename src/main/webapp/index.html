@@ -1,43 +1,37 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>NUKUPI</title>
     <!--META-->
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--FONT-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet'
-          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet' type='text/css'>
 
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    
-    
-<!--
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4..0/css/bootstrap-theme.min.css">
--->
+
+
+    <!--
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4..0/css/bootstrap-theme.min.css">
+    -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-     <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
+    <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
     <!--SLIDER-->
-    
-      <script>
+
+    <script>
         function addProduct() {
             var serv_request = new XMLHttpRequest();
             serv_request.open('POST', '/Nukupi/rest/products', false);
@@ -55,28 +49,30 @@
                 price: Number(price),
                 authorID: "3"
             }
+            var curPageOnUpdate = false;
             console.log(data);
-            serv_request.onreadystatechange = function () {
+            serv_request.onreadystatechange = function() {
                 if (serv_request.readyState == 4 && serv_request.status == 200) {
                     console.log(name);
                 }
             }
             serv_request.send(JSON.stringify(data));
-            
+
             universalCall();
         }
-            // serv_request.send("  {\n" +
-            //     "    \"title\": "+name+",\n" +
-            //     "    \"description\": "+description+",\n" +
-            //     "    \"category\": "+category+",\n" +
-            //     "    \"price\": "+price+",\n" +
-            //     "    \"images\": "+image+",\n" +
-            //     "    \"authorID\": 3,\n" +
-            //     "  }");
+        // serv_request.send("  {\n" +
+        //     "    \"title\": "+name+",\n" +
+        //     "    \"description\": "+description+",\n" +
+        //     "    \"category\": "+category+",\n" +
+        //     "    \"price\": "+price+",\n" +
+        //     "    \"images\": "+image+",\n" +
+        //     "    \"authorID\": 3,\n" +
+        //     "  }");
     </script>
 
 
 </head>
+
 <body onload="universalCall();">
 <div class="se-pre-con">
     <div class="cssload-loader"></div>
@@ -87,14 +83,14 @@
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <a href="#banner" class="logo"><img src="img/NMlogo.png" alt=""/></a>
             </div>
-                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                    <ul>
-                        <li>
-                        <button class="addproduct" data-toggle="modal" data-target="#DemoModal" id = "open-modal">ADD PRODUCT</button>
-                            <button class="addproduct">LOG OUT</button>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <ul>
+                    <li>
+                        <button class="addproduct" data-toggle="modal" data-target="#DemoModal" id="open-modal">ADD PRODUCT</button>
+                        <button class="addproduct">LOG OUT</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>
@@ -104,10 +100,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s">NU KUPI</h1>
                 <div>
-                    <input type="text" id="searchPlace" name="email" placeholder="what u r looking for?"
-                           class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s"/>
-                    <button class="btnsubmit os-animation" data-os-animation="fadeInRight"
-                            data-os-animation-delay="0.5s" onclick="universalCall()" ><img src="img/lup.png" alt=""/>SEARCH
+                    <input type="text" id="searchPlace" name="email" placeholder="what u r looking for?" class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s" />
+                    <button class="btnsubmit os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.5s" onclick="universalCall()"><img src="img/lup.png" alt=""/>SEARCH
                     </button>
                 </div>
             </div>
@@ -129,32 +123,28 @@
                         <form class="checkBoxes" name="checkBoxForm">
                             <div class="innercounter">
                                 <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
+                                    <input id="toggleButton" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
                                     <label for="toggleButton" data-on-text="Food" data-off-text="Food"></label>
                                     <div class="toggle-button__icon"></div>
                                 </div>
                             </div>
                             <div class="innercounter">
                                 <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton2" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
+                                    <input id="toggleButton2" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
                                     <label for="toggleButton2" data-on-text="Clothes" data-off-text="Clothes"></label>
                                     <div class="toggle-button__icon"></div>
                                 </div>
                             </div>
                             <div class="innercounter">
                                 <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton3" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
+                                    <input id="toggleButton3" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
                                     <label for="toggleButton3" data-on-text="Domestic" data-off-text="Domestic"></label>
                                     <div class="toggle-button__icon"></div>
                                 </div>
                             </div>
                             <div class="innercounter">
                                 <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton4" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
+                                    <input id="toggleButton4" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
                                     <label for="toggleButton4" data-on-text="Other" data-off-text="Other"></label>
                                     <div class="toggle-button__icon"></div>
                                 </div>
@@ -179,7 +169,7 @@
                 <p><span id="sliderOutputVal">No price filter</span></p>
             </div>
         </div>
-        <div class="row" id="maxORIGDIV" >
+        <div class="row" id="maxORIGDIV">
         </div>
         <!--<button class="explore os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.6s">EXPLORE MORE DESTINATIONS</button>-->
     </div>
@@ -200,18 +190,22 @@
 <script>
     var slider = document.getElementById("myRange");
     var output = document.getElementById("sliderOutputVal");
-//    var defPrice = document.getElementById("myRange").defaultValue;
+    //    var defPrice = document.getElementById("myRange").defaultValue;
     var mydata = JSON;
-    var curQuery = {currTitle:"",
-                    currentCat:"",
-                    initialUrl:"/Nukupi/rest/products/filters",
-                    curUrl: "",
-                    defPrice: document.getElementById("myRange").defaultValue};
-    
+    var curQuery = {
+        currTitle: "",
+        currentCat: "",
+        initialUrl: "/Nukupi/rest/products/filters",
+        curUrl: "",
+        defPrice: document.getElementById("myRange").defaultValue,
+        curPage: 1
+    };
+    var curPageOnLoad = false;
+
     // slider = x;
     // slider.value.defaultValue.t = "Choose value";
-   
-    slider.oninput = function () {
+
+    slider.oninput = function() {
         if (this.value == 0) {
             output.innerHTML = "free";
         } else if (this.value < 10000) {
@@ -225,16 +219,16 @@
 <!--Filter bar-->
 <script>
     var filterArr = [0, 0, 0, 0];
-    var categories = ["food","clothes","domestic","other"];
-    
+    var categories = ["food", "clothes", "domestic", "other"];
 
-    
-//    var currTitle = "";
-//    var currentCat = "";
-//    var initialUrl = "http://188.166.91.64:8080/Nukupi_war/rest/products/filters";
-//    var curUrl = "";
-    
-    
+
+
+    //    var currTitle = "";
+    //    var currentCat = "";
+    //    var initialUrl = "http://188.166.91.64:8080/Nukupi_war/rest/products/filters";
+    //    var curUrl = "";
+
+
     function filterCheckbox(element) {
         // Get the checkbox
         var group = document.checkBoxForm.checkBoxGroup;
@@ -251,190 +245,237 @@
                 }
             }
         }
-        
+
         curQuery.currentCat = "";
         for (var i = 0; i < group.length; i++) {
-            if(filterArr[i]==1){
+            if (filterArr[i] == 1) {
                 curQuery.currentCat = categories[i];
             }
         }
-        
+
         universalCall();
     }
-    
-    
-    function getTitle(){
+
+
+    function getTitle() {
         curQuery.currTitle = document.getElementById("searchPlace").value;
     }
-    
-    function universalCall(){
+
+    function universalCall() {
         getTitle();
+        curQuery.curPage = 1;
         insertParam("title", curQuery.currTitle);
         insertParam("price", curQuery.defPrice);
         insertParam("category", curQuery.currentCat);
-        
-//         console.log("I am here 0");
+        insertParam("pagenum", curQuery.curPage);
+
+        //         console.log("I am here 0");
         freeAllCards(function() {
-//            console.log("I am here 1");
+            //            console.log("I am here 1");
             var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
-//           console.log(curQuery.currTitle);
-            
+            //           console.log(curQuery.currTitle);
+
             getFiltered(finalUrl, function() {
-//                console.log("I am here 2");
-                
-                 doIt(function() {
-//                    console.log("I am here 3");
-                 });
-                
+                //                console.log("I am here 2");
+                console.log("THIS");
+                console.log(curQuery.curUrl);
+                doIt(function() {
+                    //                    console.log("I am here 3");
+                });
+
             });
-            
+
         });
     }
 
+    async function addPage() {
+
+        curQuery.curPage = curQuery.curPage + 1;
+        insertParam("pagenum", curQuery.curPage);
+        console.log(curQuery.curPage);
+        //            console.log("I am here 1");
+        var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
+        //           console.log(curQuery.currTitle);
+
+        getFiltered(finalUrl, function() {
+            doIt(function() {
+                curPageOnLoad = false;
+            });
+
+        });
+    }
 </script>
 <!--RETRIEVE CARDS-->
 <script>
-    
-            function insertParam(key,value)
-        {
-                key = encodeURIComponent(key); value = encodeURIComponent(value);
+    function insertParam(key, value) {
+        key = encodeURIComponent(key);
+        value = encodeURIComponent(value);
 
-                var s = curQuery.curUrl;
-                var kvp = key+"="+value;
+        var s = curQuery.curUrl;
+        var kvp = key + "=" + value;
 
-                var r = new RegExp("(&|\\?)"+key+"=[^\&]*");
+        var r = new RegExp("(&|\\?)" + key + "=[^\&]*");
 
-                s = s.replace(r,"$1"+kvp);
+        s = s.replace(r, "$1" + kvp);
 
-                if(!RegExp.$1) {s += (s.length>0 ? '&' : '?') + kvp;};
+        if (!RegExp.$1) {
+            s += (s.length > 0 ? '&' : '?') + kvp;
+        };
 
-                //again, do what you will here
-                curQuery.curUrl = s;
-        }
-        
-    
-        function getFiltered(thisUrl,callback2) {
-            var serv_request = new XMLHttpRequest();
-            serv_request.open('GET', thisUrl,false);
-            
-            serv_request.onreadystatechange = function () {
-                if (serv_request.readyState == XMLHttpRequest.DONE && serv_request.status == 200) {
-                    mydata = JSON.parse(serv_request.responseText);
-                }
-                console.log("I am here 3");
-                
+        //again, do what you will here
+        curQuery.curUrl = s;
+    }
+
+
+    function getFiltered(thisUrl, callback2) {
+        var serv_request = new XMLHttpRequest();
+        serv_request.open('GET', thisUrl, false);
+
+        serv_request.onreadystatechange = function() {
+            if (serv_request.readyState == XMLHttpRequest.DONE && serv_request.status == 200) {
+                mydata = JSON.parse(serv_request.responseText);
+                console.log("I am here ");
             }
 
-                console.log(thisUrl);
-                
-                serv_request.send(null);
-                console.log(mydata);
-            callback2();
-            
+
         }
 
+        console.log(thisUrl);
 
-        function freeAllCards(callback){
-            var myNode = document.getElementById("maxORIGDIV");
-                while (myNode.firstChild) {
-                myNode.removeChild(myNode.firstChild);
+        serv_request.send(null);
+        console.log(mydata);
+        callback2();
+
+    }
+
+
+    function freeAllCards(callback) {
+        curQuery.curPage = 1;
+
+        var myNode = document.getElementById("maxORIGDIV");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+
+        }
+        console.log("ASDASDDAS");
+        callback();
+
+    }
+
+    function doIt(callback) {
+        console.log("json");
+
+
+        for (i = 0; i < mydata.length; i++) {
+            var tagNames = ["firstDiv", "secondDiv", "firstImg", "firstButton", "thirdDiv", "nameId", "descId"];
+
+            for (j = 0; j < tagNames.length; j++) {
+
+                tagNames[j] = tagNames[j] +'elem'+ String(i)+'page'+String(curQuery.curPage);
 
             }
-           callback(); 
-            
-        }
-        
-        function doIt(callback){   
-            console.log("json");
-            var tagNames= ["firstDiv","secondDiv","firstImg","firstButton","thirdDiv","nameId","descId"];
-            
-            for (i = 0; i < mydata.length; i++) {
-    
-                for (j = 0; j < tagNames.length; j++) {
-                    
-                    tagNames[j]= tagNames[j]+ String(i);
-                    
-                }
 
-                var mydiv1 = document.getElementById("maxORIGDIV");
-                var div1 = document.createElement('div');
-                div1.id = tagNames[0];
-                div1.classList.add('col-lg-4', 'col-md-4', 'col-sm-6', 'col-xs-12');
-                mydiv1.appendChild(div1);
+            var mydiv1 = document.getElementById("maxORIGDIV");
+            var div1 = document.createElement('div');
+            div1.id = tagNames[0];
+            div1.classList.add('col-lg-4', 'col-md-4', 'col-sm-6', 'col-xs-12');
+            mydiv1.appendChild(div1);
 
-                var mydiv2 = document.getElementById(tagNames[0]);
-                var div2 = document.createElement('div');
-                div2.id = tagNames[1];
-                
-//                console.log(tagNames);
-                div2.classList.add('innerimg', 'os-animation', 'animated' ,'zoomIn');
-                div2.setAttribute('data-os-animation',"zoomIn");
-                div2.setAttribute('data-os-animation-delay',"0.5s");
-                div2.setAttribute('style','animation-delay: 0.5s;');
-//                console.log(div2);
-                mydiv2.appendChild(div2);
-                
-                var mydiv3 = document.getElementById(tagNames[1]);
-                var div3 = document.createElement('img');
-                div3.id = tagNames[2];
-                div3.classList.add ('mainimg');
-                div3.setAttribute('src',"img/other.jpg");
-                if(mydata[i].category.toUpperCase() === "FOOD"){
-                    div3.setAttribute('src',"img/food.jpg");
-                }
-                if(mydata[i].category.toUpperCase() === "DOMESTIC"){
-                    div3.setAttribute('src',"img/domestic.jpg");
-                }
-                if(mydata[i].category.toUpperCase() === "CLOTHES"){
-                    div3.setAttribute('src',"img/clothes.jpg");
-                }
-                
-                
-                div3.setAttribute('alt',"");
-                mydiv3.appendChild(div3);
+            var mydiv2 = document.getElementById(tagNames[0]);
+            var div2 = document.createElement('div');
+            div2.id = tagNames[1];
 
+            //                console.log(tagNames);
+            div2.classList.add('innerimg', 'os-animation', 'animated', 'zoomIn');
+            div2.setAttribute('data-os-animation', "zoomIn");
+            div2.setAttribute('data-os-animation-delay', "0.5s");
+            div2.setAttribute('style', 'animation-delay: 0.5s;');
+            //                console.log(div2);
+            mydiv2.appendChild(div2);
 
-                var div4 = document.createElement('button');
-                var t = document.createTextNode(String(mydata[i].price)); 
-                
-                div4.appendChild(t);
-
-                div4.id = tagNames[3];
-                div4.classList.add('price');
-                mydiv3.appendChild(div4);
-
-                var div5 = document.createElement('div');
-                div5.id = tagNames[4];
-                div5.classList.add('innercontent');
-                mydiv3.appendChild(div5);
-
-
-                var mydiv6 = document.getElementById(tagNames[4]);
-                var div6 = document.createElement('h5');
-                div6.id = tagNames[5];
-                var t2 = document.createTextNode(mydata[i].title); 
-                console.log(t2);
-                div6.appendChild(t2);
-                mydiv6.appendChild(div6);
-
-                var div7 = document.createElement('span');
-                div7.id = tagNames[6];
-                var t3 = document.createTextNode(mydata[i].description); 
-                div7.appendChild(t3);
-                mydiv6.appendChild(div7);
-                    
-                
+            var mydiv3 = document.getElementById(tagNames[1]);
+            var div3 = document.createElement('img');
+            div3.id = tagNames[2];
+            div3.classList.add('mainimg');
+            div3.setAttribute('src', "img/other.jpg");
+            if (mydata[i].category.toUpperCase() === "FOOD") {
+                div3.setAttribute('src', "img/food.jpg");
             }
-            
-            callback();
+            if (mydata[i].category.toUpperCase() === "DOMESTIC") {
+                div3.setAttribute('src', "img/domestic.jpg");
+            }
+            if (mydata[i].category.toUpperCase() === "CLOTHES") {
+                div3.setAttribute('src', "img/clothes.jpg");
+            }
+
+
+            div3.setAttribute('alt', "");
+            mydiv3.appendChild(div3);
+
+
+            var div4 = document.createElement('button');
+            var t = document.createTextNode(String(mydata[i].price) + " ₸");
+
+            div4.appendChild(t);
+
+            div4.id = tagNames[3];
+            div4.classList.add('price');
+            mydiv3.appendChild(div4);
+
+            var div5 = document.createElement('div');
+            div5.id = tagNames[4];
+            div5.classList.add('innercontent');
+            mydiv3.appendChild(div5);
+
+
+            var mydiv6 = document.getElementById(tagNames[4]);
+            var div6 = document.createElement('h5');
+            div6.id = tagNames[5];
+            var t2 = document.createTextNode(mydata[i].title);
+            console.log(t2);
+            div6.appendChild(t2);
+            mydiv6.appendChild(div6);
+
+            var div7 = document.createElement('span');
+            div7.id = tagNames[6];
+            var t3 = document.createTextNode(mydata[i].description);
+            div7.appendChild(t3);
+            mydiv6.appendChild(div7);
+
+
         }
-            
+
+        callback();
+    }
 </script>
 
+<script>
+    // $(window).scroll(function() {
+    //     if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+    //         addPage();
+    //     }
+    // });
+    //
+    window.onscroll = function() {
+        scrollingDown()
+    };
 
+    async function scrollingDown() {
+        if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+            console.log("IGOT");
+            if (curPageOnLoad == false){
+                curPageOnLoad= true;
+                addPage();
+            }
+        }
+
+    }
+
+
+</script>
 <!--Requests-->
-    
-    <!-- Modal -->
+
+<!-- Modal -->
 <div class="modal fade" id="DemoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -443,48 +484,47 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
-                <div class="modal-body">
-                    <form>
-                    Enter product name: <input id="product-name" class="form-control" type="text" />
-                    Enter product description: <input id="product-description" class="form-control" type="text" />
-                    Enter product price: <input id="product-price" class="form-control" type="text" />
+            <div class="modal-body">
+                <form>
+                    Enter product name: <input id="product-name" class="form-control" type="text" /> Enter product description: <input id="product-description" class="form-control" type="text" /> Enter product price: <input id="product-price" class="form-control" type="text" />
                     <div class="categradio">
                         Select a category:
                         <div class="categradio-1">
-                            <input type="radio" name="radio" id="radio1" value = "Food"/>
+                            <input type="radio" name="radio" id="radio1" value="Food" />
                             <label for="radio1">Food</label>
                         </div>
                         <div class="categradio-2">
-                            <input type="radio" name="radio" id="radio2" value = "Clothes"/>
+                            <input type="radio" name="radio" id="radio2" value="Clothes" />
                             <label for="radio2">Clothes</label>
                         </div>
                         <div class="categradio-3">
-                            <input type="radio" name="radio" id="radio3" value = "Domestic"/>
+                            <input type="radio" name="radio" id="radio3" value="Domestic" />
                             <label for="radio3">Domestic</label>
                         </div>
                         <div class="categradio-4">
-                            <input type="radio" name="radio" id="radio4" value = "Other"/>
+                            <input type="radio" name="radio" id="radio4" value="Other" />
                             <label for="radio4">Other</label>
                         </div>
                     </div>
                     <div class="input-image">
                         <form>
-                    <label>Upload Image</label>
+                            <label>Upload Image</label>
                             <input type="file" id="imgInp" multiple/>
                         </form>
                     </div>
                     <!--<form id="img-show">-->
-                        <!--<img id='img-upload'/>-->
+                    <!--<img id='img-upload'/>-->
                     <!--</form>-->
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id = "submit-add-form" onclick="addProduct()" class="btn btn-default" data-dismiss="modal">Submit</button>
-                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="submit-add-form" onclick="addProduct()" class="btn btn-default" data-dismiss="modal">Submit</button>
             </div>
         </div>
     </div>
+</div>
 
 
 </body>
+
 </html>
