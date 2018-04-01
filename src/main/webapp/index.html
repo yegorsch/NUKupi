@@ -32,7 +32,57 @@
     <!--SLIDER-->
 
     <script>
+        var user_id;
+        function uploadFile(n, prod_id) {
+            var photo;
+            if (n==1) {
+                photo = document.getElementById('imgupload1');
+            }
+                for (var x = 0; x < photo.files.length; x++) {
+                    console.log(photo.files[x].name);
+                    var serv_request = new XMLHttpRequest();
+                    serv_request.open('POST', '/Nukupi/rest/images/'+prod_id, false);
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        respo = serv_request.responseText;
+                        console.log(respo);
+                        console.log("image uploaded");
+                    }
+                    serv_request.send(photo.files[x]);
+
+                }
+            // } else if (n==2) {
+            //     photo = document.getElementById('imgupload2');
+            // } else if (n==3) {
+            //     photo = document.getElementById('imgupload3');
+            // } else if (n==4) {
+            //     photo = document.getElementById('imgupload4');
+            // }
+
+            //var file = photo.files[0];
+
+        }
+
+        function getuserid(){
+            console.log("here at user");
+            var serv_request = new XMLHttpRequest();
+            serv_request.open('GET', '/Nukupi/rest/users/getuserid', false);
+            serv_request.setRequestHeader("Content-type", "application/json");
+            serv_request.onreadystatechange = function() {
+                if (serv_request.readyState == 4 && serv_request.status == 200) {
+                    user_id = serv_request.responseText;
+
+                    console.log(user_id);
+                }
+            }
+            serv_request.send(null);
+
+        }
+
         function addProduct() {
+            console.log("Entered");
+
+            console.log("GOHERE!")
+            var product_id = JSON;
             var serv_request = new XMLHttpRequest();
             serv_request.open('POST', '/Nukupi/rest/products', false);
             serv_request.setRequestHeader("Content-type", "application/json");
@@ -47,29 +97,32 @@
                 images: image,
                 category: category,
                 price: Number(price),
-                authorID: "3"
+                authorID: user_id //user_id
             }
-            var curPageOnUpdate = false;
             console.log(data);
             serv_request.onreadystatechange = function() {
                 if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    console.log(name);
+                    product_id = serv_request.responseText;
+                    console.log("product id");
+                    console.log(product_id);
                 }
             }
             serv_request.send(JSON.stringify(data));
-
+            if(document.getElementById("imgupload1").files.length != 0 ) {
+                uploadFile(1, product_id);
+            }
+            // if(document.getElementById("imgupload2").files.length != 0 ) {
+            //     uploadFile(2, product_id);
+            // }
+            // if(document.getElementById("imgupload3").files.length != 0 ) {
+            //     uploadFile(3, product_id);
+            // }
+            // if(document.getElementById("imgupload3").files.length != 0 ) {
+            //     uploadFile(4, product_id);
+            // }
             universalCall();
         }
-        // serv_request.send("  {\n" +
-        //     "    \"title\": "+name+",\n" +
-        //     "    \"description\": "+description+",\n" +
-        //     "    \"category\": "+category+",\n" +
-        //     "    \"price\": "+price+",\n" +
-        //     "    \"images\": "+image+",\n" +
-        //     "    \"authorID\": 3,\n" +
-        //     "  }");
     </script>
-
 
 </head>
 
@@ -86,7 +139,7 @@
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                 <ul>
                     <li>
-                        <button class="addproduct" data-toggle="modal" data-target="#DemoModal" id="open-modal">ADD PRODUCT</button>
+                        <button class="addproduct" onclick="getuserid()" data-toggle="modal" data-target="#DemoModal" id="open-modal" >ADD PRODUCT</button>
                         <button class="addproduct">LOG OUT</button>
                     </li>
                 </ul>
@@ -100,7 +153,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s">NU KUPI</h1>
                 <div>
-                    <input type="text" id="searchPlace" name="email" placeholder="what u r looking for?" class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s" />
+                    <input type="text" id="searchPlace" name="email" placeholder="Type product name here" class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s" />
                     <button class="btnsubmit os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.5s" onclick="universalCall()"><img src="img/lup.png" alt=""/>SEARCH
                     </button>
                 </div>
@@ -348,6 +401,66 @@
 
     }
 
+    // function getUserEmail() {
+    //     console.log("inside getuseremail");
+    //     console.log("/Nukupi/users/getuseremail?userid="+user_id);
+    //     var serv_request = new XMLHttpRequest();
+    //     serv_request.open('GET', '/Nukupi/users/getuseremail?userid='+user_id, false);
+    //     serv_request.setRequestHeader("Content-type", "application/json");
+    //     serv_request.onreadystatechange = function() {
+    //         if (serv_request.readyState == 4 && serv_request.status == 200) {
+    //             user_email = serv_request.responseText;
+    //             console.log(user_email);
+    //         }
+    //     }
+    //     serv_request.send();
+    // }
+
+    // function showModal_description(idx){
+    //
+    //     $('#openModal').modal('show');
+    //     //getUserEmail();
+    //     //document.getElementById("pr").innerHTML = mydata[idx].price;
+    //     document.getElementById("ctgr").innerHTML = mydata[idx].category;
+    //     document.getElementById("descript").innerHTML = mydata[idx].description;
+    //     document.getElementById("title").innerHTML = mydata[idx].title;
+    //
+    //     // var firstImage = window.location.href + "rest/images?id="+ mydata[idx].images[0];
+    //     // console.log(firstImage);
+    //     // document.getElementById("main").valueOf().src = firstImage;
+    // }
+
+    function showModal_description(idx){
+        var p_user_id = mydata[idx].authorID;
+        var p_user_email = " ";
+        var p_user_phone = " ";
+        var serv_request = new XMLHttpRequest();
+            serv_request.open('GET', '/Nukupi/rest/users/getuserinfo?userid='+p_user_id, false);
+            serv_request.setRequestHeader("Content-type", "application/json");
+            serv_request.onreadystatechange = function() {
+                if (serv_request.readyState == 4 && serv_request.status == 200) {
+                    var info = serv_request.responseText.split(",");
+                    p_user_email = info[0] ;
+                    p_user_phone = info[1];
+                    console.log(p_user_email);
+                    console.log(p_user_phone);
+                }
+            }
+            serv_request.send();
+        console.log("TRYING");
+        console.log(mydata[idx].authorID);
+        $('#openModal').modal('show');
+        document.getElementById("pr").innerHTML = mydata[idx].price;
+        document.getElementById("ctgr").innerHTML = mydata[idx].category;
+        document.getElementById("descript").innerHTML = mydata[idx].description;
+        document.getElementById("title").innerHTML = mydata[idx].title;
+        document.getElementById("userEmail").innerHTML = p_user_email;
+        document.getElementById("userPhone").innerHTML = p_user_phone;
+        console.log("modal description");
+        var firstImage = window.location.href + "rest/images?id="+ mydata[idx].images[0];
+            console.log(firstImage);
+            document.getElementById("main").valueOf().src = firstImage;
+    }
 
     function freeAllCards(callback) {
         curQuery.curPage = 1;
@@ -408,7 +521,7 @@
                 div3.setAttribute('src', "img/clothes.jpg");
             }
 
-
+            div3.setAttribute('onclick', "showModal_description("+i+")");
             div3.setAttribute('alt', "");
             mydiv3.appendChild(div3);
 
@@ -461,7 +574,7 @@
     };
 
     async function scrollingDown() {
-        if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+        if ($(window).scrollTop() > $(document).height() - $(window).height()-5) {
             console.log("IGOT");
             if (curPageOnLoad == false){
                 curPageOnLoad= true;
@@ -480,13 +593,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">ADD PRODUCT FORM</h5>
+                <h7 class="modal-title" id="exampleModalLabel">ADD PRODUCT FORM</h7>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <form>
-                    Enter product name: <input id="product-name" class="form-control" type="text" /> Enter product description: <input id="product-description" class="form-control" type="text" /> Enter product price: <input id="product-price" class="form-control" type="text" />
+                <forma>
+                    Enter product name: <input id="product-name" class="form-control" type="text" />
+                    Enter product description: <input id="product-description" class="form-control" type="text" />
+                    Enter product price: <input id="product-price" class="form-control" type="number"  min=0 oninput="validity.valid||(value='');"/>
                     <div class="categradio">
                         Select a category:
                         <div class="categradio-1">
@@ -507,18 +622,50 @@
                         </div>
                     </div>
                     <div class="input-image">
-                        <form>
+                        <forma>
                             <label>Upload Image</label>
-                            <input type="file" id="imgInp" multiple/>
-                        </form>
+                            <forma>
+                                <input type="file" id="imgupload1" multiple/>
+                            </forma>
+                        </forma>
                     </div>
                     <!--<form id="img-show">-->
                     <!--<img id='img-upload'/>-->
                     <!--</form>-->
-                </form>
+                </forma>
             </div>
             <div class="modal-footer">
                 <button type="button" id="submit-add-form" onclick="addProduct()" class="btn btn-default" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Modal for product description-->
+<div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h7 class="modal-title" id="exampleModalLabel">Product Information</h7>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <div id="qr" style="display:inline-block; min-width:7cm; height:7cm; align: center;vertical-align: middle;" >
+                    <td id="pic"><img id="main" src="" width="250px" height="250px"></td>
+                </div>
+                <div style="display:inline-block;vertical-align: top;">
+                    <td id="item_des"><b><h3 id="title"></h3></b>
+                    <h3 type="text" id="pr"></h3>
+                    <h3 type="text" id="ctgr"></h3>
+                    <h3 type="text" id="descript"></h3>
+                    <h3 type="text" id="userEmail"></h3>
+                    <h3 type="text" id="userPhone"></h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

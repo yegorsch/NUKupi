@@ -44,11 +44,29 @@ public class UserDatabaseClient extends DatabaseClient {
                             "from user " +
                             "where email='" + email + "'" + ";"
             );
-            userId = rs.getString(0);
+            if (rs.next())
+                userId = rs.getString("user_id");
         } catch (Exception e) {
             e.printStackTrace();
         }
         return userId;
+    }
+
+    public String runQueryUserInfoById(String userId) {
+        String info = "";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select email, phone_number " +
+                            "from user " +
+                            "where user_id='" + userId + "'" + ";"
+            );
+            if (rs.next())
+                info = rs.getString("email") + "," + rs.getString("phone_number");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return info;
     }
 
     public boolean runQueryLogIn(String email, String password) {

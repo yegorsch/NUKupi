@@ -21,8 +21,7 @@ public class AuthenticationFilter implements javax.servlet.Filter {
             response = ( HttpServletResponse ) resp ;
             response.sendRedirect("/Nukupi/login.html");
         } else {
-            response = ( HttpServletResponse ) resp ;
-            response.sendRedirect("/NUKupi");
+            chain.doFilter(req,resp);
         }
     }
 

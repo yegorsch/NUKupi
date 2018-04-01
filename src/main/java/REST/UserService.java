@@ -38,9 +38,18 @@ public class UserService {
         if(session.getAttribute("email")==null) {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         } else {
+            System.out.println(session.getAttribute("email").toString());
             String userId = dbu.runQueryUserIdByEmail(session.getAttribute("email").toString());
             return Response.ok(userId).build();
         }
+    }
+
+
+    @GET
+    @Path("/getuserinfo")
+    public Response getUserEmail(@QueryParam("userid") String userId) {
+        String email = dbu.runQueryUserInfoById(userId);
+        return Response.ok(email).build();
     }
 
     // TODO: Idk do something

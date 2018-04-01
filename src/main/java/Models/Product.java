@@ -34,6 +34,7 @@ public class Product extends JsonModel {
     private static final String JSON_IMAGES = "images";
     private static final String JSON_PRICE = "price";
     private static final String JSON_CATEGORY = "category";
+    private static final String JSON_AUTHOR_ID = "authorID";
 
     public Product(String title, String description, String authorID, int price, String category) {
         this.title = title;
@@ -90,7 +91,7 @@ public class Product extends JsonModel {
         this.category = (String) jsonObject.get(JSON_CATEGORY);
         Double price = (Double) jsonObject.get(JSON_PRICE);
         this.price = price.intValue();
-        this.authorID = "1";
+        this.authorID = (String) jsonObject.get(JSON_AUTHOR_ID);
         this.images = (ArrayList<String>) jsonObject.get(JSON_IMAGES);
     }
 

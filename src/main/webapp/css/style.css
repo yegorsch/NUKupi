@@ -206,6 +206,9 @@ button.btnsubmit:hover{
 form{
   padding-top: 90px;
 }
+forma{
+  padding-top: 15px;
+}
 .maincounter{
   width: 100%;
   float: left;
@@ -328,6 +331,13 @@ h5{
   font-weight: 400;
   font-size: 30px;
   color: #fff;
+  text-align: left;
+  padding-bottom: 8px;
+}
+h7{
+  font-weight: 400;
+  font-size: 30px;
+  color: #000000;
   text-align: left;
   padding-bottom: 8px;
 }
