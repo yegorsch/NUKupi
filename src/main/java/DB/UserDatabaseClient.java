@@ -69,13 +69,65 @@ public class UserDatabaseClient extends DatabaseClient {
         return info;
     }
 
+    public String runQueryUserPasswordByEmail(String email) {
+        String password = "";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select password " +
+                            "from user " +
+                            "where email='" + email + "'" + ";"
+            );
+            if (rs.next())
+                password = rs.getString("password");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return password;
+    }
+
+    public boolean runQueryUpdateUserPassword(String userId, String newPassword) {
+        try {
+            Statement stmt = conn.createStatement();
+            int count = stmt.executeUpdate(
+                    "update user set password='" + newPassword + "'" +
+                            " where user_id='" + userId + "';"
+            );
+            if (count > 0) {
+                return true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public boolean runQueryLogIn(String email, String password) {
         try {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(
-                    "select user_id, password " +
+                    "select user_id " +
                             "from user " +
                             "where email='" + email + "'" + " and password='" + password + "'" + ";"
+            );
+            if (rs.next() == true) {
+                return true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean runQueryCheckPassword(String userId, String password) {
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select user_id " +
+                            "from user " +
+                            "where user_id='" + userId + "'" + " and password='" + password + "'" + ";"
             );
             if (rs.next() == true) {
                 return true;
@@ -107,8 +159,6 @@ public class UserDatabaseClient extends DatabaseClient {
         return false;
     }
 
-    // TODO: Please check it????
-    // TODO: Fix SQL Injection
     public UserCollection runQueryUsersAll() {
         UserCollection users = new UserCollection();
         try {
@@ -124,12 +174,12 @@ public class UserDatabaseClient extends DatabaseClient {
         return users;
     }
 
-    public UserCollection runQueryUserByEmail(String email) {
+    public UserCollection runQueryUserById(String userId) {
         UserCollection users = new UserCollection();
         try {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(
-                    "select * from user where email='"+email+"';"
+                    "select * from user where user_id='"+userId+"';"
             );
             fillUsers(users, rs);
             rs.close();

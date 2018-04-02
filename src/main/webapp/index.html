@@ -38,18 +38,18 @@
             if (n==1) {
                 photo = document.getElementById('imgupload1');
             }
-                for (var x = 0; x < photo.files.length; x++) {
-                    console.log(photo.files[x].name);
-                    var serv_request = new XMLHttpRequest();
-                    serv_request.open('POST', '/Nukupi/rest/images/'+prod_id, false);
-                    if (serv_request.readyState == 4 && serv_request.status == 200) {
-                        respo = serv_request.responseText;
-                        console.log(respo);
-                        console.log("image uploaded");
-                    }
-                    serv_request.send(photo.files[x]);
-
+            for (var x = 0; x < photo.files.length; x++) {
+                console.log(photo.files[x].name);
+                var serv_request = new XMLHttpRequest();
+                serv_request.open('POST', '/Nukupi/rest/images/'+prod_id, false);
+                if (serv_request.readyState == 4 && serv_request.status == 200) {
+                    respo = serv_request.responseText;
+                    console.log(respo);
+                    console.log("image uploaded");
                 }
+                serv_request.send(photo.files[x]);
+
+            }
             // } else if (n==2) {
             //     photo = document.getElementById('imgupload2');
             // } else if (n==3) {
@@ -76,6 +76,50 @@
             }
             serv_request.send(null);
 
+        }
+
+        function changePassword(){
+            var serv_request = new XMLHttpRequest();
+            var oldpassword = document.getElementById("old-password").value;
+            var newpassword = document.getElementById("new-password").value;
+            var data = {
+                user_id: user_id,
+                old_password: oldpassword,
+                new_password: newpassword
+            }
+
+            if(oldpassword != '' && newpassword != ''){
+                serv_request.open('PUT', '/Nukupi/rest/users', false);
+                serv_request.setRequestHeader("Content-type", "application/json");
+                serv_request.onreadystatechange = function() {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        user_id = serv_request.responseText;
+                        window.alert("Password is succesfully changed.");
+                    } else {
+                        window.alert("Old password doesn't match");
+                    }
+                }
+                serv_request.send(JSON.stringify(data));
+            } else {
+                window.alert("Please, fill both fields.");
+            }
+
+
+        }
+
+        function logOut(){
+            var serv_request = new XMLHttpRequest();
+            serv_request.open('GET', '/Nukupi/rest/users/logout', false);
+            serv_request.setRequestHeader("Content-type", "application/json");
+            console.log("HEE");
+            serv_request.onreadystatechange = function() {
+                if (serv_request.readyState == 4 && serv_request.status == 200) {
+                    console.log("HEREEE");
+                    window.location.replace("/Nukupi/authenticate");
+                } else
+                    console.log("outt");
+            }
+            serv_request.send(null);
         }
 
         function addProduct() {
@@ -124,9 +168,50 @@
         }
     </script>
 
+    <script>
+
+        function dropDown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+            var serv_request = new XMLHttpRequest();
+            console.log("uuuuu " + user_id);
+            serv_request.open('GET', '/Nukupi/rest/users/myinfo?userid='+user_id, false);
+            serv_request.setRequestHeader("Content-type", "application/json");
+            serv_request.onreadystatechange = function() {
+                if (serv_request.readyState == 4 && serv_request.status == 200) {
+                    var mdata = JSON.parse(serv_request.responseText);
+                    console.log(mdata);
+                    console.log(serv_request.responseText);
+                    document.getElementById("user_name").innerHTML = mdata[0].name;
+                    document.getElementById("user_tel").innerHTML = mdata[0].phone_number;
+                    document.getElementById("user_email").innerHTML = mdata[0].email;
+                    console.log(mdata[0].name);
+                    console.log(mdata[0].phone_number);
+                    console.log(mdata[0].email);
+
+                }
+            }
+            serv_request.send(null);
+
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
 
-<body onload="universalCall();">
+<body onload="universalCall(); getuserid()">
 <div class="se-pre-con">
     <div class="cssload-loader"></div>
 </div>
@@ -140,7 +225,19 @@
                 <ul>
                     <li>
                         <button class="addproduct" onclick="getuserid()" data-toggle="modal" data-target="#DemoModal" id="open-modal" >ADD PRODUCT</button>
-                        <button class="addproduct">LOG OUT</button>
+                        <div class="dropdown">
+                            <button onclick="dropDown()" class="dropbtn">MY PROFILE</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <center>Hi, <div id="user_name"></div></center>
+                                <br>
+                                <div id="user_tel"></div>
+                                <div id="user_email"><font color="#21618C"></font></div>
+                                <br>
+                                <a href="">My products</a>
+                                <a href="" data-toggle="modal" data-target="#changePasswordModal" id="changePasswordBtn">Change password</a>
+                                <a href="login.html" onclick="logOut()" >Log out</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -435,18 +532,18 @@
         var p_user_email = " ";
         var p_user_phone = " ";
         var serv_request = new XMLHttpRequest();
-            serv_request.open('GET', '/Nukupi/rest/users/getuserinfo?userid='+p_user_id, false);
-            serv_request.setRequestHeader("Content-type", "application/json");
-            serv_request.onreadystatechange = function() {
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    var info = serv_request.responseText.split(",");
-                    p_user_email = info[0] ;
-                    p_user_phone = info[1];
-                    console.log(p_user_email);
-                    console.log(p_user_phone);
-                }
+        serv_request.open('GET', '/Nukupi/rest/users/getuserinfo?userid='+p_user_id, false);
+        serv_request.setRequestHeader("Content-type", "application/json");
+        serv_request.onreadystatechange = function() {
+            if (serv_request.readyState == 4 && serv_request.status == 200) {
+                var info = serv_request.responseText.split(",");
+                p_user_email = info[0] ;
+                p_user_phone = info[1];
+                console.log(p_user_email);
+                console.log(p_user_phone);
             }
-            serv_request.send();
+        }
+        serv_request.send();
         console.log("TRYING");
         console.log(mydata[idx].authorID);
         $('#openModal').modal('show');
@@ -458,8 +555,8 @@
         document.getElementById("userPhone").innerHTML = p_user_phone;
         console.log("modal description");
         var firstImage = window.location.href + "rest/images?id="+ mydata[idx].images[0];
-            console.log(firstImage);
-            document.getElementById("main").valueOf().src = firstImage;
+        console.log(firstImage);
+        document.getElementById("main").valueOf().src = firstImage;
     }
 
     function freeAllCards(callback) {
@@ -657,15 +754,41 @@
                 </div>
                 <div style="display:inline-block;vertical-align: top;">
                     <td id="item_des"><b><h3 id="title"></h3></b>
-                    <h3 type="text" id="pr"></h3>
-                    <h3 type="text" id="ctgr"></h3>
-                    <h3 type="text" id="descript"></h3>
-                    <h3 type="text" id="userEmail"></h3>
-                    <h3 type="text" id="userPhone"></h3>
+                        <h3 type="text" id="pr"></h3>
+                        <h3 type="text" id="ctgr"></h3>
+                        <h3 type="text" id="descript"></h3>
+                        <h3 type="text" id="userEmail"></h3>
+                        <h3 type="text" id="userPhone"></h3>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Change password Modal -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h7 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD FORM</h7>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <forma>
+                    Old password: <input id="old-password" class="form-control" type="password" placeholder="Old password" />
+                    <br>
+                    New password: <input id="new-password" class="form-control" type="password" placeholder="New password" />
+
+
+                </forma>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="submit-add-form" onclick="changePassword()" class="btn btn-default" data-dismiss="modal">Submit</button>
             </div>
         </div>
     </div>

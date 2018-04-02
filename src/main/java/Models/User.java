@@ -47,16 +47,16 @@ public class User extends JsonModel{
     public User() { emptyInit(); }
 
     public User(String JSONSString) {
-        //emptyInit();
+//        emptyInit();
         initializeWith(JSONSString);
     }
 
     private void emptyInit() {
-        this.userID = UniqueStringGenerator.generateIDWithDefaultLength();
+        this.userID = "";
         this.email = "";
-        this.password = UniqueStringGenerator.generatePasswordWithDefaultLength();
+        this.password = "";
         this.name = "";
-        this.type = "User";
+        this.type = "";
         this.phoneNumber = "";
     }
 

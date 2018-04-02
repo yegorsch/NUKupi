@@ -15,7 +15,7 @@ public class SendMail {
 
     public SendMail() {}
 
-    public static void send(String recipientEmail, String tempPassword) {
+    public static void send(String recipientEmail, String tempPassword, boolean newUser) {
 
         final String username = "serviceofnukupi@gmail.com";
         final String password = "!NuKup1!";
@@ -39,8 +39,13 @@ public class SendMail {
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(recipientEmail));
-            message.setSubject("Welcome to NUKupi!");
-            message.setText("Use this temporary password to login to our service " + tempPassword);
+            if(newUser) {
+                message.setSubject("Welcome to NUKupi!");
+                message.setText("Use this temporary password to login to our service " + tempPassword);
+            } else {
+                message.setSubject("Password reset");
+                message.setText("Your password is " + tempPassword);
+            }
 
             Transport.send(message);
 

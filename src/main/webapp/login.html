@@ -96,6 +96,28 @@
 
 
         }
+
+        function forgotPassword(){
+            var serv_request = new XMLHttpRequest();
+            var emailF = document.getElementById("emailF").value;
+
+            if(emailF != ''){
+                serv_request.open('GET', '/Nukupi/rest/users/forgotpassword?email='+emailF, false);
+                serv_request.setRequestHeader("Content-type", "application/json");
+                serv_request.onreadystatechange = function() {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        user_id = serv_request.responseText;
+                        window.alert("Password is succesfully send to your email address");
+                    } else {
+                        window.alert("Something went wrong. Please, try again");
+                    }
+                }
+                serv_request.send(null);
+            } else {
+                window.alert("Please, fill the field");
+            }
+
+        }
     </script>
 </head>
 <body>
@@ -107,8 +129,8 @@
     <input type="text" value="" placeholder="example@nu.edu.kz" id="username" />
     <input type="password" value="" placeholder="Password" id="password" />
     <button onclick="loginUser()">Log in</button>
-    <button data-toggle="modal" data-target="#DemoModal" id = "open-modal">Sign up</button>
-    <a href=""><center>forgot your password?</center></a>
+    <button data-toggle="modal" data-target="#DemoModal">Sign up</button>
+    <a href="" data-toggle="modal" data-target="#fPasswordModal"><center>forgot your password?</center></a>
 </div>
 
 
@@ -151,6 +173,27 @@
             </div>
             <div class="modal-footer">
                 <button type="button" id = "confirm" class="btn btn-default" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Forgot password Modal -->
+<div class="modal fade" id="fPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h7 class="modal-title" id="exampleModalLabel">FORGOT PASSWORD FORM</h7>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <forma>
+                    E-mail: <input id="emailF" class="form-control" type="text" />
+                </forma>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="submit-add-form" onclick="forgotPassword()" class="btn btn-default" data-dismiss="modal">Submit</button>
             </div>
         </div>
     </div>

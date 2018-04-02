@@ -147,7 +147,6 @@ public class ProductDatabaseClient extends DatabaseClient {
             e.printStackTrace();
         }
         return false;
-
     }
 
 }
