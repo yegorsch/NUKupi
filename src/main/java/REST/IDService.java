@@ -3,7 +3,7 @@ package REST;
 import DB.DatabaseClient;
 import DB.ImageDatabaseClient;
 import Models.Image;
-import Utils.IDGenerator;
+import Utils.UniqueStringGenerator;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -21,7 +21,7 @@ public class IDService {
 
     @GET
     public Response generate(@QueryParam("id") String id) {
-        return Response.ok(IDGenerator.generateIDWithDefaultLength()).build();
+        return Response.ok(UniqueStringGenerator.generateIDWithDefaultLength()).build();
     }
 
 }

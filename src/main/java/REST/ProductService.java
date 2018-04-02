@@ -17,18 +17,9 @@ import java.util.ArrayList;
 public class ProductService {
 
     private ProductDatabaseClient dbc;
-    private int start;
-    private int end;
-    private int prodsize;
 
     public ProductService() {
         dbc = new ProductDatabaseClient();
-    }
-
-    @GET
-    public String getItems(@QueryParam("first") int numberOfItems) {
-        //TODO: ADD PAGINATION,
-        return "NOT YEt";
     }
 
     /**
@@ -36,26 +27,12 @@ public class ProductService {
      * Assumption that pagenum is never null and all pages contain at least one product
      */
 
-    @SuppressWarnings("Duplicates")
     @GET
     @Path("/all")
-    public Response getAllProducts(@QueryParam("pagenum") int pagenum) {
-        ProductCollection prodpaged = new ProductCollection();
-        start = (pagenum - 1) * 15;
-        end = pagenum * 15;
+    public Response getAllProducts() {
         ProductCollection prod = dbc.runQueryProductsAll();
-//        prodsize = prod.size();
-//        if (prodsize < end) {
-//            for (int i = start; i < prodsize; i++) {
-//                prodpaged.add(prod.get(i));
-//            }
-//        } else {
-//            for (int i = start; i < end; i++) {
-//                prodpaged.add(prod.get(i));
-//            }
-//        }
         Gson gson = new Gson();
-        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(prod) + ", \"size\":" + prod.size() + "}");
+        Response.ResponseBuilder b = Response.ok(gson.toJson(prod));
         return b.build();
     }
 
@@ -64,30 +41,14 @@ public class ProductService {
      * Assumption that pagenum is never null and all pages contain at least one product
      */
 
-    @SuppressWarnings("Duplicates")
     @GET
     @Path("/filters")
     public Response getProductByFilters(@QueryParam("title") String title,
                                         @QueryParam("price") int price,
                                         @QueryParam("category") String category,
                                         @QueryParam("pagenum") int pagenum) {
-        ProductCollection prodpaged = new ProductCollection();
-        start = (pagenum - 1) * 15;
-        end = pagenum * 15;
-        ProductCollection result = dbc.runQueryProductsByFilter(title, price, category);
-//        prodsize = result.size();
-//        if (prodsize < end) {
-//            for (int i = start; i < prodsize; i++) {
-//                prodpaged.add(result.get(i));
-//            }
-//        } else {
-//            for (int i = start; i < end; i++) {
-//                prodpaged.add(result.get(i));
-//            }
-//        }
-        Gson gson = new Gson();
-        Response.ResponseBuilder b = Response.ok("{\"products\":" + gson.toJson(result) + ", \"size\":" + result.size() + "}");
-        return b.build();
+        ProductCollection result = dbc.runQueryProductsByFilter(title, price, category, 15*(pagenum-1));
+        return Response.ok(result.toJson()).build();
     }
 
     /**
@@ -103,18 +64,6 @@ public class ProductService {
         }
         return Response.ok(new Gson().toJson(reqProds)).build();
     }
-
-//    @GET
-//    @Path("{ id : [A-Za-z0-9_]+}")
-//    public String getProduct(@PathParam("id") String id) {
-//        System.out.println(id);
-//        for (Product p : products) {
-//            if (p.getID().equals(id)) {
-//                return p.toJSON();
-//            }
-//        }
-//        return "";
-//    }
 
     @POST
     @Consumes("application/json")

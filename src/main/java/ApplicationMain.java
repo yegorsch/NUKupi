@@ -2,6 +2,7 @@ import DB.DatabaseClient;
 import REST.IDService;
 import REST.ImageService;
 import REST.ProductService;
+import REST.UserService;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -17,6 +18,7 @@ public class ApplicationMain extends Application {
     public ApplicationMain() {
         singletons.add(new ProductService());
         singletons.add(new ImageService());
+        singletons.add(new UserService());
         singletons.add(new IDService());
     }
 

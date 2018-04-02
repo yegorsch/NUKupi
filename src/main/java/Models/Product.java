@@ -1,6 +1,6 @@
 package Models;
 
-import Utils.IDGenerator;
+import Utils.UniqueStringGenerator;
 import com.google.gson.*;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.reflect.TypeToken;
@@ -44,7 +44,7 @@ public class Product extends JsonModel {
         //this.units = units;
         images = new ArrayList<String>();
         this.category = category;
-        ID = IDGenerator.generateIDWithDefaultLength();
+        ID = UniqueStringGenerator.generateIDWithDefaultLength();
     }
 
     public Product(String ID, String title, String description, String authorID, int price, String category) {
@@ -77,7 +77,7 @@ public class Product extends JsonModel {
         this.category = "OTHER";
         this.price = 0;
         images = new ArrayList<String>();
-        ID = IDGenerator.generateIDWithDefaultLength();
+        ID = UniqueStringGenerator.generateIDWithDefaultLength();
     }
 
     protected void initializeWith(String JSONString) {
