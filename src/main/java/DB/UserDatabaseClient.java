@@ -18,6 +18,57 @@ public class UserDatabaseClient extends DatabaseClient {
         super();
     }
 
+    public boolean runQueryEmail(String email) {
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select user_id " +
+                            "from user " +
+                            "where email='" + email + "'" + ";"
+            );
+            if (rs.next() == true) {
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public String runQueryUserIdByEmail(String email) {
+        String userId = "";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select user_id " +
+                            "from user " +
+                            "where email='" + email + "'" + ";"
+            );
+            if (rs.next())
+                userId = rs.getString("user_id");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return userId;
+    }
+
+    public String runQueryUserInfoById(String userId) {
+        String info = "";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select email, phone_number " +
+                            "from user " +
+                            "where user_id='" + userId + "'" + ";"
+            );
+            if (rs.next())
+                info = rs.getString("email") + "," + rs.getString("phone_number");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return info;
+    }
+
     public boolean runQueryLogIn(String email, String password) {
         try {
             Statement stmt = conn.createStatement();

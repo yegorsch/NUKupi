@@ -34,6 +34,7 @@ public class Product extends JsonModel {
     private static final String JSON_IMAGES = "images";
     private static final String JSON_PRICE = "price";
     private static final String JSON_CATEGORY = "category";
+    private static final String JSON_AUTHOR_ID = "authorID";
 
     public Product(String title, String description, String authorID, int price, String category) {
         this.title = title;
@@ -77,20 +78,20 @@ public class Product extends JsonModel {
         this.category = "OTHER";
         this.price = 0;
         images = new ArrayList<String>();
-        ID = UniqueStringGenerator.generateIDWithDefaultLength();
+        //ID = UniqueStringGenerator.generateIDWithDefaultLength();
     }
 
     protected void initializeWith(String JSONString) {
         Type type = new TypeToken<Map<String, Object>>() {
         }.getType();
         Map<String, Object> jsonObject = new Gson().fromJson(JSONString, type);
-        this.ID = (String) jsonObject.get(JSON_PRODUCT_ID);
+        this.ID = UniqueStringGenerator.generateIDWithDefaultLength();
         this.title = (String) jsonObject.get(JSON_TITLE);
         this.description = (String) jsonObject.get(JSON_DESC);
         this.category = (String) jsonObject.get(JSON_CATEGORY);
         Double price = (Double) jsonObject.get(JSON_PRICE);
         this.price = price.intValue();
-        this.authorID = "1";
+        this.authorID = (String) jsonObject.get(JSON_AUTHOR_ID);
         this.images = (ArrayList<String>) jsonObject.get(JSON_IMAGES);
     }
 

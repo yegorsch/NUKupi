@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_nukupi" default="compile.module.nukupi">
+  <dirname property="module.nukupi.basedir" file="${ant.file.module_nukupi}"/>
+  
+  <property name="module.jdk.home.nukupi" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.nukupi" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.nukupi" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.nukupi" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="nukupi.output.dir" value="${module.nukupi.basedir}/target/classes"/>
+  <property name="nukupi.testoutput.dir" value="${module.nukupi.basedir}/target/test-classes"/>
+  
+  <path id="nukupi.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="nukupi.module.production.classpath">
+    <path refid="${module.jdk.classpath.nukupi}"/>
+    <path refid="library.mysql-connector-java-5.1.37-bin.classpath"/>
+    <path refid="library.maven:_junit:junit:4.0.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-common:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.ws.rs:javax.ws.rs-api:2.0.1.classpath"/>
+    <path refid="library.maven:_javax.annotation:javax.annotation-api:1.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-api:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-utils:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:javax.inject:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-locator:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:osgi-resource-locator:1.0.1.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.media:jersey-media-jaxb:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-client:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-server:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet:2.23.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.2.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-multipart-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs-services:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.reactivestreams:reactive-streams:1.0.1.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.4.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.7.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_net.jcip:jcip-annotations:1.0.classpath"/>
+    <path refid="library.maven:_javax.json.bind:javax.json.bind-api:1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.rest.client:microprofile-rest-client-api:1.0.classpath"/>
+    <path refid="library.maven:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.config:microprofile-config-api:1.1.classpath"/>
+    <path refid="library.maven:_org.osgi:org.osgi.annotation.versioning:1.0.0.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-client:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxb-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-core:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.james:apache-mime4j:0.6.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.3.1.final.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.0.1.classpath"/>
+    <path refid="library.maven:_org.junit.jupiter:junit-jupiter-api:5.0.0.classpath"/>
+    <path refid="library.maven:_org.apiguardian:apiguardian-api:1.0.0.classpath"/>
+    <path refid="library.maven:_org.opentest4j:opentest4j:1.0.0.classpath"/>
+    <path refid="library.maven:_org.junit.platform:junit-platform-commons:1.0.0.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.0.1.classpath"/>
+  </path>
+  
+  <path id="nukupi.runtime.production.module.classpath">
+    <pathelement location="${nukupi.output.dir}"/>
+    <path refid="library.mysql-connector-java-5.1.37-bin.classpath"/>
+    <path refid="library.maven:_junit:junit:4.0.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-common:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.ws.rs:javax.ws.rs-api:2.0.1.classpath"/>
+    <path refid="library.maven:_javax.annotation:javax.annotation-api:1.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-api:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-utils:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:javax.inject:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-locator:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:osgi-resource-locator:1.0.1.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.media:jersey-media-jaxb:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-client:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-server:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet:2.23.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.2.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-multipart-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs-services:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.reactivestreams:reactive-streams:1.0.1.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.4.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.7.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_net.jcip:jcip-annotations:1.0.classpath"/>
+    <path refid="library.maven:_javax.json.bind:javax.json.bind-api:1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.rest.client:microprofile-rest-client-api:1.0.classpath"/>
+    <path refid="library.maven:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.config:microprofile-config-api:1.1.classpath"/>
+    <path refid="library.maven:_org.osgi:org.osgi.annotation.versioning:1.0.0.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-client:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxb-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-core:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.james:apache-mime4j:0.6.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.3.1.final.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.0.1.classpath"/>
+    <path refid="library.maven:_org.junit.jupiter:junit-jupiter-api:5.0.0.classpath"/>
+    <path refid="library.maven:_org.apiguardian:apiguardian-api:1.0.0.classpath"/>
+    <path refid="library.maven:_org.opentest4j:opentest4j:1.0.0.classpath"/>
+    <path refid="library.maven:_org.junit.platform:junit-platform-commons:1.0.0.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.0.1.classpath"/>
+  </path>
+  
+  <path id="nukupi.module.classpath">
+    <path refid="${module.jdk.classpath.nukupi}"/>
+    <pathelement location="${nukupi.output.dir}"/>
+    <path refid="library.mysql-connector-java-5.1.37-bin.classpath"/>
+    <path refid="library.maven:_junit:junit:4.0.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-common:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.ws.rs:javax.ws.rs-api:2.0.1.classpath"/>
+    <path refid="library.maven:_javax.annotation:javax.annotation-api:1.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-api:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-utils:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:javax.inject:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-locator:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:osgi-resource-locator:1.0.1.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.media:jersey-media-jaxb:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-client:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-server:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet:2.23.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.2.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-multipart-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs-services:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.reactivestreams:reactive-streams:1.0.1.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.4.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.7.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_net.jcip:jcip-annotations:1.0.classpath"/>
+    <path refid="library.maven:_javax.json.bind:javax.json.bind-api:1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.rest.client:microprofile-rest-client-api:1.0.classpath"/>
+    <path refid="library.maven:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.config:microprofile-config-api:1.1.classpath"/>
+    <path refid="library.maven:_org.osgi:org.osgi.annotation.versioning:1.0.0.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-client:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxb-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-core:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.james:apache-mime4j:0.6.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.3.1.final.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.0.1.classpath"/>
+    <path refid="library.maven:_org.junit.jupiter:junit-jupiter-api:5.0.0.classpath"/>
+    <path refid="library.maven:_org.apiguardian:apiguardian-api:1.0.0.classpath"/>
+    <path refid="library.maven:_org.opentest4j:opentest4j:1.0.0.classpath"/>
+    <path refid="library.maven:_org.junit.platform:junit-platform-commons:1.0.0.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.0.1.classpath"/>
+  </path>
+  
+  <path id="nukupi.runtime.module.classpath">
+    <pathelement location="${nukupi.testoutput.dir}"/>
+    <pathelement location="${nukupi.output.dir}"/>
+    <path refid="library.mysql-connector-java-5.1.37-bin.classpath"/>
+    <path refid="library.maven:_junit:junit:4.0.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-common:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.ws.rs:javax.ws.rs-api:2.0.1.classpath"/>
+    <path refid="library.maven:_javax.annotation:javax.annotation-api:1.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.bundles.repackaged:jersey-guava:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-api:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-utils:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2.external:javax.inject:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:hk2-locator:2.5.0-b05.classpath"/>
+    <path refid="library.maven:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.maven:_org.glassfish.hk2:osgi-resource-locator:1.0.1.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.media:jersey-media-jaxb:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-client:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.core:jersey-server:2.23.2.classpath"/>
+    <path refid="library.maven:_javax.validation:validation-api:1.1.0.final.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet-core:2.23.2.classpath"/>
+    <path refid="library.maven:_org.glassfish.jersey.containers:jersey-container-servlet:2.23.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.2.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-multipart-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxrs-services:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.reactivestreams:reactive-streams:1.0.1.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_javax.activation:activation:1.1.1.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.4.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.7.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_net.jcip:jcip-annotations:1.0.classpath"/>
+    <path refid="library.maven:_javax.json.bind:javax.json.bind-api:1.0.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.rest.client:microprofile-rest-client-api:1.0.classpath"/>
+    <path refid="library.maven:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.maven:_org.eclipse.microprofile.config:microprofile-config-api:1.1.classpath"/>
+    <path refid="library.maven:_org.osgi:org.osgi.annotation.versioning:1.0.0.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-client:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.resteasy:resteasy-jaxb-provider:4.0.0.beta2.classpath"/>
+    <path refid="library.maven:_org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.0.final.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-core:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.xml.bind:jaxb-impl:2.3.0.classpath"/>
+    <path refid="library.maven:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.james:apache-mime4j:0.6.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_org.jboss.logging:jboss-logging:3.3.1.final.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.0.1.classpath"/>
+    <path refid="library.maven:_org.junit.jupiter:junit-jupiter-api:5.0.0.classpath"/>
+    <path refid="library.maven:_org.apiguardian:apiguardian-api:1.0.0.classpath"/>
+    <path refid="library.maven:_org.opentest4j:opentest4j:1.0.0.classpath"/>
+    <path refid="library.maven:_org.junit.platform:junit-platform-commons:1.0.0.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.0.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.nukupi">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.nukupi">
+    <patternset refid="excluded.from.module.nukupi"/>
+  </patternset>
+  
+  <path id="nukupi.module.sourcepath">
+    <dirset dir="${module.nukupi.basedir}">
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  <path id="nukupi.module.test.sourcepath">
+    <dirset dir="${module.nukupi.basedir}">
+      <include name="src/test"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.nukupi" depends="compile.module.nukupi.production,compile.module.nukupi.tests" description="Compile module Nukupi"/>
+  
+  <target name="compile.module.nukupi.production" depends="register.custom.compilers" description="Compile module Nukupi; production classes">
+    <mkdir dir="${nukupi.output.dir}"/>
+    <javac2 destdir="${nukupi.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.nukupi}/javac">
+      <compilerarg line="${compiler.args.nukupi}"/>
+      <bootclasspath refid="nukupi.module.bootclasspath"/>
+      <classpath refid="nukupi.module.production.classpath"/>
+      <src refid="nukupi.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.nukupi"/>
+    </javac2>
+    
+    <copy todir="${nukupi.output.dir}">
+      <fileset dir="${module.nukupi.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.nukupi.tests" depends="register.custom.compilers,compile.module.nukupi.production" description="compile module Nukupi; test classes" unless="skip.tests">
+    <mkdir dir="${nukupi.testoutput.dir}"/>
+    <javac2 destdir="${nukupi.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.nukupi}/javac">
+      <compilerarg line="${compiler.args.nukupi}"/>
+      <bootclasspath refid="nukupi.module.bootclasspath"/>
+      <classpath refid="nukupi.module.classpath"/>
+      <src refid="nukupi.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.nukupi"/>
+    </javac2>
+    
+    <copy todir="${nukupi.testoutput.dir}">
+      <fileset dir="${module.nukupi.basedir}/src/test">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.nukupi" description="cleanup module">
+    <delete dir="${nukupi.output.dir}"/>
+    <delete dir="${nukupi.testoutput.dir}"/>
+  </target>
+</project>
