@@ -1,0 +1,29 @@
+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í”Ë«úÿÿÿÿ8ñ„µ¨,
+nsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(¬ß±è8ÜŸĞ©¨,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í”Ë«úÿÿÿÿ8“ìµ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÌøÑ©¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÌøÑ©¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ8ÌøÑ©¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÌøÑ©¨,
+msquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä²ùP8ÜŸĞ©¨,
+qsquid:S1192"PDefine a constant instead of duplicating this literal "select user_id " 3 times.(³à¾ïûÿÿÿÿ8ñ„µ¨,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(öÚ¥ùÿÿÿÿ8Çàö´¨,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ïüûùúÿÿÿÿ8İá†µ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÌøÑ©¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(èÿÆÀ8ÜŸĞ©¨,
+Csquid:S1125"(Remove the literal "true" boolean value.(Çÿ8ÌøÑ©¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÌøÑ©¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ8÷ß„µ¨,
+Csquid:S1125"(Remove the literal "true" boolean value.(Çÿ8ÜŸĞ©¨,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8ÜŸĞ©¨,
+csquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(·¦Ã…8»Öù´¨,
+lsquid:S1192"KDefine a constant instead of duplicating this literal "from user " 4 times.(õà””ûÿÿÿÿ8ÌøÑ©¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+msquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä²ùP8ÜŸĞ©¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ8ÌøÑ©¨,
+Msquid:S1135"2Complete the task associated to this TODO comment.(ş¬­:8ÜŸĞ©¨,
+qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(ˆ”–8Àµˆµ¨,

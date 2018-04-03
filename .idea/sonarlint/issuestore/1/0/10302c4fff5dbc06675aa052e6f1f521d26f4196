@@ -1,0 +1,12 @@
+
+`squid:UselessImportCheck"2Remove this unused import 'javax.ws.rs.FormParam'.(ëûÒßşÿÿÿÿ8ø•üª¨,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰çÂÕúÿÿÿÿ8ø•üª¨,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òİ”çıÿÿÿÿ8ø•üª¨,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰çÂÕúÿÿÿÿ8ø•üª¨,
+Ssquid:S1135"2Complete the task associated to this TODO comment.(¼ÆÕøÿÿÿÿ8ø•üª¨,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ˜ Ü8ø•üª¨,
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ˜ Ü8ø•üª¨,
+Tsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8ø•üª¨,
+ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ùæñÃûÿÿÿÿ8ø•üª¨,
+msquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êã8ø•üª¨,
+jsquid:S00116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ŞÒï8ø•üª¨,
