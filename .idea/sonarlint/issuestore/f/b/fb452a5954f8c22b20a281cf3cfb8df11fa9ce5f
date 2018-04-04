@@ -1,0 +1,49 @@
+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8å½ÏÒ¨,
+msquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä²ùP8ÜŸĞ©¨,
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(¥»÷Õşÿÿÿÿ8å½ÏÒ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+nsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ŞÒÔî8å½ÏÒ¨,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8ÜŸĞ©¨,
+Csquid:S1125"(Remove the literal "true" boolean value.(Çÿ8ÜŸĞ©¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÌøÑ©¨,
+Ysquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8å½ÏÒ¨,
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(¥»÷Õşÿÿÿÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èĞ»úÿÿÿÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8å½ÏÒ¨,
+nsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(»ÙÄš8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÌøÑ©¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8å½ÏÒ¨,
+qsquid:S1192"PDefine a constant instead of duplicating this literal "select user_id " 4 times.(¥»÷Õşÿÿÿÿ8å½ÏÒ¨,
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(èÿÆÀ8ÜŸĞ©¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8å½ÏÒ¨,
+[squid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8å½ÏÒ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èĞ»úÿÿÿÿ8å½ÏÒ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÌøÑ©¨,
+jsquid:S1192"NDefine a constant instead of duplicating this literal "where email='" 4 times.(Ÿñ³Ø8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èĞ»úÿÿÿÿ8å½ÏÒ¨,
+Csquid:S1125"(Remove the literal "true" boolean value.(Çÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÌøÑ©¨,
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ŠùÀûÿÿÿÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èĞ»úÿÿÿÿ8å½ÏÒ¨,
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(¥»÷Õşÿÿÿÿ8å½ÏÒ¨,
+vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(ˆù©ëúÿÿÿÿ8å½ÏÒ¨,
+msquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä²ùP8ÜŸĞ©¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èĞ»úÿÿÿÿ8å½ÏÒ¨,
+lsquid:S1192"KDefine a constant instead of duplicating this literal "from user " 6 times.(õà””ûÿÿÿÿ8ÌøÑ©¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èĞ»úÿÿÿÿ8å½ÏÒ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8å½ÏÒ¨,
+nsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(Ùú÷»8å½ÏÒ¨,
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(¥»÷Õşÿÿÿÿ8å½ÏÒ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÜŸĞ©¨,
+^squid:UselessImportCheck"5Remove this unused import 'Models.ProductCollection'.(®àä©8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8å½ÏÒ¨,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8å½ÏÒ¨,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÌøÑ©¨,
+Ysquid:UselessImportCheck"+Remove this unused import 'Models.Product'.(ÄÏ×úùÿÿÿÿ8å½ÏÒ¨,
+Csquid:S1125"(Remove the literal "true" boolean value.(Çÿ8ÌøÑ©¨,

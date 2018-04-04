@@ -1,0 +1,4 @@
+
+`squid:UselessImportCheck"7Remove this unused import 'com.google.gson.JsonParser'.(Œƒ¸Æ8ù•üª¨,
+ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ùæñÃûÿÿÿÿ8ù•üª¨,
+bsquid:UselessImportCheck":Remove this unused import 'com.google.gson.JsonPrimitive'.(§îâ8ù•üª¨,
