@@ -1,12 +1,10 @@
 
 T
 squid:S106"9Replace this use of System.out or System.err by a logger.(ëçÆÑ8ÊøÑ©¨,
-Gsquid:S1135"2Complete the task associated to this TODO comment.(•ƒ­
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‚ÓëŒÿÿÿÿÿ
 bsquid:S1192"FDefine a constant instead of duplicating this literal "email" 4 times.(éŒ¤8ÊøÑ©¨,
-Gsquid:S1135"2Complete the task associated to this TODO comment.(Æ‰£³
-Gsquid:S1135"2Complete the task associated to this TODO comment.(³°÷—
-Lsquid:S1135"2Complete the task associated to this TODO comment.(î¼Î°ùÿÿÿÿ
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(—°èÙ8ã½ÏÒ¨,
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ï¤î¦
+Ssquid:S1135"2Complete the task associated to this TODO comment.(ÎæãÆÿÿÿÿÿ8ã½ÏÒ¨,
 S
 squid:S106"9Replace this use of System.out or System.err by a logger.(ªÌ¤d8ÊøÑ©¨,
-msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ï¤î¦

@@ -3,6 +3,7 @@ package REST;
 import DB.UserDatabaseClient;
 import Models.User;
 import Models.UserCollection;
+import Models.UserInfo;
 import Utils.SendMail;
 import com.google.gson.Gson;
 
@@ -34,6 +35,7 @@ public class UserService {
     @GET
     @Path("/getuserid")
     public Response getUserId() {
+        System.out.println("HERE AT GETUSERID");
         HttpSession session = request.getSession();
         if(session.getAttribute("email")==null) {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
@@ -44,15 +46,13 @@ public class UserService {
         }
     }
 
-
     @GET
     @Path("/getuserinfo")
     public Response getUserEmail(@QueryParam("userid") String userId) {
-        String email = dbu.runQueryUserInfoById(userId);
-        return Response.ok(email).build();
+        String info = dbu.runQueryUserInfoById(userId);
+        return Response.ok(info).build();
     }
 
-    // TODO: Idk do something
     @GET
     @Path("/login")
     public Response login(@QueryParam("email") String email, @QueryParam("password") String password) {
@@ -65,22 +65,52 @@ public class UserService {
         }
     }
 
-    // TODO: Logout
-//        HttpSession session=request.getSession();
-//        session.invalidate();
+    @GET
+    @Path("/logout")
+    public Response logout() {
+        HttpSession session = request.getSession();
+        session.invalidate();
+        return Response.status(Response.Status.OK).build();
+    }
 
-    // TODO: My info (search by email? if yes why do we need userid?)
     @GET
     @Path("/myinfo")
-    public Response myInfo(@QueryParam("email") String email) {
-        UserCollection usr = dbu.runQueryUserByEmail(email);
+    public Response myInfo(@QueryParam("userid") String userId) {
+        UserCollection usr = dbu.runQueryUserById(userId);
         Gson gson = new Gson();
         Response.ResponseBuilder b = Response.ok(gson.toJson(usr));
         return b.build();
     }
 
-    // TODO: Change password
+    // TODO: Forgot password
+    @GET
+    @Path("/forgotpassword")
+    public Response forgotPassword(@QueryParam("email") String email) {
+        String password = dbu.runQueryUserPasswordByEmail(email);
+        if(!password.equals("")) {
+            SendMail.send(email, password, false);
+            return Response.ok(password).build();
+        } else {
+            return Response.status(Response.Status.NOT_ACCEPTABLE).build(); // if empty, write smth like no such user exists
+        }
+    }
 
+    // email, oldPassword, newPassword
+    @PUT
+    @Consumes("application/json")
+    public Response changePassword(String jsonString) {
+        Gson gson = new Gson();
+        UserInfo ui = gson.fromJson(jsonString, UserInfo.class);
+        if(dbu.runQueryCheckPassword(ui.getUserId(), ui.getOldPassword())) {
+            if(dbu.runQueryUpdateUserPassword(ui.getUserId(), ui.getNewPassword())) {
+                return Response.status(Response.Status.OK).build();
+            } else {
+                return Response.status(Response.Status.NOT_ACCEPTABLE).build();
+            }
+        } else {
+            return Response.status(Response.Status.NOT_ACCEPTABLE).build();
+        }
+    }
 
     @POST
     @Consumes("application/json")
@@ -96,7 +126,7 @@ public class UserService {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         } else {
             if (dbu.runQueryInsertUser(u.getUserID(), u.getEmail(), u.getPassword(), u.getName(), u.getType(), u.getPhoneNumber())) {
-                SendMail.send(u.getEmail(), u.getPassword());
+                SendMail.send(u.getEmail(), u.getPassword(), true);
                 return Response.status(Response.Status.OK).build();
             } else {
                 return Response.status(Response.Status.NOT_ACCEPTABLE).build();
