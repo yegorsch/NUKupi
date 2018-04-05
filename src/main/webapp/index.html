@@ -187,6 +187,9 @@
                     console.log(mdata[0].name);
                     console.log(mdata[0].phone_number);
                     console.log(mdata[0].email);
+                    if(mdata[0].type == "Moderator"){
+                        document.getElementById("logBtn").innerHTML = "<a href=\"Nukupi/logger.html\">Logs</a>";
+                    }
 
                 }
             }
@@ -234,6 +237,7 @@
                                 <div id="user_email"><font color="#21618C"></font></div>
                                 <br>
                                 <a href="">My products</a>
+                                <div id="logBtn"></div>
                                 <a href="" data-toggle="modal" data-target="#changePasswordModal" id="changePasswordBtn">Change password</a>
                                 <a href="login.html" onclick="logOut()" >Log out</a>
                             </div>
