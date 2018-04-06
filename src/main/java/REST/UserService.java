@@ -13,7 +13,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
-// URL: http://localhost:8080/rest/users
+// URL: http://localhost:8080/f/rest/users
 @Path("users")
 public class UserService {
     private UserDatabaseClient dbu;
@@ -84,7 +84,6 @@ public class UserService {
         return b.build();
     }
 
-    // TODO: Forgot password
     @GET
     @Path("/forgotpassword")
     public Response forgotPassword(@QueryParam("email") String email) {

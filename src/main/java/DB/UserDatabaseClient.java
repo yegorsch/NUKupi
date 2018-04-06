@@ -185,6 +185,23 @@ public class UserDatabaseClient extends DatabaseClient {
         return users;
     }
 
+    public String runQueryIfModerator(String userId) {
+        String type = "";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select type " +
+                            "from user " +
+                            "where user_id='" + userId + "'" + ";"
+            );
+            if (rs.next())
+                type = rs.getString("type");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return type;
+    }
+
     private void fillUsers(UserCollection users, ResultSet rs) throws SQLException {
         while (rs.next()) {
             User u = new User(rs.getString("user_id"), rs.getString("email"),
