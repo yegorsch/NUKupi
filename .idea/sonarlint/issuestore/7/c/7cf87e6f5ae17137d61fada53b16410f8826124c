@@ -1,14 +1,14 @@
 
-vsquid:UselessImportCheck"MRemove this unused import 'com.sun.org.apache.xerces.internal.xs.StringList'.(óÄáª8Ä¤Æü¨,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ä¤Æü¨,
-dsquid:HiddenFieldCheck"8Rename "conn" which hides the field declared at line 20.(şöì¦ùÿÿÿÿ8Ä¤Æü¨,
-Tsquid:S1313"3Make this IP "46.101.171.158" address configurable.(¨¬Ïøÿÿÿÿ8Ä¤Æü¨,
-Qsquid:S1191"5Use classes from the Java API instead of Sun classes.(óÄáª8Ä¤Æü¨,
-tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8Ä¤Æü¨,
+qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(§šÎ8üÚÎ§©,
+Tsquid:S1313"3Make this IP "46.101.171.158" address configurable.(¨¬Ïøÿÿÿÿ8üÚÎ§©,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ê˜ùò8Ä¤Æü¨,
-^squid:UselessImportCheck"5Remove this unused import 'Models.ProductCollection'.(®àä©8Ä¤Æü¨,
-qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(§šÎ8Ä¤Æü¨,
-Wsquid:UselessImportCheck")Remove this unused import 'Models.Image'.(ğÍƒ¥úÿÿÿÿ8Ä¤Æü¨,
-Ysquid:UselessImportCheck"+Remove this unused import 'Models.Product'.(ÄÏ×úùÿÿÿÿ8Ä¤Æü¨,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ä¤Æü¨,
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ê˜ùò8üÚÎ§©,
+Ysquid:UselessImportCheck"+Remove this unused import 'Models.Product'.(ÄÏ×úùÿÿÿÿ8üÚÎ§©,
+vsquid:UselessImportCheck"MRemove this unused import 'com.sun.org.apache.xerces.internal.xs.StringList'.(óÄáª8üÚÎ§©,
+Wsquid:UselessImportCheck")Remove this unused import 'Models.Image'.(ğÍƒ¥úÿÿÿÿ8üÚÎ§©,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8üÚÎ§©,
+Qsquid:S1191"5Use classes from the Java API instead of Sun classes.(óÄáª8üÚÎ§©,
+dsquid:HiddenFieldCheck"8Rename "conn" which hides the field declared at line 20.(şöì¦ùÿÿÿÿ8üÚÎ§©,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8üÚÎ§©,
+^squid:UselessImportCheck"5Remove this unused import 'Models.ProductCollection'.(®àä©8üÚÎ§©,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8üÚÎ§©,
