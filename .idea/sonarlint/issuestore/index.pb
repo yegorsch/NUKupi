@@ -39,3 +39,32 @@ Q
 !src/main/java/Utils/SendMail.java,9/c/9c98dd689a269465300b35731beb9e8c3af1f815
 M
 src/main/webapp/css/style.css,2/c/2c1f525046eaa5ad3e39cc3d3b2f4c4fab4ff318
+A
+module_nukupi.xml,d/3/d368e3afdfc3b9308c554aaf493b3f214108c66d
+T
+$src/main/java/REST/ImageService.java,2/4/2456ba3b88219f110deb3c9c43f9ea65ac01c876
+A
+nukupi.properties,5/a/5a2645ab407c9b4e0c1d5d0ae8570840c4704428
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+T
+$src/main/java/DB/DatabaseClient.java,7/c/7cf87e6f5ae17137d61fada53b16410f8826124c
+
+O.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml,2/0/206e4c1017d7a2191beea7abafa9642240739ab9
+x
+H.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml,1/1/1144116fbada5b10dcca73db3fc3868bd829c6e2
+|
+L.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml,d/2/d2f232dcfc55a116a2a830ce535184f355ab1dae
+]
+-.idea/libraries/Maven__log4j_log4j_1_2_17.xml,2/d/2dfa7669c20c41273cb505d16f04d17467fb3330
+U
+%src/main/resources/logging.properties,3/5/3503cdfdb663d3fa01250071ad96270f80e5d6bc
+`
+0src/main/webapp/WEB-INF/classes/log4j.properties,9/9/9918bd0aad69b9a33131e4fbcbc0ab9830d4b444
+:
+
+Nukupi.iml,d/5/d590ab97ea74dfe114f316d75fcb74a304adf5ff
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+U
+%src/main/java/Utils/MyLogHandler.java,e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8

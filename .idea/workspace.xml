@@ -9,36 +9,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="logging feature added">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DB/LoggerDatabaseClient.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Models/Log.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Models/LogCollection.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/REST/LoggerService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/1144116fbada5b10dcca73db3fc3868bd829c6e2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/206e4c1017d7a2191beea7abafa9642240739ab9" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/2456ba3b88219f110deb3c9c43f9ea65ac01c876" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2dfa7669c20c41273cb505d16f04d17467fb3330" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/3503cdfdb663d3fa01250071ad96270f80e5d6bc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a2645ab407c9b4e0c1d5d0ae8570840c4704428" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cf87e6f5ae17137d61fada53b16410f8826124c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/9918bd0aad69b9a33131e4fbcbc0ab9830d4b444" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2f232dcfc55a116a2a830ce535184f355ab1dae" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d368e3afdfc3b9308c554aaf493b3f214108c66d" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d590ab97ea74dfe114f316d75fcb74a304adf5ff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f93c86c05e242243fb30ea55628132e32c67e9b" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f93c86c05e242243fb30ea55628132e32c67e9b" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a973fed00e3229629ac0d2d76b45b0c059d4972e" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a973fed00e3229629ac0d2d76b45b0c059d4972e" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b90fbe0dabe2a065aa6834ff339548e6b87847e8" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b90fbe0dabe2a065aa6834ff339548e6b87847e8" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0cd9764143c90e2b3a8fa31f63a774496de9c6f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0cd9764143c90e2b3a8fa31f63a774496de9c6f" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de351eed44e20b079f604b335346fb85e6c69e1e" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de351eed44e20b079f604b335346fb85e6c69e1e" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ApplicationMain.java" afterPath="$PROJECT_DIR$/src/main/java/ApplicationMain.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/DatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/ImageDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/ImageDatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Image.java" afterPath="$PROJECT_DIR$/src/main/java/Models/Image.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/JsonModel.java" afterPath="$PROJECT_DIR$/src/main/java/Models/JsonModel.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Product.java" afterPath="$PROJECT_DIR$/src/main/java/Models/Product.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ProductAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/Models/ProductAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ProductCollection.java" afterPath="$PROJECT_DIR$/src/main/java/Models/ProductCollection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/Models/UserAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserCollection.java" afterPath="$PROJECT_DIR$/src/main/java/Models/UserCollection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserInfo.java" afterPath="$PROJECT_DIR$/src/main/java/Models/UserInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/IDService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/IDService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/ImageService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/ImageService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/AuthenticationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Filterer.java" afterPath="$PROJECT_DIR$/src/main/java/Utils/Filterer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/MyLogHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Utils/MyLogHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
-      <change beforePath="$PROJECT_DIR$/src/test/Utils/FiltererTest.java" afterPath="$PROJECT_DIR$/src/test/Utils/FiltererTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,8 +69,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="1338" column="15" lean-forward="true" selection-start-line="1338" selection-start-column="15" selection-end-line="1338" selection-end-column="15" />
+            <state relative-caret-position="48">
+              <caret line="1334" column="19" lean-forward="true" selection-start-line="1334" selection-start-column="19" selection-end-line="1334" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -881,7 +876,7 @@
       <workItem from="1522838018889" duration="18257000" />
       <workItem from="1522867455583" duration="1953000" />
       <workItem from="1522917952867" duration="19207000" />
-      <workItem from="1523001601149" duration="2878000" />
+      <workItem from="1523001601149" duration="3087000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1080,7 +1075,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238093000" />
+    <option name="totallyTimeSpent" value="238302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1103,8 +1098,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22503962" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2947702" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22503962" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2947702" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1882353" sideWeight="0.45833334" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20497803" sideWeight="0.77812994" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1515,8 +1510,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="1338" column="15" lean-forward="true" selection-start-line="1338" selection-start-column="15" selection-end-line="1338" selection-end-column="15" />
+        <state relative-caret-position="48">
+          <caret line="1334" column="19" lean-forward="true" selection-start-line="1334" selection-start-column="19" selection-end-line="1334" selection-end-column="19" />
           <folding />
         </state>
       </provider>
