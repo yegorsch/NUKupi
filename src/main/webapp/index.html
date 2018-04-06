@@ -1,886 +1,209 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>NUKUPI</title>
-    <!--META-->
+    <meta charset="UTF-8">
+    <title>NU Kupi</title>
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
     <!--FONT-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet'
+          type='text/css'>
 
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/grid.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-
-
-    <!--
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4..0/css/bootstrap-theme.min.css">
-    -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
 
-    <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
-    <!--SLIDER-->
+    <script type="text/javascript">
+        function registerUser() {
 
-    <script>
-        var user_id;
-        function uploadFile(n, prod_id) {
-            var photo;
-            if (n==1) {
-                photo = document.getElementById('imgupload1');
-            }
-            for (var x = 0; x < photo.files.length; x++) {
-                console.log(photo.files[x].name);
-                var serv_request = new XMLHttpRequest();
-                serv_request.open('POST', '/Nukupi/rest/images/'+prod_id, false);
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    respo = serv_request.responseText;
-                    console.log(respo);
-                    console.log("image uploaded");
-                }
-                serv_request.send(photo.files[x]);
-
-            }
-            // } else if (n==2) {
-            //     photo = document.getElementById('imgupload2');
-            // } else if (n==3) {
-            //     photo = document.getElementById('imgupload3');
-            // } else if (n==4) {
-            //     photo = document.getElementById('imgupload4');
-            // }
-
-            //var file = photo.files[0];
-
-        }
-
-        function getuserid(){
-            console.log("here at user");
             var serv_request = new XMLHttpRequest();
-            serv_request.open('GET', '/Nukupi/rest/users/getuserid', false);
+            serv_request.open('POST', '/Nukupi/f/rest/users/', false);
             serv_request.setRequestHeader("Content-type", "application/json");
-            serv_request.onreadystatechange = function() {
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    user_id = serv_request.responseText;
-
-                    console.log(user_id);
-                }
+            var email = document.getElementById("user-email").value;
+            var name = document.getElementById("user-name").value;
+            var phone = document.getElementById("user-phone").value;
+            var data = {
+                email: email,
+                name: name,
+                phone_number: phone
             }
-            serv_request.send(null);
+
+            var regEmail = /@nu\.edu\.kz$/;
+            var regPhone = /^([0-9]){11}/;
+            var regName = /^([A-Za-z])+/;
+
+            if (email != null && name != null && phone != null && regEmail.test(email) && regPhone.test(phone) && regName.test(name))
+            {
+                console.log("valid");
+                serv_request.onreadystatechange = function () {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        console.log("Success");
+                        document.getElementById("messageTittle").innerHTML = "Verification";
+                        document.getElementById("messageBody").innerHTML = "Please, check your e-mail. You'll receive temporary password to access your account.";
+                        document.getElementById("user-email").value = "";
+                        document.getElementById("user-name").value = "";
+                        document.getElementById("user-phone").value = "";
+                    } else {
+                        document.getElementById("messageTittle").innerHTML = "We're sorry. Sign up error. Try again.";
+                        document.getElementById("messageBody").innerHTML = "This email is already registered. Click forgot your password to recover access to the account.";
+                        document.getElementById("user-email").value = "";
+                        document.getElementById("user-name").value = "";
+                        document.getElementById("user-phone").value = "";
+                    }
+
+                }
+                serv_request.send(JSON.stringify(data));
+
+            } else {
+                document.getElementById("messageTittle").innerHTML = "Please, follow the template";
+                document.getElementById("messageBody").innerHTML = "<b>E-mail:</b> example@nu.edu.kz<br><b>Name:</b> Albina Li<br><b>Phone (11 digits):</b> 87071112233 <br><br> ***All fields are required";
+            }
+
 
         }
 
-        function changePassword(){
+        function loginUser() {
+            $('#DemoModal2').modal({ show: false});
             var serv_request = new XMLHttpRequest();
-            var oldpassword = document.getElementById("old-password").value;
-            var newpassword = document.getElementById("new-password").value;
-            var data = {
-                user_id: user_id,
-                old_password: oldpassword,
-                new_password: newpassword
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username != null && password != null){
+                serv_request.open('GET', '/Nukupi/f/rest/users/login?email='+username+"&password="+password, false);
+                serv_request.setRequestHeader("Content-type", "application/json");
+
+                serv_request.onreadystatechange = function () {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        console.log("Success");
+                        window.location.replace("/Nukupi/f/main.html");
+                    } else {
+                        document.getElementById("messageTittle").innerHTML = "Login error";
+                        document.getElementById("messageBody").innerHTML = "We could find you. Please, insert your university e-mail and recieved password. Or click forgot your password to recover the access to the account.";
+                        $('#DemoModal2').modal('show');
+                        document.getElementById("username").value = "";
+                        document.getElementById("password").value = "";
+                    }
+
+                }
+                serv_request.send(null);
+            } else {
+                document.getElementById("messageTittle").innerHTML = "Login error";
+                document.getElementById("messageBody").innerHTML = "Please, insert your university e-mail and recieved password. Or click forgot your password to recover the access to the account.";
+                $('#DemoModal2').modal('show');
             }
 
-            if(oldpassword != '' && newpassword != ''){
-                serv_request.open('PUT', '/Nukupi/rest/users', false);
+
+
+        }
+
+        function forgotPassword(){
+            var serv_request = new XMLHttpRequest();
+            var emailF = document.getElementById("emailF").value;
+
+            if(emailF != ''){
+                serv_request.open('GET', '/Nukupi/f/rest/users/forgotpassword?email='+emailF, false);
                 serv_request.setRequestHeader("Content-type", "application/json");
                 serv_request.onreadystatechange = function() {
                     if (serv_request.readyState == 4 && serv_request.status == 200) {
                         user_id = serv_request.responseText;
-                        window.alert("Password is succesfully changed.");
-                        document.getElementById("old-password").value = "";
-                        document.getElementById("new-password").value = "";
+                        window.alert("Password is succesfully send to your email address");
+                        document.getElementById("emailF").value = "";
                     } else {
-                        window.alert("Old password doesn't match");
-                        document.getElementById("old-password").value = "";
-                        document.getElementById("new-password").value = "";
+                        window.alert("Something went wrong. Please, try again");
+                        document.getElementById("emailF").value = "";
                     }
                 }
-                serv_request.send(JSON.stringify(data));
+                serv_request.send(null);
             } else {
-                window.alert("Please, fill both fields.");
+                window.alert("Please, fill the field");
             }
 
-
-        }
-
-        function searchLogs() {
-            var searchword = document.getElementById("logSearchBox").value;
-            var loggername;
-            if(document.getElementById("logUser").checked) {
-                loggername = 'UserService';
-            } else if(document.getElementById("logProduct").checked) {
-                loggername = 'ProductService';
-            } else if(document.getElementById("logImage").checked) {
-                loggername = 'ImageService';
-            } else {
-                loggername = '';
-            }
-            var serv_request = new XMLHttpRequest();
-            serv_request.open('GET', '/Nukupi/rest/logger/filters?searchWord='+searchword+'&loggerName='+loggername, false);
-            serv_request.setRequestHeader("Content-type", "application/json");
-            serv_request.onreadystatechange = function() {
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    document.getElementById("logSearchBox").value = '';
-                    var logdata = JSON.parse(serv_request.responseText);
-                    var readymsg = '';
-                    for (var i = 0; i < logdata.length; i++) {
-                        readymsg = readymsg + new Date(logdata[i].millis).toDateString() + ", " + logdata[i].loggerName + ", " + logdata[i].message + "\n";
-                    }
-                    document.getElementById("messageBox").innerHTML = readymsg;
-                } else
-                    console.log("outt");
-            }
-            serv_request.send(null);
-        }
-
-        function logOut(){
-            var serv_request = new XMLHttpRequest();
-            serv_request.open('GET', '/Nukupi/rest/users/logout', false);
-            serv_request.setRequestHeader("Content-type", "application/json");
-            console.log("HEE");
-            serv_request.onreadystatechange = function() {
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    console.log("HEREEE");
-                    window.location.replace("/Nukupi/authenticate");
-                } else
-                    console.log("outt");
-            }
-            serv_request.send(null);
-        }
-
-        function addProduct() {
-            console.log("Entered");
-
-            console.log("GOHERE!")
-            var product_id = JSON;
-            var serv_request = new XMLHttpRequest();
-            serv_request.open('POST', '/Nukupi/rest/products', false);
-            serv_request.setRequestHeader("Content-type", "application/json");
-            var name = document.getElementById("product-name").value;
-            var description = document.getElementById("product-description").value;
-            var price = document.getElementById("product-price").value;
-            var category = document.querySelector('input[name="radio"]:checked').value;
-            var image = [];
-            var data = {
-                title: name,
-                description: description,
-                images: image,
-                category: category,
-                price: Number(price),
-                authorID: user_id //user_id
-            }
-            console.log(data);
-            serv_request.onreadystatechange = function() {
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    product_id = serv_request.responseText;
-                    console.log("product id");
-                    console.log(product_id);
-                }
-            }
-            serv_request.send(JSON.stringify(data));
-            if(document.getElementById("imgupload1").files.length != 0 ) {
-                uploadFile(1, product_id);
-            }
-            // if(document.getElementById("imgupload2").files.length != 0 ) {
-            //     uploadFile(2, product_id);
-            // }
-            // if(document.getElementById("imgupload3").files.length != 0 ) {
-            //     uploadFile(3, product_id);
-            // }
-            // if(document.getElementById("imgupload3").files.length != 0 ) {
-            //     uploadFile(4, product_id);
-            // }
-            universalCall();
         }
     </script>
-
-    <script>
-
-        function dropDown() {
-            document.getElementById("myDropdown").classList.toggle("show");
-            var serv_request = new XMLHttpRequest();
-            console.log("uuuuu " + user_id);
-            serv_request.open('GET', '/Nukupi/rest/users/myinfo?userid='+user_id, false);
-            serv_request.setRequestHeader("Content-type", "application/json");
-            serv_request.onreadystatechange = function() {
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    var mdata = JSON.parse(serv_request.responseText);
-                    console.log(mdata);
-                    console.log(serv_request.responseText);
-                    document.getElementById("user_name").innerHTML = "Hi, " + mdata[0].name;
-                    document.getElementById("user_tel").innerHTML = "Tel: " + mdata[0].phone_number;
-                    document.getElementById("user_email").innerHTML = mdata[0].email;
-                    console.log(mdata[0].name);
-                    console.log(mdata[0].phone_number);
-                    console.log(mdata[0].email);
-                    if(mdata[0].type == "Moderator"){
-                        document.getElementById("logBtn").innerHTML = "<a href=\"\" data-toggle=\"modal\" data-target=\"#logsModal\">Logs</a>";
-                    }
-
-                }
-            }
-            serv_request.send(null);
-
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-
 </head>
-
-<body onload="universalCall(); getuserid()">
-<div class="se-pre-con">
-    <div class="cssload-loader"></div>
+<body>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/login.css">
+<div class="logo"></div>
+<div class="login-block">
+    <h1>NU Kupi</h1>
+    <input type="email" value="" placeholder="example@nu.edu.kz" id="username" />
+    <input type="password" value="" placeholder="Password" id="password" />
+    <button onclick="loginUser()">Log in</button>
+    <button data-toggle="modal" data-target="#DemoModal">Sign up</button>
+    <a href="" data-toggle="modal" data-target="#fPasswordModal"><center>forgot your password?</center></a>
 </div>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <a href="#banner" class="logo"><img src="img/NMlogo.png" alt=""/></a>
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <ul>
-                    <li>
-                        <button class="addproduct" onclick="getuserid()" data-toggle="modal" data-target="#DemoModal" id="open-modal" >ADD PRODUCT</button>
-                        <div class="dropdown">
-                            <button onclick="dropDown()" class="dropbtn">MY PROFILE</button>
-                            <div id="myDropdown" class="dropdown-content">
-                                <center><div id="user_name"></div></center>
-                                <br>
-                                <div id="user_tel"></div>
-                                <div id="user_email" class="dropdown-email"></div>
-                                <br>
-                                <a href="">My products</a>
-                                <div id="logBtn"></div>
-                                <a href="" data-toggle="modal" data-target="#changePasswordModal" id="changePasswordBtn">Change password</a>
-                                <a href="login.html" onclick="logOut()" >Log out</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-<section id="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s">NU KUPI</h1>
-                <div>
-                    <input type="text" id="searchPlace" name="email" placeholder="Type product name here" class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s" />
-                    <button class="btnsubmit os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.5s" onclick="universalCall()"><img src="img/lup.png" alt=""/>SEARCH
-                    </button>
-                </div>
-            </div>
-        </div>
 
 
-    </div>
-
-</section>
-
-<aside>
-    <div class="container">
-        <div class="row">
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="maincounter">
-
-                    <section class="section section--aava">
-                        <form class="checkBoxes" name="checkBoxForm">
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
-                                    <label for="toggleButton" data-on-text="Food" data-off-text="Food"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton2" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
-                                    <label for="toggleButton2" data-on-text="Clothes" data-off-text="Clothes"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton3" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
-                                    <label for="toggleButton3" data-on-text="Domestic" data-off-text="Domestic"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton4" name="checkBoxGroup" type="checkbox" onclick="filterCheckbox(this)">
-                                    <label for="toggleButton4" data-on-text="Other" data-off-text="Other"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </section>
-                    <!--</div>-->
-                </div>
-
-            </div>
-        </div>
-    </div>
-</aside>
-<section id="destination">
-    <div class="container">
-        <!--SLIDE CONTAINER HERE-->
-        <div class="row">
-            <div class="slidecontainer">
-
-                <p>Price filter:</p>
-                <input type="range" min="0" max="10000" value="10000" class="slider" id="myRange">
-                <p><span id="sliderOutputVal">No price filter</span></p>
-            </div>
-        </div>
-        <div class="row" id="maxORIGDIV">
-        </div>
-        <!--<button class="explore os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.6s">EXPLORE MORE DESTINATIONS</button>-->
-    </div>
-</section>
-
-
-<footer>
-    <div class="container">
-
-    </div>
-</footer>
-
-
-<script type="text/javascript" src="js/script.js"></script>
-<script src="js/countUp.js"></script>
-<script type="text/javascript" src="js/waypoints.min.js"></script>
-<!--slider-->
-<script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("sliderOutputVal");
-    //    var defPrice = document.getElementById("myRange").defaultValue;
-    var mydata = JSON;
-    var curQuery = {
-        currTitle: "",
-        currentCat: "",
-        initialUrl: "/Nukupi/rest/products/filters",
-        curUrl: "",
-        defPrice: 27000000,
-        curPage: 1
-    };
-    var curPageOnLoad = false;
-
-    // slider = x;
-    // slider.value.defaultValue.t = "Choose value";
-
-    slider.oninput = function() {
-        if (this.value == 0) {
-            output.innerHTML = "free";
-            curQuery.defPrice = this.value;
-        } else if (this.value < 10000) {
-            output.innerHTML = "Less than: " + String(this.value) + "₸";
-            curQuery.defPrice = this.value;
-        } else {
-            console.log("GOTDEFpRICE");
-            curQuery.defPrice = 27000000;
-            output.innerHTML = "No price filter";
-        }
-
-    }
-</script>
-<!--Filter bar-->
-<script>
-    var filterArr = [0, 0, 0, 0];
-    var categories = ["food", "clothes", "domestic", "other"];
-
-
-
-    //    var currTitle = "";
-    //    var currentCat = "";
-    //    var initialUrl = "http://188.166.91.64:8080/Nukupi_war/rest/products/filters";
-    //    var curUrl = "";
-
-
-    function filterCheckbox(element) {
-        // Get the checkbox
-        var group = document.checkBoxForm.checkBoxGroup;
-
-        for (var i = 0; i < group.length; i++) {
-            if (group[i] != element) {
-                group[i].checked = false;
-                filterArr[i] = 0;
-            } else {
-                if (group[i].checked == false) {
-                    filterArr[i] = 0;
-                } else {
-                    filterArr[i] = 1;
-                }
-            }
-        }
-
-        curQuery.currentCat = "";
-        for (var i = 0; i < group.length; i++) {
-            if (filterArr[i] == 1) {
-                curQuery.currentCat = categories[i];
-            }
-        }
-
-        universalCall();
-    }
-
-
-    function getTitle() {
-        curQuery.currTitle = document.getElementById("searchPlace").value;
-    }
-
-    function universalCall() {
-        getTitle();
-        curQuery.curPage = 1;
-        insertParam("title", curQuery.currTitle);
-        insertParam("price", curQuery.defPrice);
-        insertParam("category", curQuery.currentCat);
-        insertParam("pagenum", curQuery.curPage);
-
-        //         console.log("I am here 0");
-        freeAllCards(function() {
-            //            console.log("I am here 1");
-            var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
-            //           console.log(curQuery.currTitle);
-
-            getFiltered(finalUrl, function() {
-                //                console.log("I am here 2");
-                console.log("THIS");
-                console.log(curQuery.curUrl);
-                doIt(function() {
-                    //                    console.log("I am here 3");
-                });
-
-            });
-
-        });
-    }
-
-    async function addPage() {
-
-        curQuery.curPage = curQuery.curPage + 1;
-        insertParam("pagenum", curQuery.curPage);
-        console.log(curQuery.curPage);
-        //            console.log("I am here 1");
-        var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
-        //           console.log(curQuery.currTitle);
-
-        getFiltered(finalUrl, function() {
-            doIt(function() {
-                curPageOnLoad = false;
-            });
-
-        });
-    }
-</script>
-<!--RETRIEVE CARDS-->
-<script>
-    function insertParam(key, value) {
-        key = encodeURIComponent(key);
-        value = encodeURIComponent(value);
-
-        var s = curQuery.curUrl;
-        var kvp = key + "=" + value;
-
-        var r = new RegExp("(&|\\?)" + key + "=[^\&]*");
-
-        s = s.replace(r, "$1" + kvp);
-
-        if (!RegExp.$1) {
-            s += (s.length > 0 ? '&' : '?') + kvp;
-        };
-
-        //again, do what you will here
-        curQuery.curUrl = s;
-    }
-
-
-    function getFiltered(thisUrl, callback2) {
-        var serv_request = new XMLHttpRequest();
-        serv_request.open('GET', thisUrl, false);
-
-        serv_request.onreadystatechange = function() {
-            if (serv_request.readyState == XMLHttpRequest.DONE && serv_request.status == 200) {
-                mydata = JSON.parse(serv_request.responseText);
-                console.log("I am here ");
-            }
-
-
-        }
-
-        console.log(thisUrl);
-
-        serv_request.send(null);
-        console.log(mydata);
-        callback2();
-
-    }
-
-    // function getUserEmail() {
-    //     console.log("inside getuseremail");
-    //     console.log("/Nukupi/users/getuseremail?userid="+user_id);
-    //     var serv_request = new XMLHttpRequest();
-    //     serv_request.open('GET', '/Nukupi/users/getuseremail?userid='+user_id, false);
-    //     serv_request.setRequestHeader("Content-type", "application/json");
-    //     serv_request.onreadystatechange = function() {
-    //         if (serv_request.readyState == 4 && serv_request.status == 200) {
-    //             user_email = serv_request.responseText;
-    //             console.log(user_email);
-    //         }
-    //     }
-    //     serv_request.send();
-    // }
-
-    // function showModal_description(idx){
-    //
-    //     $('#openModal').modal('show');
-    //     //getUserEmail();
-    //     //document.getElementById("pr").innerHTML = mydata[idx].price;
-    //     document.getElementById("ctgr").innerHTML = mydata[idx].category;
-    //     document.getElementById("descript").innerHTML = mydata[idx].description;
-    //     document.getElementById("title").innerHTML = mydata[idx].title;
-    //
-    //     // var firstImage = window.location.href + "rest/images?id="+ mydata[idx].images[0];
-    //     // console.log(firstImage);
-    //     // document.getElementById("main").valueOf().src = firstImage;
-    // }
-
-    function showModal_description(idx){
-        var p_user_id = mydata[idx].authorID;
-        var p_user_email = " ";
-        var p_user_phone = " ";
-        var serv_request = new XMLHttpRequest();
-        serv_request.open('GET', '/Nukupi/rest/users/getuserinfo?userid='+p_user_id, false);
-        serv_request.setRequestHeader("Content-type", "application/json");
-        serv_request.onreadystatechange = function() {
-            if (serv_request.readyState == 4 && serv_request.status == 200) {
-                var info = serv_request.responseText.split(",");
-                p_user_email = info[0] ;
-                p_user_phone = info[1];
-                console.log(p_user_email);
-                console.log(p_user_phone);
-            }
-        }
-        serv_request.send();
-        console.log("TRYING");
-        console.log(mydata[idx].authorID);
-        $('#openModal').modal('show');
-        document.getElementById("pr").innerHTML = mydata[idx].price;
-        document.getElementById("ctgr").innerHTML = mydata[idx].category;
-        document.getElementById("descript").innerHTML = mydata[idx].description;
-        document.getElementById("title").innerHTML = mydata[idx].title;
-        document.getElementById("userEmail").innerHTML = p_user_email;
-        document.getElementById("userPhone").innerHTML = p_user_phone;
-        console.log("modal description");
-        var firstImage = window.location.href + "rest/images?id="+ mydata[idx].images[0];
-        console.log(firstImage);
-        document.getElementById("main").valueOf().src = firstImage;
-    }
-
-    function freeAllCards(callback) {
-        curQuery.curPage = 1;
-
-        var myNode = document.getElementById("maxORIGDIV");
-        while (myNode.firstChild) {
-            myNode.removeChild(myNode.firstChild);
-
-        }
-        console.log("ASDASDDAS");
-        callback();
-
-    }
-
-    function doIt(callback) {
-        console.log("json");
-
-
-        for (i = 0; i < mydata.length; i++) {
-            var tagNames = ["firstDiv", "secondDiv", "firstImg", "firstButton", "thirdDiv", "nameId", "descId"];
-
-            for (j = 0; j < tagNames.length; j++) {
-
-                tagNames[j] = tagNames[j] +'elem'+ String(i)+'page'+String(curQuery.curPage);
-
-            }
-
-            var mydiv1 = document.getElementById("maxORIGDIV");
-            var div1 = document.createElement('div');
-            div1.id = tagNames[0];
-            div1.classList.add('col-lg-4', 'col-md-4', 'col-sm-6', 'col-xs-12');
-            mydiv1.appendChild(div1);
-
-            var mydiv2 = document.getElementById(tagNames[0]);
-            var div2 = document.createElement('div');
-            div2.id = tagNames[1];
-
-            //                console.log(tagNames);
-            div2.classList.add('innerimg', 'os-animation', 'animated', 'zoomIn');
-            div2.setAttribute('data-os-animation', "zoomIn");
-            div2.setAttribute('data-os-animation-delay', "0.5s");
-            div2.setAttribute('style', 'animation-delay: 0.5s;');
-            //                console.log(div2);
-            mydiv2.appendChild(div2);
-
-            var mydiv3 = document.getElementById(tagNames[1]);
-            var div3 = document.createElement('img');
-            div3.id = tagNames[2];
-            div3.classList.add('mainimg');
-            div3.setAttribute('src', "img/other.jpg");
-            if (mydata[i].category.toUpperCase() === "FOOD") {
-                div3.setAttribute('src', "img/food.jpg");
-            }
-            if (mydata[i].category.toUpperCase() === "DOMESTIC") {
-                div3.setAttribute('src', "img/domestic.jpg");
-            }
-            if (mydata[i].category.toUpperCase() === "CLOTHES") {
-                div3.setAttribute('src', "img/clothes.jpg");
-            }
-
-            div3.setAttribute('onclick', "showModal_description("+i+")");
-            div3.setAttribute('alt', "");
-            mydiv3.appendChild(div3);
-
-
-            var div4 = document.createElement('button');
-            var t = document.createTextNode(String(mydata[i].price) + " ₸");
-
-            div4.appendChild(t);
-
-            div4.id = tagNames[3];
-            div4.classList.add('price');
-            mydiv3.appendChild(div4);
-
-            var div5 = document.createElement('div');
-            div5.id = tagNames[4];
-            div5.classList.add('innercontent');
-            mydiv3.appendChild(div5);
-
-
-            var mydiv6 = document.getElementById(tagNames[4]);
-            var div6 = document.createElement('h5');
-            div6.id = tagNames[5];
-            var t2 = document.createTextNode(mydata[i].title);
-            console.log(t2);
-            div6.appendChild(t2);
-            mydiv6.appendChild(div6);
-
-            var div7 = document.createElement('span');
-            div7.id = tagNames[6];
-            var t3 = document.createTextNode(mydata[i].description);
-            div7.appendChild(t3);
-            mydiv6.appendChild(div7);
-
-
-        }
-
-        callback();
-    }
-</script>
-
-<script>
-    // $(window).scroll(function() {
-    //     if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-    //         addPage();
-    //     }
-    // });
-    //
-    window.onscroll = function() {
-        scrollingDown()
-    };
-
-    async function scrollingDown() {
-        if ($(window).scrollTop() > $(document).height() - $(window).height()-5) {
-            console.log("IGOT");
-            if (curPageOnLoad == false){
-                curPageOnLoad= true;
-                addPage();
-            }
-        }
-
-    }
-
-
-</script>
-<!--Requests-->
 
 <!-- Modal -->
 <div class="modal fade" id="DemoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h7 class="modal-title" id="exampleModalLabel">ADD PRODUCT FORM</h7>
+                <h5 class="modal-title" id="exampleModalLabel">SIGN UP FORM</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <forma>
-                    Enter product name: <input id="product-name" class="form-control" type="text" />
-                    Enter product description: <input id="product-description" class="form-control" type="text" />
-                    Enter product price: <input id="product-price" class="form-control" type="number"  min=0 oninput="validity.valid||(value='');"/>
-                    <div class="categradio">
-                        Select a category:
-                        <div class="categradio-1">
-                            <input type="radio" name="radio" id="radio1" value="Food" />
-                            <label for="radio1">Food</label>
-                        </div>
-                        <div class="categradio-2">
-                            <input type="radio" name="radio" id="radio2" value="Clothes" />
-                            <label for="radio2">Clothes</label>
-                        </div>
-                        <div class="categradio-3">
-                            <input type="radio" name="radio" id="radio3" value="Domestic" />
-                            <label for="radio3">Domestic</label>
-                        </div>
-                        <div class="categradio-4">
-                            <input type="radio" name="radio" id="radio4" value="Other" />
-                            <label for="radio4">Other</label>
-                        </div>
-                    </div>
-                    <div class="input-image">
-                        <forma>
-                            <label>Upload Image</label>
-                            <forma>
-                                <input type="file" id="imgupload1" multiple/>
-                            </forma>
-                        </forma>
-                    </div>
-                    <!--<form id="img-show">-->
-                    <!--<img id='img-upload'/>-->
-                    <!--</form>-->
-                </forma>
+                <form>
+                    E-mail: <input id="user-email" class="form-control" type="email" placeholder="example@nu.edu.kz"/>
+                    Full Name: <input id="user-name" class="form-control" type="text" placeholder="Nu Kupi"/>
+                    Phone Number: <input id="user-phone" class="form-control" type="tel" placeholder="87071112233"/>
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" id="submit-add-form" onclick="addProduct()" class="btn btn-default" data-dismiss="modal">Submit</button>
+                <button type="button" id = "submit-sign-up" onclick="registerUser()" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#DemoModal2">Receive password</button>
             </div>
         </div>
     </div>
 </div>
 
 
-<!--Modal for product description-->
-<div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="DemoModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h7 class="modal-title" id="exampleModalLabel">Product Information</h7>
+                <h5 class="modal-title" id="messageTittle"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <div id="qr" style="display:inline-block; min-width:7cm; height:7cm; align: center;vertical-align: middle;" >
-                    <td id="pic"><img id="main" src="" width="250px" height="250px"></td>
-                </div>
-                <div style="display:inline-block;vertical-align: top;">
-                    <td id="item_des"><b><h3 id="title"></h3></b>
-                        <h3 type="text" id="pr"></h3>
-                        <h3 type="text" id="ctgr"></h3>
-                        <h3 type="text" id="descript"></h3>
-                        <h3 type="text" id="userEmail"></h3>
-                        <h3 type="text" id="userPhone"></h3>
-                </div>
+                <div id ="messageBody"><p></p></div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                <button type="button" id = "confirm" class="btn btn-default" data-dismiss="modal">Okay</button>
             </div>
         </div>
     </div>
 </div>
 
-
-<!-- Change password Modal -->
-<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Forgot password Modal -->
+<div class="modal fade" id="fPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h7 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD FORM</h7>
+                <h7 class="modal-title" id="exampleModalLabel">FORGOT PASSWORD FORM</h7>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
             <div class="modal-body">
                 <forma>
-                    Old password: <input id="old-password" class="form-control" type="password" placeholder="Old password" />
-                    <br>
-                    New password: <input id="new-password" class="form-control" type="password" placeholder="New password" />
-
-
+                    E-mail: <input id="emailF" class="form-control" type="email" />
                 </forma>
             </div>
             <div class="modal-footer">
-                <button type="button" id="submit-add-form" onclick="changePassword()" class="btn btn-default" data-dismiss="modal">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Logs Modal -->
-<div class="modal fade" id="logsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document" >
-        <div class="modal-content">
-            <div class="modal-header">
-                <h7 class="modal-title" id="exampleModalLabel">LOGS</h7>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <forma>
-                    <div class="wrap">
-                        <div class="search">
-                            <input type="text" class="searchTerm" id="logSearchBox" placeholder="Search...">
-                            <button type="button" class="searchButton" onclick="searchLogs()">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                        <center><div class="radioFilter">
-                            <div class="maxl">
-                                <label class="radio inline">
-                                    <input type="radio" id="logUser" name="filter" value="User">
-                                    <span>User</span>
-                                </label>
-                                <label class="radio inline">
-                                    <input type="radio" id="logProduct" name="filter" value="Product">
-                                    <span>Product</span>
-                                </label>
-                                <label class="radio inline">
-                                    <input type="radio" id="logImage" name="filter" value="Image">
-                                    <span>Image</span>
-                                </label>
-                                <label class="radio inline">
-                                    <input type="radio" id="logAll" name="filter" value="All" checked>
-                                    <span>All</span>
-                                </label>
-                            </div>
-                        </div></center>
-                        <center><textarea readonly id="messageBox" class="msgbox" rows="15" cols="70" wrap="off"></textarea></center>
-                    </div>
-                </forma>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="submit-add-form" onclick="forgotPassword()" class="btn btn-default" data-dismiss="modal">Submit</button>
             </div>
         </div>
     </div>
@@ -888,5 +211,4 @@
 
 
 </body>
-
 </html>

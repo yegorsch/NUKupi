@@ -9,31 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="logging feature added">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/1144116fbada5b10dcca73db3fc3868bd829c6e2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/206e4c1017d7a2191beea7abafa9642240739ab9" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/2456ba3b88219f110deb3c9c43f9ea65ac01c876" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2dfa7669c20c41273cb505d16f04d17467fb3330" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/3503cdfdb663d3fa01250071ad96270f80e5d6bc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a2645ab407c9b4e0c1d5d0ae8570840c4704428" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cf87e6f5ae17137d61fada53b16410f8826124c" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/9918bd0aad69b9a33131e4fbcbc0ab9830d4b444" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2f232dcfc55a116a2a830ce535184f355ab1dae" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d368e3afdfc3b9308c554aaf493b3f214108c66d" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d590ab97ea74dfe114f316d75fcb74a304adf5ff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f93c86c05e242243fb30ea55628132e32c67e9b" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f93c86c05e242243fb30ea55628132e32c67e9b" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a973fed00e3229629ac0d2d76b45b0c059d4972e" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a973fed00e3229629ac0d2d76b45b0c059d4972e" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b90fbe0dabe2a065aa6834ff339548e6b87847e8" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b90fbe0dabe2a065aa6834ff339548e6b87847e8" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0cd9764143c90e2b3a8fa31f63a774496de9c6f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0cd9764143c90e2b3a8fa31f63a774496de9c6f" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de351eed44e20b079f604b335346fb85e6c69e1e" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de351eed44e20b079f604b335346fb85e6c69e1e" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ApplicationMain.java" afterPath="$PROJECT_DIR$/src/main/java/ApplicationMain.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/REST/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/clothes.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/f/img/clothes.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/domestic.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/f/img/domestic.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/food.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/f/img/food.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/other.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/f/img/other.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/f/main.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoggerService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/REST/LoggerService.java">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state relative-caret-position="153">
+              <caret line="598" column="26" lean-forward="false" selection-start-line="598" selection-start-column="26" selection-end-line="598" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -59,18 +44,48 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="877" column="82" lean-forward="false" selection-start-line="877" selection-start-column="82" selection-end-line="877" selection-end-column="82" />
+            <state relative-caret-position="102">
+              <caret line="154" column="48" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <file leaf-file-name="ImageService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST/ImageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="1334" column="19" lean-forward="true" selection-start-line="1334" selection-start-column="19" selection-end-line="1334" selection-end-column="19" />
+            <state relative-caret-position="153">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ApplicationMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="58" column="48" lean-forward="false" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticationFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -91,10 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>form{</find>
-      <find>mydata</find>
-      <find>h5a</find>
-      <find>h6</find>
       <find>h7</find>
       <find>url</find>
       <find>callback</find>
@@ -107,7 +118,6 @@
       <find>drop</find>
       <find>dropDown()</find>
       <find>user_nam</find>
-      <find>login</find>
       <find>logOu</find>
       <find>password</find>
       <find>simple</find>
@@ -121,6 +131,11 @@
       <find>logsMod</find>
       <find>searchLogs</find>
       <find>logSearch</find>
+      <find>login</find>
+      <find>rest</find>
+      <find>image</find>
+      <find>clothes</find>
+      <find>images?</find>
     </findStrings>
     <replaceStrings>
       <replace>ProductCollection</replace>
@@ -155,8 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/js/waypoints.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/script.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/Utils/json.txt" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Filterer.java" />
@@ -178,13 +191,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/login.css" />
         <option value="$PROJECT_DIR$/src/main/java/REST/ImageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/SendMail.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/LoggingFilterNukupi.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties" />
@@ -197,15 +208,19 @@
         <option value="$PROJECT_DIR$/src/main/java/Utils/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/logger.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/logger.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ApplicationMain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/MyLogHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/LogCollection.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/LoggerDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/LoggerService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/main.html" />
+        <option value="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ApplicationMain.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/f/main.html" />
       </list>
     </option>
   </component>
@@ -303,6 +318,14 @@
               <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="REST" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NUKupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,6 +335,31 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NUKupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="f" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NUKupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="f" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NUKupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NUKupi" type="b2602c69:ProjectViewProjectNode" />
@@ -362,12 +410,8 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Utils" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp" />
-      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main" />
-      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp\img" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Models" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -377,8 +421,12 @@
       <recent name="" />
       <recent name="junit.framework.TestCase" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Models" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp\f\img" />
+      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp\f" />
+      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp" />
+      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -876,7 +924,7 @@
       <workItem from="1522838018889" duration="18257000" />
       <workItem from="1522867455583" duration="1953000" />
       <workItem from="1522917952867" duration="19207000" />
-      <workItem from="1523001601149" duration="3087000" />
+      <workItem from="1523001601149" duration="10220000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1075,7 +1123,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238302000" />
+    <option name="totallyTimeSpent" value="245435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1098,12 +1146,13 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22503962" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2947702" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22503962" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38985738" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1882353" sideWeight="0.45833334" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20497803" sideWeight="0.77812994" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21303074" sideWeight="0.22187005" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.49166667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1113,7 +1162,6 @@
       <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.49722221" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.49166667" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1217,13 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST/ImageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Models/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1310,13 +1351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2281">
-          <caret line="203" column="4" lean-forward="false" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UniqueStringGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1329,16 +1363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="102" column="64" lean-forward="true" selection-start-line="102" selection-start-column="64" selection-end-line="102" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,14 +1401,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/logger.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Models/ProductCollection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1431,14 +1447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ApplicationMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="129" lean-forward="false" selection-start-line="23" selection-start-column="129" selection-end-line="23" selection-end-column="129" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/LoggerDatabaseClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -1476,18 +1484,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST/ProductService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/grid.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="75" column="48" lean-forward="true" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+        <state relative-caret-position="-19711">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="877" column="82" lean-forward="false" selection-start-line="877" selection-start-column="82" selection-end-line="877" selection-end-column="82" />
+        <state relative-caret-position="235">
+          <caret line="1345" column="23" lean-forward="false" selection-start-line="1345" selection-start-column="23" selection-end-line="1345" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1500,18 +1508,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/grid.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ApplicationMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19711">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="1334" column="19" lean-forward="true" selection-start-line="1334" selection-start-column="19" selection-end-line="1334" selection-end-column="19" />
+        <state relative-caret-position="-748">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="58" column="48" lean-forward="false" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="154" column="48" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST/ImageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="598" column="26" lean-forward="false" selection-start-line="598" selection-start-column="26" selection-end-line="598" selection-end-column="26" />
           <folding />
         </state>
       </provider>

@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/authenticate/*")
+@WebFilter("/f/*")
 public class AuthenticationFilter implements javax.servlet.Filter {
     public void destroy() {
     }
@@ -13,13 +13,14 @@ public class AuthenticationFilter implements javax.servlet.Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = ( HttpServletRequest ) req ;
         HttpSession session = request.getSession();
-        String test = ( String ) session.getAttribute("email");
+        String test = (String) session.getAttribute("email");
         HttpServletResponse response;
-        if ( test == null ) {
-            response = ( HttpServletResponse ) resp ;
-            response.sendRedirect("/Nukupi/login.html");
+        System.out.println(request.getRequestURI());
+        if (test == null && !request.getRequestURI().contains("/rest/users/login")) {
+            response = (HttpServletResponse) resp;
+            response.sendRedirect("/Nukupi");
         } else {
-            chain.doFilter(req,resp);
+            chain.doFilter(req, resp);
         }
     }
 

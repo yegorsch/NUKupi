@@ -56,9 +56,11 @@ public class UserService {
     @GET
     @Path("/login")
     public Response login(@QueryParam("email") String email, @QueryParam("password") String password) {
+        System.out.println("CAME HERE!!!!!!!!!!!");
         if(dbu.runQueryLogIn(email, password)) {
             HttpSession session = request.getSession();
             session.setAttribute("email", email);
+            System.out.println("EVERYTHING IS OK");
             return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();

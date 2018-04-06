@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Logger;
 
-@ApplicationPath("rest")
+@ApplicationPath("f/rest")
 public class ApplicationMain extends Application {
 
     private Set<Object> singletons = new HashSet<Object>();
