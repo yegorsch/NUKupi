@@ -17,7 +17,8 @@ public class AuthenticationFilter implements javax.servlet.Filter {
         HttpServletResponse response;
 //        System.out.println(request.getRequestURI());
         if (test == null && !request.getRequestURI().equals("/Nukupi/f/rest/users/login") &&
-                !request.getRequestURI().equals("/Nukupi/f/rest/users/")) {
+                !request.getRequestURI().equals("/Nukupi/f/rest/users/") &&
+                !request.getRequestURI().equals("/Nukupi/f/rest/users/forgotpassword")) {
             response = (HttpServletResponse) resp;
             response.sendRedirect("/Nukupi");
         } else {
