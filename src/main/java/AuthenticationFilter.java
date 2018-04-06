@@ -1,5 +1,3 @@
-package Utils;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -7,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/authenticate")
+@WebFilter("/authenticate/*")
 public class AuthenticationFilter implements javax.servlet.Filter {
     public void destroy() {
     }

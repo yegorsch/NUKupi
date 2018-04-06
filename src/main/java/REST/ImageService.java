@@ -1,6 +1,5 @@
 package REST;
 
-import DB.DatabaseClient;
 import DB.ImageDatabaseClient;
 import Models.Image;
 import com.google.gson.Gson;

@@ -49,9 +49,15 @@
                         console.log("Success");
                         document.getElementById("messageTittle").innerHTML = "Verification";
                         document.getElementById("messageBody").innerHTML = "Please, check your e-mail. You'll receive temporary password to access your account.";
+                        document.getElementById("user-email").value = "";
+                        document.getElementById("user-name").value = "";
+                        document.getElementById("user-phone").value = "";
                     } else {
                         document.getElementById("messageTittle").innerHTML = "We're sorry. Sign up error. Try again.";
                         document.getElementById("messageBody").innerHTML = "This email is already registered. Click forgot your password to recover access to the account.";
+                        document.getElementById("user-email").value = "";
+                        document.getElementById("user-name").value = "";
+                        document.getElementById("user-phone").value = "";
                     }
 
                 }
@@ -83,6 +89,8 @@
                         document.getElementById("messageTittle").innerHTML = "Login error";
                         document.getElementById("messageBody").innerHTML = "We could find you. Please, insert your university e-mail and recieved password. Or click forgot your password to recover the access to the account.";
                         $('#DemoModal2').modal('show');
+                        document.getElementById("username").value = "";
+                        document.getElementById("password").value = "";
                     }
 
                 }
@@ -108,8 +116,10 @@
                     if (serv_request.readyState == 4 && serv_request.status == 200) {
                         user_id = serv_request.responseText;
                         window.alert("Password is succesfully send to your email address");
+                        document.getElementById("emailF").value = "";
                     } else {
                         window.alert("Something went wrong. Please, try again");
+                        document.getElementById("emailF").value = "";
                     }
                 }
                 serv_request.send(null);
@@ -126,7 +136,7 @@
 <div class="logo"></div>
 <div class="login-block">
     <h1>NU Kupi</h1>
-    <input type="text" value="" placeholder="example@nu.edu.kz" id="username" />
+    <input type="email" value="" placeholder="example@nu.edu.kz" id="username" />
     <input type="password" value="" placeholder="Password" id="password" />
     <button onclick="loginUser()">Log in</button>
     <button data-toggle="modal" data-target="#DemoModal">Sign up</button>
@@ -146,9 +156,9 @@
             </div>
             <div class="modal-body">
                 <form>
-                    E-mail: <input id="user-email" class="form-control" type="text" />
-                    Full Name: <input id="user-name" class="form-control" type="text" />
-                    Phone Number: <input id="user-phone" class="form-control" type="text" />
+                    E-mail: <input id="user-email" class="form-control" type="email" placeholder="example@nu.edu.kz"/>
+                    Full Name: <input id="user-name" class="form-control" type="text" placeholder="Nu Kupi"/>
+                    Phone Number: <input id="user-phone" class="form-control" type="tel" placeholder="87071112233"/>
                 </form>
             </div>
             <div class="modal-footer">
@@ -189,7 +199,7 @@
             </div>
             <div class="modal-body">
                 <forma>
-                    E-mail: <input id="emailF" class="form-control" type="text" />
+                    E-mail: <input id="emailF" class="form-control" type="email" />
                 </forma>
             </div>
             <div class="modal-footer">

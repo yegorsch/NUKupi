@@ -1,7 +1,5 @@
 package DB;
 
-import Models.Product;
-import Models.ProductCollection;
 import Models.User;
 import Models.UserCollection;
 
@@ -9,8 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class UserDatabaseClient extends DatabaseClient {
 

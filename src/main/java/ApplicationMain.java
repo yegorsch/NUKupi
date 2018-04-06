@@ -1,7 +1,4 @@
-import REST.IDService;
-import REST.ImageService;
-import REST.ProductService;
-import REST.UserService;
+import REST.*;
 import org.glassfish.jersey.logging.LoggingFeature;
 
 import javax.ws.rs.ApplicationPath;
@@ -21,7 +18,10 @@ public class ApplicationMain extends Application {
         singletons.add(new ImageService());
         singletons.add(new UserService());
         singletons.add(new IDService());
-        singletons.add(new LoggingFeature(Logger.getLogger(ApplicationMain.class.getName()), LoggingFeature.Verbosity.PAYLOAD_ANY));
+        singletons.add(new LoggerService());
+        singletons.add(new LoggingFeature(Logger.getLogger(ProductService.class.getName()), LoggingFeature.Verbosity.PAYLOAD_ANY));
+        singletons.add(new LoggingFeature(Logger.getLogger(UserService.class.getName()), LoggingFeature.Verbosity.PAYLOAD_ANY));
+        singletons.add(new LoggingFeature(Logger.getLogger(ImageService.class.getName()), LoggingFeature.Verbosity.PAYLOAD_ANY));
     }
 
     public Set<Class<?>> getClasses() {

@@ -95,8 +95,12 @@
                     if (serv_request.readyState == 4 && serv_request.status == 200) {
                         user_id = serv_request.responseText;
                         window.alert("Password is succesfully changed.");
+                        document.getElementById("old-password").value = "";
+                        document.getElementById("new-password").value = "";
                     } else {
                         window.alert("Old password doesn't match");
+                        document.getElementById("old-password").value = "";
+                        document.getElementById("new-password").value = "";
                     }
                 }
                 serv_request.send(JSON.stringify(data));
@@ -105,6 +109,36 @@
             }
 
 
+        }
+
+        function searchLogs() {
+            var searchword = document.getElementById("logSearchBox").value;
+            var loggername;
+            if(document.getElementById("logUser").checked) {
+                loggername = 'UserService';
+            } else if(document.getElementById("logProduct").checked) {
+                loggername = 'ProductService';
+            } else if(document.getElementById("logImage").checked) {
+                loggername = 'ImageService';
+            } else {
+                loggername = '';
+            }
+            var serv_request = new XMLHttpRequest();
+            serv_request.open('GET', '/Nukupi/rest/logger/filters?searchWord='+searchword+'&loggerName='+loggername, false);
+            serv_request.setRequestHeader("Content-type", "application/json");
+            serv_request.onreadystatechange = function() {
+                if (serv_request.readyState == 4 && serv_request.status == 200) {
+                    document.getElementById("logSearchBox").value = '';
+                    var logdata = JSON.parse(serv_request.responseText);
+                    var readymsg = '';
+                    for (var i = 0; i < logdata.length; i++) {
+                        readymsg = readymsg + new Date(logdata[i].millis).toDateString() + ", " + logdata[i].loggerName + ", " + logdata[i].message + "\n";
+                    }
+                    document.getElementById("messageBox").innerHTML = readymsg;
+                } else
+                    console.log("outt");
+            }
+            serv_request.send(null);
         }
 
         function logOut(){
@@ -181,14 +215,14 @@
                     var mdata = JSON.parse(serv_request.responseText);
                     console.log(mdata);
                     console.log(serv_request.responseText);
-                    document.getElementById("user_name").innerHTML = mdata[0].name;
-                    document.getElementById("user_tel").innerHTML = mdata[0].phone_number;
+                    document.getElementById("user_name").innerHTML = "Hi, " + mdata[0].name;
+                    document.getElementById("user_tel").innerHTML = "Tel: " + mdata[0].phone_number;
                     document.getElementById("user_email").innerHTML = mdata[0].email;
                     console.log(mdata[0].name);
                     console.log(mdata[0].phone_number);
                     console.log(mdata[0].email);
                     if(mdata[0].type == "Moderator"){
-                        document.getElementById("logBtn").innerHTML = "<a href=\"Nukupi/logger.html\">Logs</a>";
+                        document.getElementById("logBtn").innerHTML = "<a href=\"\" data-toggle=\"modal\" data-target=\"#logsModal\">Logs</a>";
                     }
 
                 }
@@ -231,10 +265,10 @@
                         <div class="dropdown">
                             <button onclick="dropDown()" class="dropbtn">MY PROFILE</button>
                             <div id="myDropdown" class="dropdown-content">
-                                <center>Hi, <div id="user_name"></div></center>
+                                <center><div id="user_name"></div></center>
                                 <br>
                                 <div id="user_tel"></div>
-                                <div id="user_email"><font color="#21618C"></font></div>
+                                <div id="user_email" class="dropdown-email"></div>
                                 <br>
                                 <a href="">My products</a>
                                 <div id="logBtn"></div>
@@ -351,7 +385,7 @@
         currentCat: "",
         initialUrl: "/Nukupi/rest/products/filters",
         curUrl: "",
-        defPrice: document.getElementById("myRange").defaultValue,
+        defPrice: 27000000,
         curPage: 1
     };
     var curPageOnLoad = false;
@@ -362,12 +396,16 @@
     slider.oninput = function() {
         if (this.value == 0) {
             output.innerHTML = "free";
+            curQuery.defPrice = this.value;
         } else if (this.value < 10000) {
             output.innerHTML = "Less than: " + String(this.value) + "₸";
+            curQuery.defPrice = this.value;
         } else {
+            console.log("GOTDEFpRICE");
+            curQuery.defPrice = 27000000;
             output.innerHTML = "No price filter";
         }
-        curQuery.defPrice = this.value;
+
     }
 </script>
 <!--Filter bar-->
@@ -793,6 +831,56 @@
             </div>
             <div class="modal-footer">
                 <button type="button" id="submit-add-form" onclick="changePassword()" class="btn btn-default" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Logs Modal -->
+<div class="modal fade" id="logsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h7 class="modal-title" id="exampleModalLabel">LOGS</h7>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <forma>
+                    <div class="wrap">
+                        <div class="search">
+                            <input type="text" class="searchTerm" id="logSearchBox" placeholder="Search...">
+                            <button type="button" class="searchButton" onclick="searchLogs()">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        <center><div class="radioFilter">
+                            <div class="maxl">
+                                <label class="radio inline">
+                                    <input type="radio" id="logUser" name="filter" value="User">
+                                    <span>User</span>
+                                </label>
+                                <label class="radio inline">
+                                    <input type="radio" id="logProduct" name="filter" value="Product">
+                                    <span>Product</span>
+                                </label>
+                                <label class="radio inline">
+                                    <input type="radio" id="logImage" name="filter" value="Image">
+                                    <span>Image</span>
+                                </label>
+                                <label class="radio inline">
+                                    <input type="radio" id="logAll" name="filter" value="All" checked>
+                                    <span>All</span>
+                                </label>
+                            </div>
+                        </div></center>
+                        <center><textarea readonly id="messageBox" class="msgbox" rows="15" cols="70" wrap="off"></textarea></center>
+                    </div>
+                </forma>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

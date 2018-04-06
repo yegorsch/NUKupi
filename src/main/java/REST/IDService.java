@@ -1,8 +1,6 @@
 package REST;
 
 import DB.DatabaseClient;
-import DB.ImageDatabaseClient;
-import Models.Image;
 import Utils.UniqueStringGenerator;
 
 import javax.ws.rs.GET;
