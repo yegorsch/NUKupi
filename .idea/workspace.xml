@@ -8,59 +8,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/026ebd895c57234fc30913aa7c5046e2c57718b3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02d402c0ee5cdaa6a23775f75168adca1cfc1ff3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17b2292c4e951176760fef6948eceb2a3a5acfc1" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1fe08a094f11e9ce1da182e8ea86506ae05bac48" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f71134157a92b2c54cce1636ea829d15689bca0" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3ae172befc6922c45a1667187af59ffdb6e69b27" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/905d657f28bc7c02ea09633fd92d27d99ad8b399" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a965831b56150228e1304e91fac78cf8c668d0fd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db6d1698a5712e81bb6653a6f804bd01bae8df62" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DB/QueryCreators/ImageQueryCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DB/QueryCreators/LoggerQueryCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DB/QueryCreators/ProductQueryCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DB/QueryCreators/UserQueryCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/Utils/ProductQueryTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/Utils/UserQueryTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/10302c4fff5dbc06675aa052e6f1f521d26f4196" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/10302c4fff5dbc06675aa052e6f1f521d26f4196" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16fbcc6988d2a8815949d3cbe6e62df4be6b60ba" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16fbcc6988d2a8815949d3cbe6e62df4be6b60ba" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/2456ba3b88219f110deb3c9c43f9ea65ac01c876" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/2456ba3b88219f110deb3c9c43f9ea65ac01c876" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/3205dbae87c88f4fdec2bd05911ceac80c45d791" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/3205dbae87c88f4fdec2bd05911ceac80c45d791" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cf87e6f5ae17137d61fada53b16410f8826124c" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cf87e6f5ae17137d61fada53b16410f8826124c" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a973fed00e3229629ac0d2d76b45b0c059d4972e" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a973fed00e3229629ac0d2d76b45b0c059d4972e" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad1bd37e47ba8edd6a9410d5da82d5213338c846" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad1bd37e47ba8edd6a9410d5da82d5213338c846" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b90fbe0dabe2a065aa6834ff339548e6b87847e8" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c193402152569230ad053c4aaab4ef874758dfd9" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c193402152569230ad053c4aaab4ef874758dfd9" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0cd9764143c90e2b3a8fa31f63a774496de9c6f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0cd9764143c90e2b3a8fa31f63a774496de9c6f" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de351eed44e20b079f604b335346fb85e6c69e1e" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de351eed44e20b079f604b335346fb85e6c69e1e" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4c60db0d4b9f71fb9f2059c37eeb1ab47672c33" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4c60db0d4b9f71fb9f2059c37eeb1ab47672c33" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f317f906f24246fad79b038f99332b718d024ec7" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f317f906f24246fad79b038f99332b718d024ec7" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/DatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/ImageDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/ImageDatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/LoggerDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/LoggerDatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/LogCollection.java" afterPath="$PROJECT_DIR$/src/main/java/Models/LogCollection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Product.java" afterPath="$PROJECT_DIR$/src/main/java/Models/Product.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ProductCollection.java" afterPath="$PROJECT_DIR$/src/main/java/Models/ProductCollection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserCollection.java" afterPath="$PROJECT_DIR$/src/main/java/Models/UserCollection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/IDService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/IDService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/LoggerService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/LoggerService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/REST/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/MyLogHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Utils/MyLogHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/SendMail.java" afterPath="$PROJECT_DIR$/src/main/java/Utils/SendMail.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/f/main.html" afterPath="$PROJECT_DIR$/src/main/webapp/f/main.html" />
-      <change beforePath="$PROJECT_DIR$/src/test/Utils/FiltererTest.java" afterPath="" />
-    </list>
+    <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,8 +23,8 @@
       <file leaf-file-name="ApplicationMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ApplicationMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+            <state relative-caret-position="187">
+              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -917,7 +865,7 @@
       <workItem from="1523001601149" duration="10805000" />
       <workItem from="1523027015430" duration="7076000" />
       <workItem from="1523261204406" duration="3290000" />
-      <workItem from="1523266301487" duration="7671000" />
+      <workItem from="1523266301487" duration="7835000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1123,7 +1071,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264057000" />
+    <option name="totallyTimeSpent" value="264221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1146,7 +1094,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41521394" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41521394" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25515056" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1882353" sideWeight="0.45833334" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22181553" sideWeight="0.77812994" order="2" side_tool="false" content_ui="combo" />
@@ -1537,10 +1485,10 @@
         <state relative-caret-position="34">
           <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding>
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="false" />
+            <element signature="e#285#286#0" expanded="false" />
+            <element signature="e#378#379#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1550,10 +1498,10 @@
         <state relative-caret-position="153">
           <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="false" />
+            <element signature="e#279#280#0" expanded="false" />
+            <element signature="e#370#371#0" expanded="false" />
+            <element signature="e#402#403#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1563,9 +1511,9 @@
         <state relative-caret-position="-182">
           <caret line="15" column="124" lean-forward="false" selection-start-line="15" selection-start-column="124" selection-end-line="15" selection-end-column="124" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1783#1784#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1783#1784#0" expanded="false" />
+            <element signature="e#1815#1816#0" expanded="false" />
             <marker date="1523273143906" expanded="true" signature="414:581" ph="select produ... " />
             <marker date="1523273143906" expanded="true" signature="414:659" ph="select produ... product" />
             <marker date="1523273143906" expanded="true" signature="414:784" ph="select produ... product" />
@@ -1614,8 +1562,8 @@
         <state relative-caret-position="-488">
           <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="false" />
+            <element signature="e#328#329#0" expanded="false" />
             <marker date="1523274862354" expanded="true" signature="459:495" ph="insert into image... " />
             <marker date="1523274862354" expanded="true" signature="1213:1318" ph="select image... " />
             <marker date="1523274862354" expanded="true" signature="1896:1938" ph="delete from image... " />
@@ -1628,7 +1576,7 @@
         <state relative-caret-position="-978">
           <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1523274907067" expanded="true" signature="453:491" ph="insert into logger... " />
             <marker date="1523274907067" expanded="true" signature="1107:1154" ph="select milli... logger" />
             <marker date="1523274907067" expanded="true" signature="1609:1962" ph="SELECT milli... logger" />
@@ -1638,8 +1586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ApplicationMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        <state relative-caret-position="187">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding />
         </state>
       </provider>
