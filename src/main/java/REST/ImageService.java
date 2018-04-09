@@ -1,6 +1,5 @@
 package REST;
 
-import DB.DatabaseClient;
 import DB.ImageDatabaseClient;
 import Models.Image;
 import com.google.gson.Gson;
@@ -14,7 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-// URL: http://localhost:8080/rest/images
+// URL: http://localhost:8080/f/rest/images
 @Path("images")
 public class ImageService {
 

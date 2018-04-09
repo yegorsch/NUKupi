@@ -1,7 +1,4 @@
-import REST.IDService;
-import REST.ImageService;
-import REST.ProductService;
-import REST.UserService;
+import REST.*;
 import org.glassfish.jersey.logging.LoggingFeature;
 
 import javax.ws.rs.ApplicationPath;
@@ -10,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Logger;
 
-@ApplicationPath("rest")
+@ApplicationPath("f/rest")
 public class ApplicationMain extends Application {
 
     private Set<Object> singletons = new HashSet<Object>();
@@ -21,6 +18,7 @@ public class ApplicationMain extends Application {
         singletons.add(new ImageService());
         singletons.add(new UserService());
         singletons.add(new IDService());
+        singletons.add(new LoggerService());
         singletons.add(new LoggingFeature(Logger.getLogger(ProductService.class.getName()), LoggingFeature.Verbosity.PAYLOAD_ANY));
         singletons.add(new LoggingFeature(Logger.getLogger(UserService.class.getName()), LoggingFeature.Verbosity.PAYLOAD_ANY));
         singletons.add(new LoggingFeature(Logger.getLogger(ImageService.class.getName()), LoggingFeature.Verbosity.PAYLOAD_ANY));

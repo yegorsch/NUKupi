@@ -13,7 +13,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
-// URL: http://localhost:8080/rest/users
+// URL: http://localhost:8080/f/rest/users
 @Path("users")
 public class UserService {
     private UserDatabaseClient dbu;
@@ -56,9 +56,11 @@ public class UserService {
     @GET
     @Path("/login")
     public Response login(@QueryParam("email") String email, @QueryParam("password") String password) {
+        System.out.println("CAME HERE!!!!!!!!!!!");
         if(dbu.runQueryLogIn(email, password)) {
             HttpSession session = request.getSession();
             session.setAttribute("email", email);
+            System.out.println("EVERYTHING IS OK");
             return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
@@ -82,7 +84,6 @@ public class UserService {
         return b.build();
     }
 
-    // TODO: Forgot password
     @GET
     @Path("/forgotpassword")
     public Response forgotPassword(@QueryParam("email") String email) {

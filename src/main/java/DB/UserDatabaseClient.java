@@ -1,7 +1,5 @@
 package DB;
 
-import Models.Product;
-import Models.ProductCollection;
 import Models.User;
 import Models.UserCollection;
 
@@ -9,8 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class UserDatabaseClient extends DatabaseClient {
 
@@ -187,6 +183,23 @@ public class UserDatabaseClient extends DatabaseClient {
             e.printStackTrace();
         }
         return users;
+    }
+
+    public String runQueryIfModerator(String userId) {
+        String type = "";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select type " +
+                            "from user " +
+                            "where user_id='" + userId + "'" + ";"
+            );
+            if (rs.next())
+                type = rs.getString("type");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return type;
     }
 
     private void fillUsers(UserCollection users, ResultSet rs) throws SQLException {

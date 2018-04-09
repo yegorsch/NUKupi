@@ -6,7 +6,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.Map;
 
 @JsonAdapter(UserAdapter.class)
