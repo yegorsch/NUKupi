@@ -74,3 +74,13 @@ Z
 *src/main/java/DB/LoggerDatabaseClient.java,9/0/905d657f28bc7c02ea09633fd92d27d99ad8b399
 d
 4src/main/java/DB/QueryCreators/UserQueryCreator.java,3/a/3ae172befc6922c45a1667187af59ffdb6e69b27
+M
+src/main/java/Models/Log.java,0/2/026ebd895c57234fc30913aa7c5046e2c57718b3
+U
+%src/main/java/Models/ProductInfo.java,d/b/db6d1698a5712e81bb6653a6f804bd01bae8df62
+W
+'src/main/java/AuthenticationFilter.java,0/2/02d402c0ee5cdaa6a23775f75168adca1cfc1ff3
+P
+ src/test/Utils/FiltererTest.java,a/9/a965831b56150228e1304e91fac78cf8c668d0fd
+W
+'src/main/java/Models/LogCollection.java,2/f/2f71134157a92b2c54cce1636ea829d15689bca0

@@ -1,0 +1,11 @@
+
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+asquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èÐ»úÿÿÿÿ
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÐÀœ¢8Îñ€à©,
+asquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï
+asquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èÐ»úÿÿÿÿ
+dsquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¾ãÇ•
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+lsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(òÉ¯­ýÿÿÿÿ

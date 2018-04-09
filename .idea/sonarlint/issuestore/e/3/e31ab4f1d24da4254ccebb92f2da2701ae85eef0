@@ -1,12 +1,10 @@
 
 Y
 squid:S106"9Replace this use of System.out or System.err by a logger.(Ξ¬ΐÿÿÿÿÿ8Ξ•ί©,
-Ysquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(χ‰ξƒ8Ξ•ί©,
-S
-squid:S106"9Replace this use of System.out or System.err by a logger.(Δώ!8Ξ•ί©,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(υσβΰ8ράΉϋ¨,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ο¤ξ¦8ράΉϋ¨,
 Ssquid:S1135"2Complete the task associated to this TODO comment.(΄®‘Γόÿÿÿÿ8ράΉϋ¨,
 lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ΣΈΘ²ώÿÿÿÿ8ράΉϋ¨,
-tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ο¤ξ¦8ράΉϋ¨,
-lsquid:UselessImportCheck">Remove this unused import 'com.google.gson.reflect.TypeToken'.(έªύρψÿÿÿÿ8Ξ•ί©,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(υσβΰ8ράΉϋ¨,
+S
+squid:S106"9Replace this use of System.out or System.err by a logger.(Δώ!8Ξ•ί©,
