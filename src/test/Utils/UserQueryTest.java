@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FiltererTest extends TestCase {
+public class UserQueryTest extends TestCase {
 
     ProductCollection products;
 
