@@ -244,6 +244,10 @@
                 }
             }
         }
+
+        function eraseText() {
+            document.getElementById("messageBox").value = "";
+        }
     </script>
 
 </head>
@@ -843,7 +847,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h7 class="modal-title" id="exampleModalLabel">LOGS</h7>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" onclick="eraseText()" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
             <div class="modal-body">
@@ -875,12 +879,12 @@
                                 </label>
                             </div>
                         </div></center>
-                        <center><textarea readonly id="messageBox" class="msgbox" rows="15" cols="70" wrap="off"></textarea></center>
+                        <center><textarea readonly id="messageBox" class="msgbox" wrap="off"></textarea></center>
                     </div>
                 </forma>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" onclick="eraseText()" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

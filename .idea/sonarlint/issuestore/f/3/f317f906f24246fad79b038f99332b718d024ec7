@@ -1,27 +1,25 @@
 
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒşÂŞÿÿÿÿÿ8ø•üª¨,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Öãâşÿÿÿÿ8ø•üª¨,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÚÖÈá8ø•üª¨,
+‘squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(†ìû’úÿÿÿÿ8ø•üª¨,
 ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òİ”çıÿÿÿÿ8ø•üª¨,
-qsquid:UselessImportCheck"CRemove this unused import 'jdk.nashorn.internal.parser.JSONParser'.(©ß÷‰ıÿÿÿÿ8ø•üª¨,
-squid:S1319"qThe type of the "images" object should be an interface such as "List" rather than the implementation "ArrayList".(¸•÷ 8ø•üª¨,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Õ‰ Ê8ø•üª¨,
 nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û’ß‚8ø•üª¨,
 …"squid:ClassVariableVisibilityCheck"RMake images a static final constant or non-public and provide accessors if needed.(¸•÷ 8ø•üª¨,
-‘squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(†ìû’úÿÿÿÿ8ø•üª¨,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Öãâşÿÿÿÿ8ø•üª¨,
-Nsquid:S1135"2Complete the task associated to this TODO comment.(ºõ«Š8ø•üª¨,
+squid:S1319"qThe type of the "images" object should be an interface such as "List" rather than the implementation "ArrayList".(¸•÷ 8ø•üª¨,
 gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÑÁÒø8ø•üª¨,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Õ‰ Ê8ø•üª¨,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Öãâşÿÿÿÿ8ø•üª¨,
-zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(üê¼åúÿÿÿÿ8ø•üª¨,
-lsquid:UselessImportCheck">Remove this unused import 'com.google.gson.stream.JsonReader'.(ËÓÌ—üÿÿÿÿ8ø•üª¨,
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ›¨‡8ø•üª¨,
-’squid:S1319"qThe type of the "images" object should be an interface such as "List" rather than the implementation "ArrayList".(ÿØùÿÿÿÿ8ø•üª¨,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÚÖÈá8ø•üª¨,
-jsquid:S00116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ŞÒï8ø•üª¨,
-zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(üê¼åúÿÿÿÿ8ø•üª¨,
-esquid:HiddenFieldCheck"9Rename "price" which hides the field declared at line 26.(Îì‡±ùÿÿÿÿ8ø•üª¨,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Õ‰ Ê8ø•üª¨,
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ºõ«Š8ø•üª¨,
 zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(üê¼åúÿÿÿÿ8ø•üª¨,
 ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ùæñÃûÿÿÿÿ8ø•üª¨,
+’squid:S1319"qThe type of the "images" object should be an interface such as "List" rather than the implementation "ArrayList".(ÿØùÿÿÿÿ8ø•üª¨,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒşÂŞÿÿÿÿÿ8ø•üª¨,
 Osquid:S1068"3Remove this unused "JSON_PRODUCT_ID" private field.(çñ¦Ì8ø•üª¨,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(üê¼åúÿÿÿÿ8ø•üª¨,
+esquid:HiddenFieldCheck"9Rename "price" which hides the field declared at line 24.(Îì‡±ùÿÿÿÿ8ø•üª¨,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ›¨‡8ø•üª¨,
+jsquid:S00116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ŞÒï8ø•üª¨,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Öãâşÿÿÿÿ8ø•üª¨,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(üê¼åúÿÿÿÿ8ø•üª¨,
 gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(×¡î³8ø•üª¨,
 Nsquid:S1135"2Complete the task associated to this TODO comment.(Š¡Ã—8ø•üª¨,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Õ‰ Ê8ø•üª¨,

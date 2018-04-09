@@ -1,10 +1,13 @@
 
-Ssquid:S1135"2Complete the task associated to this TODO comment.(ÎæãÆÿÿÿÿÿ8û…Ğø¨,
-bsquid:S1192"FDefine a constant instead of duplicating this literal "email" 4 times.(éŒ¤8û…Ğø¨,
 S
 squid:S106"9Replace this use of System.out or System.err by a logger.(ªÌ¤d8û…Ğø¨,
 T
 squid:S106"9Replace this use of System.out or System.err by a logger.(ëçÆÑ8û…Ğø¨,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ù¼øıÿÿÿÿ8ÔÚß©,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÖÖá‚8ÔÚß©,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ï¤î¦8û…Ğø¨,
 T
 squid:S106"9Replace this use of System.out or System.err by a logger.(—°èÙ8û…Ğø¨,
-tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ï¤î¦8û…Ğø¨,
+bsquid:S1192"FDefine a constant instead of duplicating this literal "email" 4 times.(éŒ¤8û…Ğø¨,

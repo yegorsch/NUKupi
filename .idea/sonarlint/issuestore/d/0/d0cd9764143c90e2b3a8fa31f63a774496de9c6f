@@ -1,12 +1,11 @@
 
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ›¨‡8ø•üª¨,
-Rsquid:S1068"1Remove this unused "JSON_PASSWORD" private field.(âÍÄÙÿÿÿÿÿ8ø•üª¨,
-vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(›ôÃúÿÿÿÿ8ã½ÏÒ¨,
-ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ùæñÃûÿÿÿÿ8ø•üª¨,
+_squid:HiddenFieldCheck"8Rename "type" which hides the field declared at line 18.(Æ¢†Î8ø•üª¨,
 Lsquid:S1068"0Remove this unused "JSON_USER_ID" private field.(áÍ‡¤8ø•üª¨,
-Isquid:S1068"-Remove this unused "JSON_TYPE" private field.(ç‘ú¸8ø•üª¨,
-_squid:HiddenFieldCheck"8Rename "type" which hides the field declared at line 19.(Æ¢†Î8ø•üª¨,
 lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(˜á¾äüÿÿÿÿ8ø•üª¨,
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÀş¥8ø•üª¨,
+vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(›ôÃúÿÿÿÿ8ã½ÏÒ¨,
+Isquid:S1068"-Remove this unused "JSON_TYPE" private field.(ç‘ú¸8ø•üª¨,
 vsquid:S2068"U'PASSWORD' detected in this expression, review this potentially hardcoded credential.(âÍÄÙÿÿÿÿÿ8ø•üª¨,
-Ysquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ø•üª¨,
+ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ùæñÃûÿÿÿÿ8ø•üª¨,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ›¨‡8ø•üª¨,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÀş¥8ø•üª¨,
+Rsquid:S1068"1Remove this unused "JSON_PASSWORD" private field.(âÍÄÙÿÿÿÿÿ8ø•üª¨,

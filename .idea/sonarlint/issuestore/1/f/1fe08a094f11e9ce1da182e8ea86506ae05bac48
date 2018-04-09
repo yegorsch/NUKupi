@@ -1,0 +1,15 @@
+
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+[squid:S1126"AReplace this if-then-else statement by a single return statement.(ìèÊúÿÿÿÿ
+@squid:S1481"+Remove this unused "images" local variable.(ÖÂ¤
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÁ§äûÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Osquid:S1854":Remove this useless assignment to local variable "images".(ÖÂ¤
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÜêÉ
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï
+isquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¢”àüÿÿÿÿ
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖÂ¤
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+isquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’¶ÈÓşÿÿÿÿ
+asquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ
+dsquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(êÚ¿“

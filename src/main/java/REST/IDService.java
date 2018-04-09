@@ -1,6 +1,5 @@
 package REST;
 
-import DB.DatabaseClient;
 import Utils.UniqueStringGenerator;
 
 import javax.ws.rs.GET;
@@ -10,12 +9,6 @@ import javax.ws.rs.core.Response;
 
 @Path("id")
 public class IDService {
-
-    private DatabaseClient dbc;
-
-    public IDService() {
-        dbc = new DatabaseClient();
-    }
 
     @GET
     public Response generate(@QueryParam("id") String id) {

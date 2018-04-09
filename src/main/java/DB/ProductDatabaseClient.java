@@ -1,5 +1,6 @@
 package DB;
 
+import DB.QueryCreators.ProductQueryCreator;
 import Models.Product;
 import Models.ProductCollection;
 
@@ -10,7 +11,7 @@ import java.util.Arrays;
 public class ProductDatabaseClient extends DatabaseClient {
 
     public ProductDatabaseClient() {
-        super();
+        ProductQueryCreator.getInstance().setConnection(conn);
     }
 
     public boolean runQueryInsertProduct(String product_id, String title, String description, int price, String category, String p_user_id) {
@@ -51,22 +52,14 @@ public class ProductDatabaseClient extends DatabaseClient {
         return products;
     }
 
-    //TODO: FIX SQL INJECTION
     public ProductCollection runQueryProductsByUser(String p_user_id) {
         ProductCollection products = new ProductCollection();
 
         try {
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select product_id, title, description, price, category, p_user_id " +
-                            "from product " + "where p_user_id='" + p_user_id + "'" + ";"
-            );
-
-            while (rs.next()) {
-                products.add(new Product(rs.getString("product_id"), rs.getString("title"),
-                        rs.getString("description"), rs.getString("p_user_id"),
-                        rs.getInt("price"), rs.getString("category")));
-            }
+            ResultSet rs = ProductQueryCreator.getInstance().productsByUser(p_user_id).executeQuery();
+            fillProducts(products, rs);
+            rs.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -132,17 +125,12 @@ public class ProductDatabaseClient extends DatabaseClient {
         }
     }
 
-    //TODO: FIX SQL INJECTION
     public boolean runQueryDeleteProduct(String product_id) {
         try {
-            Statement stmt = conn.createStatement();
-            int count = stmt.executeUpdate(
-                    "delete from product where product_id='" + product_id + "';"
-            );
+            int count = ProductQueryCreator.getInstance().deleteProduct(product_id).executeUpdate();
             if (count > 0) {
                 return true;
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
