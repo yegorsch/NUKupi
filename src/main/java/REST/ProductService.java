@@ -7,14 +7,12 @@ import Models.Product;
 import Models.ProductCollection;
 import Models.ProductInfo;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
 
 //import Utils.Filterer;
 

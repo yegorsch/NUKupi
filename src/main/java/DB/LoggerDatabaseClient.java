@@ -3,8 +3,9 @@ package DB;
 import Models.Log;
 import Models.LogCollection;
 
-import java.sql.*;
-import java.util.ArrayList;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class LoggerDatabaseClient extends DatabaseClient {
 
@@ -49,7 +50,9 @@ public class LoggerDatabaseClient extends DatabaseClient {
     public LogCollection runQueryLogsByFilter(String searchWord, String loggerName) {
         LogCollection logs = new LogCollection();
         try {
-            Statement stmt = conn.createStatement();
+            String sql = "select millis, logger_name, message from logger " +
+                    "where message like '%(?)%' and logger_name like '%(?)%'";
+            PreparedStatement stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery(
                     "select millis, logger_name, message from logger " +
                             "where message like '%" + searchWord + "%' and logger_name like '%" + loggerName + "%'"

@@ -9,4 +9,8 @@ public class UserQueryCreator {
 
     private UserQueryCreator() {
     }
+
+    public String getUserByEmail(String email) {
+        String sq
+    }
 }

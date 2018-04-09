@@ -1,7 +1,6 @@
 package Utils;
 
 import DB.LoggerDatabaseClient;
-import com.google.gson.Gson;
 
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;

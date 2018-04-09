@@ -33,8 +33,6 @@ O
 src/main/java/Models/Image.java,1/0/10302c4fff5dbc06675aa052e6f1f521d26f4196
 Q
 !src/main/java/REST/IDService.java,8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2
-]
--src/main/java/Utils/AuthenticationFilter.java,b/9/b90fbe0dabe2a065aa6834ff339548e6b87847e8
 Q
 !src/main/java/Utils/SendMail.java,9/c/9c98dd689a269465300b35731beb9e8c3af1f815
 M
@@ -68,3 +66,11 @@ Nukupi.iml,d/5/d590ab97ea74dfe114f316d75fcb74a304adf5ff
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 U
 %src/main/java/Utils/MyLogHandler.java,e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8
+U
+%src/main/java/REST/LoggerService.java,1/7/17b2292c4e951176760fef6948eceb2a3a5acfc1
+Y
+)src/main/java/DB/ImageDatabaseClient.java,1/f/1fe08a094f11e9ce1da182e8ea86506ae05bac48
+Z
+*src/main/java/DB/LoggerDatabaseClient.java,9/0/905d657f28bc7c02ea09633fd92d27d99ad8b399
+d
+4src/main/java/DB/QueryCreators/UserQueryCreator.java,3/a/3ae172befc6922c45a1667187af59ffdb6e69b27
