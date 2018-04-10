@@ -1,9 +1,9 @@
 
-dsquid:HiddenFieldCheck"8Rename "conn" which hides the field declared at line 17.(şöì¦ùÿÿÿÿ8üÚÎ§©,
-qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(§šÎ8üÚÎ§©,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8üÚÎ§©,
-Tsquid:S1313"3Make this IP "46.101.171.158" address configurable.(¨¬Ïøÿÿÿÿ8üÚÎ§©,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8ÖÂÆÌª,
+Tsquid:S1313"3Make this IP "46.101.171.158" address configurable.(¨¬Ïøÿÿÿÿ8ÖÂÆÌª,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÖÂÆÌª,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÖÂÆÌª,
+qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(§šÎ8ÖÂÆÌª,
+dsquid:HiddenFieldCheck"8Rename "conn" which hides the field declared at line 17.(şöì¦ùÿÿÿÿ8ÖÂÆÌª,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ê˜ùò8üÚÎ§©,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8üÚÎ§©,
-tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8üÚÎ§©,
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ê˜ùò8ÖÂÆÌª,
