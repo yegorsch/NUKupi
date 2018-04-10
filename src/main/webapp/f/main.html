@@ -19,6 +19,9 @@
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
 
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <!--
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4..0/css/bootstrap-theme.min.css">
@@ -33,15 +36,16 @@
 
     <script>
         var user_id;
+
         function uploadFile(n, prod_id) {
             var photo;
-            if (n==1) {
+            if (n == 1) {
                 photo = document.getElementById('imgupload1');
             }
             for (var x = 0; x < photo.files.length; x++) {
                 console.log(photo.files[x].name);
                 var serv_request = new XMLHttpRequest();
-                serv_request.open('POST', '/Nukupi/f/rest/images/'+prod_id, false);
+                serv_request.open('POST', '/Nukupi/f/rest/images/' + prod_id, false);
                 if (serv_request.readyState == 4 && serv_request.status == 200) {
                     respo = serv_request.responseText;
                     console.log(respo);
@@ -62,7 +66,7 @@
 
         }
 
-        function getuserid(){
+        function getuserid() {
             console.log("here at user");
             var serv_request = new XMLHttpRequest();
             serv_request.open('GET', '/Nukupi/f/rest/users/getuserid', false);
@@ -78,7 +82,7 @@
 
         }
 
-        function changePassword(){
+        function changePassword() {
             var serv_request = new XMLHttpRequest();
             var oldpassword = document.getElementById("old-password").value;
             var newpassword = document.getElementById("new-password").value;
@@ -88,7 +92,7 @@
                 new_password: newpassword
             }
 
-            if(oldpassword != '' && newpassword != ''){
+            if (oldpassword != '' && newpassword != '') {
                 serv_request.open('PUT', '/Nukupi/f/rest/users', false);
                 serv_request.setRequestHeader("Content-type", "application/json");
                 serv_request.onreadystatechange = function() {
@@ -141,7 +145,8 @@
             serv_request.send(null);
         }
 
-        function logOut(){
+
+        function logOut() {
             var serv_request = new XMLHttpRequest();
             serv_request.open('GET', '/Nukupi/f/rest/users/logout', false);
             serv_request.setRequestHeader("Content-type", "application/json");
@@ -200,10 +205,10 @@
             // }
             universalCall();
         }
+
     </script>
 
     <script>
-
         function dropDown() {
             document.getElementById("myDropdown").classList.toggle("show");
             var serv_request = new XMLHttpRequest();
@@ -215,7 +220,7 @@
                     var mdata = JSON.parse(serv_request.responseText);
                     console.log(mdata);
                     console.log(serv_request.responseText);
-                    document.getElementById("user_name").innerHTML = "Hi, " + mdata[0].name;
+                    document.getElementById("user_name").innerHTML ="Hi, " +  mdata[0].name;
                     document.getElementById("user_tel").innerHTML = "Tel: " + mdata[0].phone_number;
                     document.getElementById("user_email").innerHTML = mdata[0].email;
                     console.log(mdata[0].name);
@@ -224,7 +229,6 @@
                     if(mdata[0].type == "Moderator"){
                         document.getElementById("logBtn").innerHTML = "<a href=\"\" data-toggle=\"modal\" data-target=\"#logsModal\">Logs</a>";
                     }
-
                 }
             }
             serv_request.send(null);
@@ -244,15 +248,15 @@
                 }
             }
         }
-
         function eraseText() {
             document.getElementById("messageBox").value = "";
         }
+
     </script>
 
 </head>
 
-<body onload="universalCall(); getuserid()">
+<body onload="dynamicCards.addCard(), getuserid()">
 <div class="se-pre-con">
     <div class="cssload-loader"></div>
 </div>
@@ -361,8 +365,28 @@
                 <p><span id="sliderOutputVal">No price filter</span></p>
             </div>
         </div>
-        <div class="row" id="maxORIGDIV">
+        <div id="maxORIGDIV">
+            <div class="row">
+
+                <section>
+                    <div v-for="card in cards" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div v-on:click="showModal_description(card)" class="innerimg" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
+                            <img :src="card.images[0]"   class="mainimg" />
+                            <button class="price">{{ card.price }}</button>
+                            <div class="innercontent">
+                                <h5>{{ card.title }}</h5>
+                                <span>{{ card.description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div v-if="isLoaded == false"> <img src="img/loading.gif" alt="Loading" height="64" width="64"> </div>
         </div>
+        <!-- <img src="img/loading.gif" alt="Loading" height="42" width="42"> -->
+        <!-- <img v-if="isLoaded == false" src="img/loading.gif" alt="Loading"> -->
         <!--<button class="explore os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.6s">EXPLORE MORE DESTINATIONS</button>-->
     </div>
 </section>
@@ -405,12 +429,12 @@
             output.innerHTML = "Less than: " + String(this.value) + "₸";
             curQuery.defPrice = this.value;
         } else {
-            console.log("GOTDEFpRICE");
-            curQuery.defPrice = 27000000;
             output.innerHTML = "No price filter";
+            curQuery.defPrice = 27000000;
         }
-
+        curQuery.defPrice = this.value;
     }
+
 </script>
 <!--Filter bar-->
 <script>
@@ -457,6 +481,137 @@
         curQuery.currTitle = document.getElementById("searchPlace").value;
     }
 
+
+    var dynamicCards = new Vue({
+        el: '#maxORIGDIV',
+        data() {
+            return {
+                bottom: false,
+                isLoaded: true,
+                isFirst: true,
+                cards: []
+            }
+        },
+        watch: {
+            bottom(bottom) {
+                if ((bottom && this.isLoaded) || this.isFirst) {
+                    this.addCard()
+                }
+            }
+        },
+        created() {
+            window.addEventListener('scroll', () => {
+                this.bottom = this.bottomVisible()
+        })
+            // this.addCard()
+        },
+        methods: {
+            showModal_description(idx) {
+                var p_user_id = idx.authorID;
+                var p_user_email = " ";
+                var p_user_phone = " ";
+                var serv_request = new XMLHttpRequest();
+                serv_request.open('GET', '/Nukupi/rest/users/getuserinfo?userid=' + p_user_id, false);
+                serv_request.setRequestHeader("Content-type", "application/json");
+                serv_request.onreadystatechange = function() {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        var info = serv_request.responseText.split(",");
+                        p_user_email = info[0];
+                        p_user_phone = info[1];
+                        console.log(p_user_email);
+                        console.log(p_user_phone);
+                    }
+                }
+                serv_request.send();
+                // console.log("TRYING");
+                // console.log(idx);
+                $('#openModal').modal('show');
+                document.getElementById("pr").innerHTML = idx.price;
+                document.getElementById("ctgr").innerHTML = idx.category;
+                document.getElementById("descript").innerHTML = idx.description;
+                document.getElementById("item_title").innerHTML = idx.title;
+                document.getElementById("userEmail").innerHTML = p_user_email;
+                document.getElementById("userPhone").innerHTML = p_user_phone;
+                // console.log("modal description");
+                // var firstImage = window.location.href + "rest/images?id=" + idx.images[0];
+                // console.log(firstImage);
+                // document.getElementById("main").valueOf().src = firstImage;
+
+                console.log("in images");
+                console.log(idx);
+                console.log("idx");
+                imageSlide(idx);
+
+            },
+
+
+            bottomVisible() {
+                const scrollY = window.scrollY
+                const visible = document.documentElement.clientHeight
+                const pageHeight = document.documentElement.scrollHeight
+                const bottomOfPage = visible + scrollY >= pageHeight
+                return bottomOfPage || pageHeight < visible
+            },
+            createImageURL(imageNotCreated){
+                var temp = [];
+                if (imageNotCreated.images.length == 0) {
+                    if (imageNotCreated.category.toUpperCase() === "OTHER") {
+                        temp[0] = "img/other.jpg";
+                    } else if (imageNotCreated.category.toUpperCase() === "FOOD") {
+                        temp[0] = "img/food.jpg";
+                    } else if (imageNotCreated.category.toUpperCase()  === "DOMESTIC") {
+                        temp[0] = "img/domestic.jpg";
+                    } else if (imageNotCreated.category.toUpperCase()  === "CLOTHES") {
+                        temp[0] = "img/clothes.jpg";
+                    }
+
+                }else{
+                    for (let i=0; i<imageNotCreated.images.length; ++i) {
+                        temp[i] =  "http://localhost:8080/Nukupi/f/rest/images?id=" + imageNotCreated.images[i];
+                    }
+                }
+                return temp;
+            },
+
+            addCard() {
+                this.isLoaded = false;
+                this.isFirst = false;
+                insertParam("pagenum", curQuery.curPage);
+                insertParam("title", curQuery.currTitle);
+                insertParam("price", curQuery.defPrice);
+                insertParam("category", curQuery.currentCat);
+                var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
+                console.log("ENTERED AXIOS");
+                console.log(this.isFirst);
+                axios.get(finalUrl)
+                    .then(response => {
+                    console.log("STARTED PARSING");
+                // console.log(this.isLoaded);
+                for (const api in response.data) {
+                    let apiInfo = {
+                        id: response.data[api].ID,
+                        title: response.data[api].title,
+                        description: response.data[api].description,
+                        category: response.data[api].category,
+                        price: response.data[api].price,
+                        authorID: response.data[api].authorID,
+                        images: this.createImageURL(response.data[api])
+                    };
+                    // console.log(apiInfo);
+                    this.cards.push(apiInfo)
+
+                }
+                if (this.bottomVisible() && this.isLoaded) {
+                    this.addCard()
+                }
+                curQuery.curPage = curQuery.curPage + 1;
+                this.isLoaded = true;
+            })
+            }
+        }
+    });
+
+
     function universalCall() {
         getTitle();
         curQuery.curPage = 1;
@@ -471,35 +626,11 @@
             var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
             //           console.log(curQuery.currTitle);
 
-            getFiltered(finalUrl, function() {
-                //                console.log("I am here 2");
-                console.log("THIS");
-                console.log(curQuery.curUrl);
-                doIt(function() {
-                    //                    console.log("I am here 3");
-                });
-
-            });
-
         });
+        console.log("STARTING DYNAMICS");
+        // dynamicCards.addCard;
     }
 
-    async function addPage() {
-
-        curQuery.curPage = curQuery.curPage + 1;
-        insertParam("pagenum", curQuery.curPage);
-        console.log(curQuery.curPage);
-        //            console.log("I am here 1");
-        var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
-        //           console.log(curQuery.currTitle);
-
-        getFiltered(finalUrl, function() {
-            doIt(function() {
-                curPageOnLoad = false;
-            });
-
-        });
-    }
 </script>
 <!--RETRIEVE CARDS-->
 <script>
@@ -523,213 +654,85 @@
     }
 
 
-    function getFiltered(thisUrl, callback2) {
-        var serv_request = new XMLHttpRequest();
-        serv_request.open('GET', thisUrl, false);
-
-        serv_request.onreadystatechange = function() {
-            if (serv_request.readyState == XMLHttpRequest.DONE && serv_request.status == 200) {
-                mydata = JSON.parse(serv_request.responseText);
-                console.log("I am here ");
-            }
-
-
-        }
-
-        console.log(thisUrl);
-
-        serv_request.send(null);
-        console.log(mydata);
-        callback2();
-
-    }
-
-    // function getUserEmail() {
-    //     console.log("inside getuseremail");
-    //     console.log("/Nukupi/users/getuseremail?userid="+user_id);
-    //     var serv_request = new XMLHttpRequest();
-    //     serv_request.open('GET', '/Nukupi/users/getuseremail?userid='+user_id, false);
-    //     serv_request.setRequestHeader("Content-type", "application/json");
-    //     serv_request.onreadystatechange = function() {
-    //         if (serv_request.readyState == 4 && serv_request.status == 200) {
-    //             user_email = serv_request.responseText;
-    //             console.log(user_email);
-    //         }
-    //     }
-    //     serv_request.send();
-    // }
-
-    // function showModal_description(idx){
-    //
-    //     $('#openModal').modal('show');
-    //     //getUserEmail();
-    //     //document.getElementById("pr").innerHTML = mydata[idx].price;
-    //     document.getElementById("ctgr").innerHTML = mydata[idx].category;
-    //     document.getElementById("descript").innerHTML = mydata[idx].description;
-    //     document.getElementById("title").innerHTML = mydata[idx].title;
-    //
-    //     // var firstImage = window.location.href + "rest/images?id="+ mydata[idx].images[0];
-    //     // console.log(firstImage);
-    //     // document.getElementById("main").valueOf().src = firstImage;
-    // }
-
-    function showModal_description(idx){
-        var p_user_id = mydata[idx].authorID;
-        var p_user_email = " ";
-        var p_user_phone = " ";
-        var serv_request = new XMLHttpRequest();
-        serv_request.open('GET', '/Nukupi/f/rest/users/getuserinfo?userid='+p_user_id, false);
-        serv_request.setRequestHeader("Content-type", "application/json");
-        serv_request.onreadystatechange = function() {
-            if (serv_request.readyState == 4 && serv_request.status == 200) {
-                var info = serv_request.responseText.split(",");
-                p_user_email = info[0] ;
-                p_user_phone = info[1];
-                console.log(p_user_email);
-                console.log(p_user_phone);
-            }
-        }
-        serv_request.send();
-        console.log("TRYING");
-        console.log(mydata[idx].authorID);
-        $('#openModal').modal('show');
-        document.getElementById("pr").innerHTML = mydata[idx].price;
-        document.getElementById("ctgr").innerHTML = mydata[idx].category;
-        document.getElementById("descript").innerHTML = mydata[idx].description;
-        document.getElementById("title").innerHTML = mydata[idx].title;
-        document.getElementById("userEmail").innerHTML = p_user_email;
-        document.getElementById("userPhone").innerHTML = p_user_phone;
-        console.log("modal description");
-        var firstImage = "rest/images?id="+ mydata[idx].images[0];
-        console.log(firstImage);
-        document.getElementById("main").valueOf().src = firstImage;
-    }
-
     function freeAllCards(callback) {
         curQuery.curPage = 1;
 
-        var myNode = document.getElementById("maxORIGDIV");
-        while (myNode.firstChild) {
-            myNode.removeChild(myNode.firstChild);
-
-        }
-        console.log("ASDASDDAS");
+        dynamicCards.cards = [];
         callback();
 
     }
 
-    function doIt(callback) {
-        console.log("json");
-
-
-        for (i = 0; i < mydata.length; i++) {
-            var tagNames = ["firstDiv", "secondDiv", "firstImg", "firstButton", "thirdDiv", "nameId", "descId"];
-
-            for (j = 0; j < tagNames.length; j++) {
-
-                tagNames[j] = tagNames[j] +'elem'+ String(i)+'page'+String(curQuery.curPage);
-
-            }
-
-            var mydiv1 = document.getElementById("maxORIGDIV");
-            var div1 = document.createElement('div');
-            div1.id = tagNames[0];
-            div1.classList.add('col-lg-4', 'col-md-4', 'col-sm-6', 'col-xs-12');
-            mydiv1.appendChild(div1);
-
-            var mydiv2 = document.getElementById(tagNames[0]);
-            var div2 = document.createElement('div');
-            div2.id = tagNames[1];
-
-            //                console.log(tagNames);
-            div2.classList.add('innerimg', 'os-animation', 'animated', 'zoomIn');
-            div2.setAttribute('data-os-animation', "zoomIn");
-            div2.setAttribute('data-os-animation-delay', "0.5s");
-            div2.setAttribute('style', 'animation-delay: 0.5s;');
-            //                console.log(div2);
-            mydiv2.appendChild(div2);
-
-            var mydiv3 = document.getElementById(tagNames[1]);
-            var div3 = document.createElement('img');
-            div3.id = tagNames[2];
-            div3.classList.add('mainimg');
-            div3.setAttribute('src', "img/other.jpg");
-            if (mydata[i].category.toUpperCase() === "FOOD") {
-                div3.setAttribute('src', "img/food.jpg");
-            }
-            if (mydata[i].category.toUpperCase() === "DOMESTIC") {
-                div3.setAttribute('src', "img/domestic.jpg");
-            }
-            if (mydata[i].category.toUpperCase() === "CLOTHES") {
-                div3.setAttribute('src', "img/clothes.jpg");
-            }
-
-            div3.setAttribute('onclick', "showModal_description("+i+")");
-            div3.setAttribute('alt', "");
-            mydiv3.appendChild(div3);
-
-
-            var div4 = document.createElement('button');
-            var t = document.createTextNode(String(mydata[i].price) + " ₸");
-
-            div4.appendChild(t);
-
-            div4.id = tagNames[3];
-            div4.classList.add('price');
-            mydiv3.appendChild(div4);
-
-            var div5 = document.createElement('div');
-            div5.id = tagNames[4];
-            div5.classList.add('innercontent');
-            mydiv3.appendChild(div5);
-
-
-            var mydiv6 = document.getElementById(tagNames[4]);
-            var div6 = document.createElement('h5');
-            div6.id = tagNames[5];
-            var t2 = document.createTextNode(mydata[i].title);
-            console.log(t2);
-            div6.appendChild(t2);
-            mydiv6.appendChild(div6);
-
-            var div7 = document.createElement('span');
-            div7.id = tagNames[6];
-            var t3 = document.createTextNode(mydata[i].description);
-            div7.appendChild(t3);
-            mydiv6.appendChild(div7);
-
-
-        }
-
-        callback();
-    }
 </script>
 
 <script>
-    // $(window).scroll(function() {
-    //     if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-    //         addPage();
-    //     }
-    // });
-    //
-    window.onscroll = function() {
-        scrollingDown()
-    };
+    var cnt = 0;
+    var timer;
+    var imgadr;
 
-    async function scrollingDown() {
-        if ($(window).scrollTop() > $(document).height() - $(window).height()-5) {
-            console.log("IGOT");
-            if (curPageOnLoad == false){
-                curPageOnLoad= true;
-                addPage();
+    function imageSlide(idx) {
+        imgadr = []; 
+        console.log("SLIDERIMAGE");
+        document.getElementById("imgSlider").setAttribute('src', '#');
+        console.log(idx);
+        imgadr = idx.images.slice();
+        console.log(imgadr);
+        // mydata[nn].images.slice();
+        if (imgadr.length == 0) {
+            if (idx.category.toUpperCase() === "OTHER") {
+                document.getElementById('imgSlider').valueOf().src = "img/food.jpg";
+            } else if (idx.category.toUpperCase() === "FOOD") {
+                document.getElementById('imgSlider').valueOf().src = "img/food.jpg";
+            } else if (idx.category.toUpperCase()  === "DOMESTIC") {
+                document.getElementById('imgSlider').valueOf().src = "img/domestic.jpg";
+            } else if (idx.category.toUpperCase()  === "CLOTHES") {
+                document.getElementById('imgSlider').valueOf().src = "img/clothes.jpg";
             }
+        } else {
+            console.log(imgadr);
+            sliderTimer();
         }
-
     }
 
+    function sliderTimer() {
+        timer = setInterval(function() {
+            sliderI();
+        }, 3500);
+    }
+
+    function sliderI() {
+        cnt++;
+        if (cnt >= imgadr.length)
+            cnt = 0;
+        var imSlider = document.getElementById('imgSlider');
+        imSlider.valueOf().src =imgadr[cnt];
+    }
+
+    function next() {
+        clearInterval(timer);
+
+        cnt++;
+        if (cnt == imgadr.length)
+            cnt = 0;
+
+        var imSlider = document.getElementById('imgSlider');
+        imSlider.valueOf().src = imgadr[cnt];
+        sliderTimer();
+    }
+
+    function prev() {
+        console.log('prev');
+        clearInterval(timer);
+
+        cnt--;
+        if (cnt == -1)
+            cnt = imgadr.length - 1;
+
+        var imSlider = document.getElementById('imgSlider');
+        imSlider.valueOf().src = imgadr[cnt];
+        sliderTimer();
+    }
 
 </script>
-<!--Requests-->
 
 <!-- Modal -->
 <div class="modal fade" id="DemoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -742,11 +745,11 @@
             </div>
             <div class="modal-body">
                 <forma>
-                    Enter product name: <input id="product-name" class="form-control" type="text" />
-                    Enter product description: <input id="product-description" class="form-control" type="text" />
-                    Enter product price: <input id="product-price" class="form-control" type="number"  min=0 oninput="validity.valid||(value='');"/>
+                    Enter product name: <br> <br> <input style = "height: 40px" id="product-name" class="form-control" type="text" />
+                    <br> Enter product description: <br> <br> <input style = "height: 40px" id="product-description" class="form-control" type="text" />
+                    <br> Enter product price: <br> <br> <input style = "height: 40px" id="product-price" class="form-control" type="number" min=0 oninput="validity.valid||(value='');" />
                     <div class="categradio">
-                        Select a category:
+                        <br> Select a category:
                         <div class="categradio-1">
                             <input type="radio" name="radio" id="radio1" value="Food" />
                             <label for="radio1">Food</label>
@@ -766,10 +769,10 @@
                     </div>
                     <div class="input-image">
                         <forma>
-                            <label>Upload Image</label>
-                            <forma>
-                                <input type="file" id="imgupload1" multiple/>
-                            </forma>
+                            <label class="fileContainer">
+                                Click here to trigger the file uploader!
+                                <input type="file"/>
+                            </label>
                         </forma>
                     </div>
                     <!--<form id="img-show">-->
@@ -795,16 +798,21 @@
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <div id="qr" style="display:inline-block; min-width:7cm; height:7cm; align: center;vertical-align: middle;" >
-                    <td id="pic"><img id="main" src="" width="250px" height="250px"></td>
-                </div>
-                <div style="display:inline-block;vertical-align: top;">
-                    <td id="item_des"><b><h3 id="title"></h3></b>
-                        <h3 type="text" id="pr"></h3>
-                        <h3 type="text" id="ctgr"></h3>
-                        <h3 type="text" id="descript"></h3>
-                        <h3 type="text" id="userEmail"></h3>
-                        <h3 type="text" id="userPhone"></h3>
+
+                <div id="imageSlider">
+                    <img id="imgSlider" src="" width="324px" height="300px" alt = "wait for it" style = "float:left">
+                    <div class="icon" id="left"><i class="fa fa-angle-left" onclick="prev()"></i></div>
+                    <div class="icon" id="right"><i class="fa fa-angle-right" onclick="next()"></i></div>
+                    <center>
+                        <div id="item_des">
+                            <b><strong><h3 id="item_title"></h3></strong></b>
+                            <h4 type="text" id="pr"></h4>
+                            <h7 type="text" id="ctgr"></h7>
+                            <h3 type="text" id="descript"></h3>
+                            <h5 type="text" id="userEmail"></h5>
+                            <h6 type="text" id="userPhone"></h6>
+                        </div>
+                    </center>
                 </div>
             </div>
             <div class="modal-footer">
@@ -827,8 +835,7 @@
             <div class="modal-body">
                 <forma>
                     Old password: <input id="old-password" class="form-control" type="password" placeholder="Old password" />
-                    <br>
-                    New password: <input id="new-password" class="form-control" type="password" placeholder="New password" />
+                    <br> New password: <input id="new-password" class="form-control" type="password" placeholder="New password" />
 
 
                 </forma>
@@ -841,7 +848,7 @@
 </div>
 
 
-<!-- Logs Modal -->
+
 <div class="modal fade" id="logsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document" >
         <div class="modal-content">
@@ -889,7 +896,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 
