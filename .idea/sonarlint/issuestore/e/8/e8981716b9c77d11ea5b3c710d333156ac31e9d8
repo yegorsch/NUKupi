@@ -1,11 +1,11 @@
 
-¡%squid:RedundantThrowsDeclarationCheck"fRemove the declaration of thrown exception 'java.lang.SecurityException' which is a runtime exception.(ñÕ›ëıÿÿÿÿ8»ÿç§©,
-squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã®¸Â8»ÿç§©,
-Wsquid:S1854"6Remove this useless assignment to local variable "sb".(€ê±Õúÿÿÿÿ8Î“ÀËª,
 Y
 squid:S106"9Replace this use of System.out or System.err by a logger.(øºÑûúÿÿÿÿ8Î“ÀËª,
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ã®¸Â8»ÿç§©,
 Y
 squid:S106"9Replace this use of System.out or System.err by a logger.(şÒãûÿÿÿÿ8Î“ÀËª,
-¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñÕ›ëıÿÿÿÿ8»ÿç§©,
+¡%squid:RedundantThrowsDeclarationCheck"fRemove the declaration of thrown exception 'java.lang.SecurityException' which is a runtime exception.(ñÕ›ëıÿÿÿÿ8»ÿç§©,
 ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÚâĞûÿÿÿÿ8»ÿç§©,
+Wsquid:S1854"6Remove this useless assignment to local variable "sb".(€ê±Õúÿÿÿÿ8Î“ÀËª,
 Hsquid:S1481"'Remove this unused "sb" local variable.(€ê±Õúÿÿÿÿ8Î“ÀËª,
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñÕ›ëıÿÿÿÿ8»ÿç§©,

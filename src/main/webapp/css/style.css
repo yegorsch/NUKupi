@@ -271,8 +271,9 @@ button.price img{
 #destination button.price{
     font-family: 'Open Sans', sans-serif;
     outline:0;
+    display: inline-block;
     border: 1px solid #e7434e;
-    /*background: #e7434e url('../img/boat.png') no-repeat 10px center;*/
+    /*background: #e7434e url('../img/boat.png') no-repeat 10px center;*!*/
     padding: 10px 15px 10px 15px;
     color: #fff;
     text-align: center;
@@ -280,7 +281,7 @@ button.price img{
     font-size: 16px;
     border-radius: 5px;
     position: absolute;
-    left: 4%;
+    left: 16%;
     top: 8%;
 }
 #destination button.price:hover{
@@ -302,7 +303,7 @@ button.price{
     font-size: 16px;
     border-radius: 5px;
     position: absolute;
-    left: 4%;
+    left: 16%;
     top: 8%;
 }
 button.price:hover{
@@ -328,7 +329,7 @@ button.email img{
     color: #fff;
     border-radius: 5px;
     position: absolute;
-    left: 25%;
+    left: 4%;
     top: 8%;
 }
 #destination button.email:hover{
@@ -346,9 +347,8 @@ button.email{
     padding:18px 18px;
     color: #fff;
     border-radius: 5px;
-    /*line-height: 5px;*/
     position: absolute;
-    left: 25%;
+    left: 4%;
     top: 8%;
 }
 button.email:hover{

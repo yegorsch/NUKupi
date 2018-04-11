@@ -80,7 +80,15 @@ U
 %src/main/java/Models/ProductInfo.java,d/b/db6d1698a5712e81bb6653a6f804bd01bae8df62
 W
 'src/main/java/AuthenticationFilter.java,0/2/02d402c0ee5cdaa6a23775f75168adca1cfc1ff3
-P
- src/test/Utils/FiltererTest.java,a/9/a965831b56150228e1304e91fac78cf8c668d0fd
 W
 'src/main/java/Models/LogCollection.java,2/f/2f71134157a92b2c54cce1636ea829d15689bca0
+Q
+!src/test/Utils/UserQueryTest.java,a/6/a63be2bc3a221249ded27faa51c67c1f745cd2b9
+g
+7src/main/java/DB/QueryCreators/ProductQueryCreator.java,0/2/0289a0c3565ff2e16b9374d727f4d690215ac2c3
+f
+6src/main/java/DB/QueryCreators/LoggerQueryCreator.java,9/9/99b112190ff17b2a3da0e41c933bb53419e5f681
+e
+5src/main/java/DB/QueryCreators/ImageQueryCreator.java,f/5/f5ea946603d451e425b2ea6794aa73f8aca05798
+R
+"src/main/java/Models/UserInfo.java,e/7/e7903554ba49072f6ed74f0f0593ef1cdcbfb7f9

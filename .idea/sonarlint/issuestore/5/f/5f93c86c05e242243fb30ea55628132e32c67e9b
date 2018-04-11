@@ -1,25 +1,21 @@
 
-hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÔĞ«¢,
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ÏÕøúÿÿÿÿ8ÔĞ«¢,
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÇĞñ8ÔĞ«¢,
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(í”Ë«úÿÿÿÿ8Àëğƒ«,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñ§Ìµ8Àëğƒ«,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8Àëğƒ«,
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(÷«˜¹8Àëğƒ«,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í”Ë«úÿÿÿÿ8Àëğƒ«,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8Àëğƒ«,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¢óå‘ÿÿÿÿÿ8ÔĞ«¢,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÔĞ«¢,
-hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èĞ»úÿÿÿÿ8ÔĞ«¢,
-psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í”Ë«úÿÿÿÿ8ÔĞ«¢,
-ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(í”Ë«úÿÿÿÿ8ÿŒ­”§,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÔĞ«¢,
-hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÔĞ«¢,
-tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8ÔĞ«¢,
-ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(÷«˜¹8ÔĞ«¢,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÔĞ«¢,
-Ssquid:S1135"2Complete the task associated to this TODO comment.(èüÿÿÿÿ8ÔĞ«¢,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÔĞ«¢,
-Ssquid:S1135"2Complete the task associated to this TODO comment.(èüÿÿÿÿ8ÔĞ«¢,
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜«ÎÁşÿÿÿÿ8ÔĞ«¢,
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜«ÎÁşÿÿÿÿ8ÔĞ«¢,
-nsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(—ø³8ÔĞ«¢,
-hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÔĞ«¢,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÔĞ«¢,
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñ§Ìµ8ÔĞ«¢,
-msquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(™×éX8ÔĞ«¢,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢óå‘ÿÿÿÿÿ8Àëğƒ«,
+Jsquid:S1481")Remove this unused "stmt" local variable.(ìï‡Àûÿÿÿÿ8Àëğƒ«,
+Ysquid:S1854"8Remove this useless assignment to local variable "stmt".(ìï‡Àûÿÿÿÿ8Àëğƒ«,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜«ÎÁşÿÿÿÿ8Àëğƒ«,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜«ÎÁşÿÿÿÿ8Àëğƒ«,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÇĞñ8Àëğƒ«,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ÏÕøúÿÿÿÿ8Àëğƒ«,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8Àëğƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Àëğƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Àëğƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Àëğƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Àëğƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Àëğƒ«,

@@ -2,6 +2,8 @@ package DB;
 
 import Models.User;
 import Models.UserCollection;
+import Utils.Hasher;
+import Utils.UniqueStringGenerator;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -65,6 +67,23 @@ public class UserDatabaseClient extends DatabaseClient {
         return info;
     }
 
+    public String runQueryUserEmailById(String userId) {
+        String info = "";
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(
+                    "select email " +
+                            "from user " +
+                            "where user_id='" + userId + "'" + ";"
+            );
+            if (rs.next())
+                info = rs.getString("email") + "," + rs.getString("phone_number");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return info;
+    }
+
     public String runQueryUserPasswordByEmail(String email) {
         String password = "";
         try {
@@ -97,6 +116,24 @@ public class UserDatabaseClient extends DatabaseClient {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public String runQueryDefaultUserPasswordByEmail(String email) {
+        try {
+            PreparedStatement stmt = conn.prepareStatement("update user set password=? where email=?");
+            String password = UniqueStringGenerator.generatePasswordWithDefaultLength();
+            String hashedPassword = Hasher.encodeSHA256(password);
+            stmt.setString(1, hashedPassword);
+            stmt.setString(2, email);
+            if (stmt.executeUpdate() == 0) {
+                System.out.println(stmt.toString());
+                throw new Exception("Oopsie");
+            }
+            return password;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
     public boolean runQueryLogIn(String email, String password) {
@@ -210,5 +247,19 @@ public class UserDatabaseClient extends DatabaseClient {
             users.add(u);
         }
     }
+
+//    private String updatePassword(String email) {
+//        try {
+//            PreparedStatement stmt = conn.prepareStatement("UPDATE users set password=? where email=(?)");
+//            String tempPassword = UniqueStringGenerator.generateIDWithDefaultLength();
+//            stmt.setString(1, tempPassword);
+//            stmt.setString(2, email);
+//            stmt.execute();
+//            return tempPassword;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return "";
+//    }
 
 }

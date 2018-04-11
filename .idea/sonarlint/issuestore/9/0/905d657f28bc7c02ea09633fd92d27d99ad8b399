@@ -1,11 +1,12 @@
 
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-asquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èÐ»úÿÿÿÿ
-ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÐÀœ¢8Îñ€à©,
-asquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
-msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï
-asquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èÐ»úÿÿÿÿ
-dsquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¾ãÇ•
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-lsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(òÉ¯­ýÿÿÿÿ
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(í”Ë«úÿÿÿÿ8—éðƒ«,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥èÐ»úÿÿÿÿ8—éðƒ«,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í”Ë«úÿÿÿÿ8—éðƒ«,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8—éðƒ«,
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¾ãÇ•8—éðƒ«,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢óå‘ÿÿÿÿÿ8—éðƒ«,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8—éðƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8—éðƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8—éðƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8—éðƒ«,
