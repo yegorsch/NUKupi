@@ -284,7 +284,7 @@ button.price img{
     top: 8%;
 }
 #destination button.price:hover{
-    background: #e7434e url('../img/boat-hover.png') no-repeat 10px center;
+    /*background: #e7434e url('../img/boat-hover.png') no-repeat 10px center;*/
     color:#e7434e;
     transition: all 0.5s;
     background-color:transparent;
@@ -306,6 +306,52 @@ button.price{
     top: 8%;
 }
 button.price:hover{
+    color:#e7434e;
+    transition: all 0.5s;
+    background-color:transparent;
+    border:1px solid #e7434e;
+}
+
+
+button.email img{
+    margin: 0px 5px;
+    position: relative;
+    top: 1px;
+    right: 4px;
+}
+#destination button.email{
+    font-family: 'Open Sans', sans-serif;
+    outline:0;
+    border: 1px solid #e7434e;
+    background: #e7434e url('../img/email.png') no-repeat center;
+    padding: 18px 18px 18px 18px;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 25%;
+    top: 8%;
+}
+#destination button.email:hover{
+    background: #e7434e url('../img/email-hover.png') no-repeat 10px center;*/
+    color:#e7434e;
+    transition: all 0.5s;
+    background-color:transparent;
+    border:1px solid #e7434e;
+}
+button.email{
+    font-family: 'Open Sans', sans-serif;
+    outline:0;
+    border: 1px solid #e7434e;
+    background-color: #e7434e;
+    padding:18px 18px;
+    color: #fff;
+    border-radius: 5px;
+    /*line-height: 5px;*/
+    position: absolute;
+    left: 25%;
+    top: 8%;
+}
+button.email:hover{
     color:#e7434e;
     transition: all 0.5s;
     background-color:transparent;
@@ -1169,7 +1215,7 @@ button.addproduct:hover {
 }
 
 .categradio label {
-    width: 100%;
+    width: 200px;
     border-radius: 3px;
     border: 1px solid #D1D3D4;
     font-weight: normal;
@@ -1230,7 +1276,7 @@ button.addproduct:hover {
 
 .categradio-1 input[type="radio"]:checked ~ label:before {
     color: #fff;
-    background-color: #f0ad4e;
+    background-color: #e7434e;
 }
 
 .categradio-2 input[type="radio"]:checked ~ label:before {
@@ -1240,12 +1286,12 @@ button.addproduct:hover {
 
 .categradio-3 input[type="radio"]:checked ~ label:before {
     color: #fff;
-    background-color: #5cb85c;
+    background-color: #e7434e;
 }
 
 .categradio-4 input[type="radio"]:checked ~ label:before {
     color: #fff;
-    background-color: #d9534f;
+    background-color: #337ab7;
 }
 
 .dropbtn {
@@ -1427,4 +1473,33 @@ textarea {
     resize: none;
 }
 
-/*till here*/
+/*#imgSlider {*/
+    /*width: 300px;*/
+    /*height: 300px;*/
+    /*object-fit: cover;*/
+/*}*/
+
+.mainimg {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.dropFiles {
+    width: 100%;
+    min-height: 100px;
+    height: 100px;
+    border: 2px #D1D3D4 dashed;
+
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.highlightDropArea {
+    border: 2px #e7434e dashed ;
+}
+
+tr, td {
+    padding: 0 15px 0 15px;
+}
