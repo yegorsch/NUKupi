@@ -8,19 +8,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="QueryCreator add (very tedious, pls help)">
+    <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Utils/Hasher.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/Utils/HasherTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/026ebd895c57234fc30913aa7c5046e2c57718b3" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/026ebd895c57234fc30913aa7c5046e2c57718b3" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1fe08a094f11e9ce1da182e8ea86506ae05bac48" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1fe08a094f11e9ce1da182e8ea86506ae05bac48" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/3205dbae87c88f4fdec2bd05911ceac80c45d791" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/3205dbae87c88f4fdec2bd05911ceac80c45d791" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3ae172befc6922c45a1667187af59ffdb6e69b27" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3ae172befc6922c45a1667187af59ffdb6e69b27" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f93c86c05e242243fb30ea55628132e32c67e9b" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f93c86c05e242243fb30ea55628132e32c67e9b" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cf87e6f5ae17137d61fada53b16410f8826124c" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cf87e6f5ae17137d61fada53b16410f8826124c" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f1bac9e062679d79eae40281dea5ae884e85fb2" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/905d657f28bc7c02ea09633fd92d27d99ad8b399" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/905d657f28bc7c02ea09633fd92d27d99ad8b399" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3184f85c4d2a7fa02ecca5496923d60fd3f170a" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a965831b56150228e1304e91fac78cf8c668d0fd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db6d1698a5712e81bb6653a6f804bd01bae8df62" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db6d1698a5712e81bb6653a6f804bd01bae8df62" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31ab4f1d24da4254ccebb92f2da2701ae85eef0" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8981716b9c77d11ea5b3c710d333156ac31e9d8" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f317f906f24246fad79b038f99332b718d024ec7" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f317f906f24246fad79b038f99332b718d024ec7" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb452a5954f8c22b20a281cf3cfb8df11fa9ce5f" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/QueryCreators/UserQueryCreator.java" afterPath="$PROJECT_DIR$/src/main/java/DB/QueryCreators/UserQueryCreator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" afterPath="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/REST/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/REST/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/Utils/UserQueryTest.java" afterPath="$PROJECT_DIR$/src/test/Utils/UserQueryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,56 +42,123 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserQueryCreator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/UserQueryCreator.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <state relative-caret-position="237">
+              <caret line="97" column="5" lean-forward="false" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Models/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendMail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductQueryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Utils/ProductQueryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HasherTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Utils/HasherTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
-                <element signature="e#1656#1657#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-                <marker date="1523381799820" expanded="true" signature="399:473" ph="select user_... user" />
-                <marker date="1523381799820" expanded="true" signature="529:617" ph="select email... user" />
-                <marker date="1523381799820" expanded="true" signature="680:755" ph="select passw... user" />
-                <marker date="1523381799820" expanded="true" signature="816:878" ph="update user... " />
-                <marker date="1523381799820" expanded="true" signature="929:1020" ph="select user_... user" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageDatabaseClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/ImageDatabaseClient.java">
+      <file leaf-file-name="UserQueryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Utils/UserQueryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-              <folding>
-                <marker date="1523379344482" expanded="true" signature="459:495" ph="insert into image... " />
-                <marker date="1523379344482" expanded="true" signature="1213:1318" ph="select image... " />
-                <marker date="1523379344482" expanded="true" signature="1896:1938" ph="delete from image... " />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDatabaseClient.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserDatabaseClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="133" column="32" lean-forward="true" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
               <folding>
-                <marker date="1523297466475" expanded="true" signature="483:601" ph="select user_... user" />
-                <marker date="1523297466475" expanded="true" signature="1026:1144" ph="select user_... user" />
-                <marker date="1523297466475" expanded="true" signature="1565:1698" ph="select email... user" />
-                <marker date="1523297466475" expanded="true" signature="2160:2279" ph="select passw... user" />
-                <marker date="1523297466475" expanded="true" signature="2704:2814" ph="update user... " />
-                <marker date="1523297466475" expanded="true" signature="3209:3364" ph="select user_... user" />
-                <marker date="1523297466475" expanded="true" signature="3781:3939" ph="select user_... user" />
-                <marker date="1523297466475" expanded="true" signature="4355:4397" ph="insert into user... " />
-                <marker date="1523297466475" expanded="true" signature="5096:5114" ph="select * fro... user" />
-                <marker date="1523297466475" expanded="true" signature="5540:5585" ph="select * fro... user" />
-                <marker date="1523297466475" expanded="true" signature="5980:6098" ph="select type user" />
+                <marker date="1523428672674" expanded="true" signature="540:658" ph="select user_... user" />
+                <marker date="1523428672674" expanded="true" signature="1083:1201" ph="select user_... user" />
+                <marker date="1523428672674" expanded="true" signature="1622:1755" ph="select email... user" />
+                <marker date="1523428672674" expanded="true" signature="2208:2327" ph="select email... user" />
+                <marker date="1523428672674" expanded="true" signature="2789:2908" ph="select passw... user" />
+                <marker date="1523428672674" expanded="true" signature="3333:3443" ph="update user... " />
+                <marker date="1523428672674" expanded="true" signature="3781:3806" ph="update user... " />
+                <marker date="1523428672674" expanded="true" signature="3781:3814" ph="update user... " />
+                <marker date="1523428672674" expanded="true" signature="3781:3821" ph="update user... " />
+                <marker date="1523428672674" expanded="true" signature="4555:4710" ph="select user_... user" />
+                <marker date="1523428672674" expanded="true" signature="5127:5285" ph="select user_... user" />
+                <marker date="1523428672674" expanded="true" signature="5701:5743" ph="insert into user... " />
+                <marker date="1523428672674" expanded="true" signature="6442:6460" ph="select * fro... user" />
+                <marker date="1523428672674" expanded="true" signature="6886:6931" ph="select * fro... user" />
+                <marker date="1523428672674" expanded="true" signature="7326:7444" ph="select type user" />
+                <marker date="1523428672674" expanded="true" signature="8147:8190" ph="UPDATE users... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggerService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST/LoggerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST/ProductService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="652">
+              <caret line="100" column="52" lean-forward="false" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hasher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Hasher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,9 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>url</find>
-      <find>callback</find>
-      <find>forma</find>
       <find>range</find>
       <find>getuseremail</find>
       <find>logout</find>
@@ -135,6 +205,9 @@
       <find>clothes</find>
       <find>images?</find>
       <find>eraseTex</find>
+      <find>pas</find>
+      <find>select emai</find>
+      <find>generate</find>
     </findStrings>
     <replaceStrings>
       <replace>ProductCollection</replace>
@@ -169,8 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Models/UserCollection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/IDGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Image.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/SendEmail.java" />
         <option value="$PROJECT_DIR$/src/main/java/SendMail.java" />
@@ -200,16 +271,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/main.html" />
         <option value="$PROJECT_DIR$/src/main/java/ApplicationMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/ProductInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/ImageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/IDService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/test/Utils/FiltererTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/DatabaseClient.java" />
-        <option value="$PROJECT_DIR$/src/test/Utils/UserQueryTest.java" />
         <option value="$PROJECT_DIR$/src/test/Utils/ProductQueryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/QueryCreators/ProductQueryCreator.java" />
@@ -220,6 +287,12 @@
         <option value="$PROJECT_DIR$/src/main/java/DB/LoggerDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/f/main.html" />
         <option value="$PROJECT_DIR$/src/main/java/DB/QueryCreators/UserQueryCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/test/Utils/UserQueryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/Utils/HasherTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Hasher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java" />
       </list>
     </option>
   </component>
@@ -243,7 +316,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="801" />
@@ -285,6 +358,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,16 +398,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
-              <item name="QueryCreators" type="462c0819:PsiDirectoryNode" />
+              <item name="REST" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nukupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nukupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nukupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nukupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -342,7 +427,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
@@ -404,25 +489,6 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="SendEmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="authenticate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Utils.SendEmail" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Nukupi" />
-      <envs />
-    </configuration>
     <configuration name="SendMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Utils.SendMail" />
@@ -451,10 +517,10 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="FiltererTest.testFilterByCategoryBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HasherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="authenticate.*" />
+          <option name="PATTERN" value="Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -462,8 +528,33 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Utils" />
-      <option name="MAIN_CLASS_NAME" value="Utils.FiltererTest" />
-      <option name="METHOD_NAME" value="testFilterByCategoryBooks" />
+      <option name="MAIN_CLASS_NAME" value="Utils.HasherTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="HasherTest.testHashing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Nukupi" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Utils" />
+      <option name="MAIN_CLASS_NAME" value="Utils.HasherTest" />
+      <option name="METHOD_NAME" value="testHashing" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -476,10 +567,10 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="FiltererTest.testFilterByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HasherTest.testHashingWrong" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="authenticate.*" />
+          <option name="PATTERN" value="Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -487,8 +578,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Utils" />
-      <option name="MAIN_CLASS_NAME" value="Utils.FiltererTest" />
-      <option name="METHOD_NAME" value="testFilterByPrice" />
+      <option name="MAIN_CLASS_NAME" value="Utils.HasherTest" />
+      <option name="METHOD_NAME" value="testHashingWrong" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -806,19 +897,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Start" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
-      <item index="2" class="java.lang.String" itemvalue="Application.SendEmail" />
-      <item index="3" class="java.lang.String" itemvalue="Application.SendMail" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FiltererTest.testFilterByPrice" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.FiltererTest.testFilterByCategoryBooks" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.UserQueryTest.testUserByEmailQuery" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SendMail" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserQueryTest.testUserByEmailQuery" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HasherTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.HasherTest.testHashing" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.HasherTest.testHashingWrong" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserQueryTest.testUserByEmailQuery" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SendMail" />
-        <item index="2" class="java.lang.String" itemvalue="Application.SendEmail" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FiltererTest.testFilterByCategoryBooks" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FiltererTest.testFilterByPrice" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HasherTest.testHashingWrong" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HasherTest.testHashing" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HasherTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserQueryTest.testUserByEmailQuery" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SendMail" />
       </list>
     </recent_temporary>
   </component>
@@ -885,7 +976,9 @@
       <workItem from="1523266301487" duration="7835000" />
       <workItem from="1523275673214" duration="125000" />
       <workItem from="1523375619738" duration="2673000" />
-      <workItem from="1523379358882" duration="1384000" />
+      <workItem from="1523379358882" duration="1567000" />
+      <workItem from="1523386351969" duration="317000" />
+      <workItem from="1523420360242" duration="4237000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1055,57 +1148,64 @@
       <option name="project" value="LOCAL" />
       <updated>1523265222291</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="userquery continue">
+      <created>1523382000996</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1523382000996</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FiltererTest_testFilterByTitle - 2018.02.24 at 21h 49m 14s.xml">
-      <configuration name="FiltererTest.testFilterByTitle" configurationId="JUnit" />
+    <history-entry file="HasherTest - 2018.04.11 at 10h 38m 22s.xml">
+      <configuration name="HasherTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FiltererTest_testFilterByTitle - 2018.02.24 at 21h 57m 18s.xml">
-      <configuration name="FiltererTest.testFilterByTitle" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashing - 2018.04.11 at 10h 38m 32s.xml">
+      <configuration name="HasherTest.testHashing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 14h 46m 52s.xml">
-      <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashing - 2018.04.11 at 10h 39m 45s.xml">
+      <configuration name="HasherTest.testHashing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 14h 51m 23s.xml">
-      <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashing - 2018.04.11 at 10h 39m 54s.xml">
+      <configuration name="HasherTest.testHashing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 15h 09m 54s.xml">
-      <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashing - 2018.04.11 at 10h 40m 06s.xml">
+      <configuration name="HasherTest.testHashing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 15h 10m 26s.xml">
-      <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashing - 2018.04.11 at 10h 40m 35s.xml">
+      <configuration name="HasherTest.testHashing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 15h 39m 46s.xml">
-      <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashing - 2018.04.11 at 10h 41m 59s.xml">
+      <configuration name="HasherTest.testHashing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 15h 57m 01s.xml">
-      <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashingWrong - 2018.04.11 at 10h 43m 04s.xml">
+      <configuration name="HasherTest.testHashingWrong" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 16h 12m 42s.xml">
-      <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
+    <history-entry file="HasherTest_testHashingWrong - 2018.04.11 at 10h 58m 53s.xml">
+      <configuration name="HasherTest.testHashingWrong" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserQueryTest_testUserByEmailQuery - 2018.04.09 at 16h 49m 58s.xml">
       <configuration name="UserQueryTest.testUserByEmailQuery" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269154000" />
+    <option name="totallyTimeSpent" value="273891000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="801" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="794" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32705882" sideWeight="0.49513888" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32647464" sideWeight="0.49513888" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12757201" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4072022" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25515056" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1882353" sideWeight="0.45833334" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1114,10 +1214,11 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21303074" sideWeight="0.22187005" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.49166667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3317647" sideWeight="0.47777778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33058986" sideWeight="0.47777778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1129,7 +1230,6 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.49166667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1197,40 +1297,17 @@
     <MESSAGE value="Filter sql fixed" />
     <MESSAGE value="logging feature added" />
     <MESSAGE value="QueryCreator add (very tedious, pls help)" />
-    <option name="LAST_COMMIT_MESSAGE" value="QueryCreator add (very tedious, pls help)" />
+    <MESSAGE value="userquery continue" />
+    <option name="LAST_COMMIT_MESSAGE" value="userquery continue" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="40" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="56" column="27" lean-forward="false" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Configs.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/LoggingFilterNukupi.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.23.2/jersey-common-2.23.2.jar!/org/glassfish/jersey/logging/LoggingFeature.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="68" column="21" lean-forward="false" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/javax/servlet/http/HttpServletRequest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-601">
@@ -1262,20 +1339,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UniqueStringGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -1298,34 +1361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyLogHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/LogCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/grid.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-19711">
@@ -1333,45 +1368,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST/LoggerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/REST/ImageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/ProductInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1403,34 +1403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Utils/UserQueryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-671">
-          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Utils/ProductQueryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -1438,31 +1410,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/ImageQueryCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/ProductQueryCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
-          <caret line="15" column="124" lean-forward="false" selection-start-line="15" selection-start-column="124" selection-end-line="15" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/LoggerDatabaseClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-978">
           <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/LoggerQueryCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1494,12 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="953">
           <caret line="675" column="25" lean-forward="true" selection-start-line="675" selection-start-column="25" selection-end-line="675" selection-end-column="25" />
-          <folding>
-            <element signature="e#29868#29875#1" expanded="false" />
-            <element signature="e#32826#32833#1" expanded="false" />
-            <element signature="e#34577#34584#1" expanded="false" />
-            <element signature="e#35749#35756#1" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1507,7 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="59" lean-forward="false" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,38 +1467,237 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/ProductQueryCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="15" column="124" lean-forward="false" selection-start-line="15" selection-start-column="124" selection-end-line="15" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/LoggerQueryCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/ImageQueryCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/LogCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/ProductAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/JsonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/ProductInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MyLogHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/UniqueStringGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
-            <marker date="1523297466475" expanded="true" signature="483:601" ph="select user_... user" />
-            <marker date="1523297466475" expanded="true" signature="1026:1144" ph="select user_... user" />
-            <marker date="1523297466475" expanded="true" signature="1565:1698" ph="select email... user" />
-            <marker date="1523297466475" expanded="true" signature="2160:2279" ph="select passw... user" />
-            <marker date="1523297466475" expanded="true" signature="2704:2814" ph="update user... " />
-            <marker date="1523297466475" expanded="true" signature="3209:3364" ph="select user_... user" />
-            <marker date="1523297466475" expanded="true" signature="3781:3939" ph="select user_... user" />
-            <marker date="1523297466475" expanded="true" signature="4355:4397" ph="insert into user... " />
-            <marker date="1523297466475" expanded="true" signature="5096:5114" ph="select * fro... user" />
-            <marker date="1523297466475" expanded="true" signature="5540:5585" ph="select * fro... user" />
-            <marker date="1523297466475" expanded="true" signature="5980:6098" ph="select type user" />
+            <element signature="e#429#430#0" expanded="false" />
+            <element signature="e#504#505#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="87" column="25" lean-forward="false" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/QueryCreators/UserQueryCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        <state relative-caret-position="604">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <element signature="e#1656#1657#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
             <marker date="1523381799820" expanded="true" signature="399:473" ph="select user_... user" />
             <marker date="1523381799820" expanded="true" signature="529:617" ph="select email... user" />
             <marker date="1523381799820" expanded="true" signature="680:755" ph="select passw... user" />
             <marker date="1523381799820" expanded="true" signature="816:878" ph="update user... " />
             <marker date="1523381799820" expanded="true" signature="929:1020" ph="select user_... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="100" column="52" lean-forward="false" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST/LoggerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Utils/HasherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Utils/ProductQueryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Hasher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Utils/UserQueryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="97" column="5" lean-forward="false" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDatabaseClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="133" column="32" lean-forward="true" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
+          <folding>
+            <marker date="1523428672674" expanded="true" signature="540:658" ph="select user_... user" />
+            <marker date="1523428672674" expanded="true" signature="1083:1201" ph="select user_... user" />
+            <marker date="1523428672674" expanded="true" signature="1622:1755" ph="select email... user" />
+            <marker date="1523428672674" expanded="true" signature="2208:2327" ph="select email... user" />
+            <marker date="1523428672674" expanded="true" signature="2789:2908" ph="select passw... user" />
+            <marker date="1523428672674" expanded="true" signature="3333:3443" ph="update user... " />
+            <marker date="1523428672674" expanded="true" signature="3781:3806" ph="update user... " />
+            <marker date="1523428672674" expanded="true" signature="3781:3814" ph="update user... " />
+            <marker date="1523428672674" expanded="true" signature="3781:3821" ph="update user... " />
+            <marker date="1523428672674" expanded="true" signature="4555:4710" ph="select user_... user" />
+            <marker date="1523428672674" expanded="true" signature="5127:5285" ph="select user_... user" />
+            <marker date="1523428672674" expanded="true" signature="5701:5743" ph="insert into user... " />
+            <marker date="1523428672674" expanded="true" signature="6442:6460" ph="select * fro... user" />
+            <marker date="1523428672674" expanded="true" signature="6886:6931" ph="select * fro... user" />
+            <marker date="1523428672674" expanded="true" signature="7326:7444" ph="select type user" />
+            <marker date="1523428672674" expanded="true" signature="8147:8190" ph="UPDATE users... " />
           </folding>
         </state>
       </provider>
@@ -1570,6 +1713,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

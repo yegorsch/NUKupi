@@ -4,6 +4,7 @@ import DB.UserDatabaseClient;
 import Models.User;
 import Models.UserCollection;
 import Models.UserInfo;
+import Utils.Hasher;
 import Utils.SendMail;
 import com.google.gson.Gson;
 
@@ -56,11 +57,10 @@ public class UserService {
     @GET
     @Path("/login")
     public Response login(@QueryParam("email") String email, @QueryParam("password") String password) {
-        System.out.println("CAME HERE!!!!!!!!!!!");
-        if(dbu.runQueryLogIn(email, password)) {
+        String hashed = Hasher.encodeSHA256(password);
+        if(dbu.runQueryLogIn(email, hashed)) {
             HttpSession session = request.getSession();
             session.setAttribute("email", email);
-            System.out.println("EVERYTHING IS OK");
             return Response.status(Response.Status.OK).build();
         } else {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
@@ -87,8 +87,8 @@ public class UserService {
     @GET
     @Path("/forgotpassword")
     public Response forgotPassword(@QueryParam("email") String email) {
-        String password = dbu.runQueryUserPasswordByEmail(email);
-        if(!password.equals("")) {
+        if(!email.equals("")) {
+            String password = dbu.runQueryDefaultUserPasswordByEmail(email);
             SendMail.send(email, password, false);
             return Response.ok(password).build();
         } else {
@@ -102,8 +102,8 @@ public class UserService {
     public Response changePassword(String jsonString) {
         Gson gson = new Gson();
         UserInfo ui = gson.fromJson(jsonString, UserInfo.class);
-        if(dbu.runQueryCheckPassword(ui.getUserId(), ui.getOldPassword())) {
-            if(dbu.runQueryUpdateUserPassword(ui.getUserId(), ui.getNewPassword())) {
+        if(dbu.runQueryCheckPassword(ui.getUserId(), Hasher.encodeSHA256(ui.getOldPassword()))) {
+            if(dbu.runQueryUpdateUserPassword(ui.getUserId(), Hasher.encodeSHA256(ui.getNewPassword()))) {
                 return Response.status(Response.Status.OK).build();
             } else {
                 return Response.status(Response.Status.NOT_ACCEPTABLE).build();
@@ -126,7 +126,7 @@ public class UserService {
         if (dbu.runQueryEmail(u.getEmail())) {
             return Response.status(Response.Status.NOT_ACCEPTABLE).build();
         } else {
-            if (dbu.runQueryInsertUser(u.getUserID(), u.getEmail(), u.getPassword(), u.getName(), u.getType(), u.getPhoneNumber())) {
+            if (dbu.runQueryInsertUser(u.getUserID(), u.getEmail(), Hasher.encodeSHA256(u.getPassword()), u.getName(), u.getType(), u.getPhoneNumber())) {
                 SendMail.send(u.getEmail(), u.getPassword(), true);
                 return Response.status(Response.Status.OK).build();
             } else {

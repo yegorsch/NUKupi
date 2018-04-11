@@ -99,8 +99,6 @@ public class ProductService {
         HttpSession session = request.getSession();
         String test = dbu.runQueryUserIdByEmail(session.getAttribute("email").toString());
         String type = dbu.runQueryIfModerator(test);
-        System.out.println(type);
-        System.out.println(test);
         if(type.equals("Moderator") || test.equals(pi.getUserId())) {
             dbi.runQueryDeleteImage(pi.getProductId());
             if (dbc.runQueryDeleteProduct(pi.getProductId())) {
