@@ -8,12 +8,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="QueryCreator add (very tedious, pls help)">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/f/img/loading.gif" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/f/main.html" afterPath="$PROJECT_DIR$/src/main/webapp/f/main.html" />
-    </list>
+    <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="QueryCreator add (very tedious, pls help)" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +26,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="283" column="12" lean-forward="true" selection-start-line="283" selection-start-column="12" selection-end-line="283" selection-end-column="12" />
+            <state relative-caret-position="119">
+              <caret line="277" column="23" lean-forward="true" selection-start-line="277" selection-start-column="23" selection-end-line="277" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -42,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="375" column="46" lean-forward="false" selection-start-line="375" selection-start-column="46" selection-end-line="375" selection-end-column="46" />
+              <caret line="375" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="972" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#31462#31469#1" expanded="true" />
@@ -843,7 +838,7 @@
       <workItem from="1523266301487" duration="7835000" />
       <workItem from="1523275673214" duration="125000" />
       <workItem from="1523375619738" duration="2673000" />
-      <workItem from="1523388236847" duration="27411000" />
+      <workItem from="1523388236847" duration="27507000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1049,7 +1044,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295181000" />
+    <option name="totallyTimeSpent" value="295277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1439,7 +1434,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="375" column="46" lean-forward="false" selection-start-line="375" selection-start-column="46" selection-end-line="375" selection-end-column="46" />
+          <caret line="375" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="972" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#31462#31469#1" expanded="true" />
@@ -1454,8 +1449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="283" column="12" lean-forward="true" selection-start-line="283" selection-start-column="12" selection-end-line="283" selection-end-column="12" />
+        <state relative-caret-position="119">
+          <caret line="277" column="23" lean-forward="true" selection-start-line="277" selection-start-column="23" selection-end-line="277" selection-end-column="23" />
           <folding />
         </state>
       </provider>
