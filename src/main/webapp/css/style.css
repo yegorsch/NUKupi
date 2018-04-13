@@ -358,6 +358,51 @@ button.email:hover{
     border:1px solid #e7434e;
 }
 
+button.del img{
+    margin: 0px 5px;
+    position: relative;
+    top: 1px;
+    right: 4px;
+}
+#destination button.del{
+    font-family: 'Open Sans', sans-serif;
+    outline:0;
+    border: 1px solid #e7434e;
+    background: #e7434e url('../img/bin.png') no-repeat center;
+    padding: 18px 18px 18px 18px;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 4%;
+    top: 8%;
+}
+#destination button.del:hover{
+    background: #e7434e url('../img/bin-hover.png') no-repeat 10px center;
+    color:#e7434e;
+    transition: all 0.5s;
+    background-color:transparent;
+    border:1px solid #e7434e;
+}
+button.del{
+    font-family: 'Open Sans', sans-serif;
+    outline:0;
+    border: 1px solid #e7434e;
+    background-color: #e7434e;
+    padding:18px 18px;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 4%;
+    top: 8%;
+}
+button.del:hover{
+ 
+    color:#e7434e;
+    transition: all 0.5s;
+    background-color:transparent;
+    border:1px solid #e7434e;
+}
+
 .innercontent{
     position: absolute;
     left: 4%;
@@ -1500,6 +1545,53 @@ textarea {
     border: 2px #e7434e dashed ;
 }
 
+
+
 tr, td {
     padding: 0 15px 0 15px;
 }
+
+.prod-title {
+    font-size: 27px;
+    font-style: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.prod-ctgr {
+    font-size: medium;
+    font-style: italic;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.prod-descr {
+    word-wrap: break-word;
+    font-size: medium;
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.prod-pr {
+    text-align: left;
+    border-radius: 0.25em;
+    border: none;
+    padding: .6em 1.2em;
+    background-color: #f82f53;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
