@@ -405,8 +405,10 @@ button.del:hover{
 
 .innercontent{
     position: absolute;
-    left: 4%;
-    bottom: 8%;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
 }
 .innerimg{
     position: relative;
@@ -1390,6 +1392,8 @@ button.addproduct:hover {
     display: block;
 }
 
+
+
 .dropdown-email {
     color: #154360;
 }
@@ -1593,5 +1597,10 @@ tr, td {
     display: inline-block;
     margin-right: 20px;
     margin-left: 20px;
+}
+
+#myproducts:hover {
+    color: #e7434e;
+    cursor: pointer;
 }
 

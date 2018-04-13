@@ -216,6 +216,7 @@
             document.getElementById("product-name").value = "";
             document.getElementById("product-description").value = "";
             document.getElementById("product-price").value = null;
+            document.getElementById("imgupload1").value = null;
             document.querySelector('input[name="radio"]:checked').checked = false;
         }
 
@@ -294,7 +295,7 @@
                                     <div id="user_tel"></div>
                                     <div id="user_email" class="dropdown-email"></div>
                                     <br>
-                                    <a v-on:click="proceedMyProducts()"   >My products</a>
+                                    <a v-on:click="proceedMyProducts()" id = "myproducts" >My products</a>
                                     <div id="logBtn"></div>
                                     <a href="" data-toggle="modal" data-target="#changePasswordModal" id="changePasswordBtn">Change password</a>
                                     <a href="../index.html" onclick="logOut()">Log out</a>
@@ -390,7 +391,7 @@
                     <section>
                         <div v-for="card in cards" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                             <div v-on:click="showModal_description(card)" class="innerimg" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
-                                <img :src="card.images[0]" class="mainimg" />
+                                <img :src="card.images[0]" class="mainimg"  />
                                 <button class="price">{{ card.price }}</button>
                                 <button class="email" v-show = "(isModerator || isMyProducts) == false" v-on:click="openGmail(card)" ></button>
                                 <button class="del" v-show = "(isModerator || isMyProducts) == true"  v-on:click="del(card)"></button>
@@ -525,6 +526,7 @@
 
             methods: {
                 searchWithWord() {
+
                     universalCall();
                     dynamicCards.addCard();
 
@@ -869,14 +871,14 @@
                 }
             } else {
                 console.log(imgadr);
-                sliderTimer();
+                sliderI();
             }
         }
 
         function sliderTimer() {
             timer = setInterval(function() {
                 sliderI();
-            }, 3500);
+            }, 2000);
         }
 
         function sliderI() {
@@ -896,7 +898,7 @@
 
             var imSlider = document.getElementById('imgSlider');
             imSlider.valueOf().src = imgadr[cnt];
-            sliderTimer();
+            // sliderTimer();
         }
 
         function prev() {
@@ -909,7 +911,7 @@
 
             var imSlider = document.getElementById('imgSlider');
             imSlider.valueOf().src = imgadr[cnt];
-            sliderTimer();
+            // sliderTimer();
         }
 
     </script>
@@ -1090,7 +1092,7 @@
             <div class="modal-body">
                 <div class="modal-body">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                 <div id="imageSlider" class = "crop">
                   <center>
                           <img id="imgSlider" class = "mainimg" src="" width="300px" height="300px">
@@ -1100,7 +1102,7 @@
                       </center>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div id="itemimage_des">
                             <div id="item_title" class="prod-title"></div>
                             <div id="ctgr" class="prod-ctgr"></div>
