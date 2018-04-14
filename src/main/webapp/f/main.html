@@ -6,6 +6,7 @@
     <title>NUKUPI</title>
     <!--META-->
     <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--FONT-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -396,7 +397,7 @@
                                 <button class="email" v-show = "(isModerator || isMyProducts) == false" v-on:click="openGmail(card)" ></button>
                                 <button class="del" v-show = "(isModerator || isMyProducts) == true"  v-on:click="del(card)"></button>
 
-                                <div class="innercontent">
+                                <div class="innercontent" >
                                     <h5>{{ card.title }}</h5>
                                     <span>{{ card.description }}</span>
                                 </div>
@@ -1005,8 +1006,8 @@
                 </div>
                 <div class="modal-body">
                     <forma>
-                        Enter product name: <br> <br> <input style="height: 40px" id="product-name" class="form-control" type="text" />
-                        <br> Enter product description: <br> <br> <input style="height: 40px" id="product-description" class="form-control" type="text" />
+                        Enter product name: <br> <br> <input style="height: 40px" id="product-name" class="form-control" type="text" maxlength="45"/>
+                        <br> Enter product description: <br> <br> <input style="height: 40px" id="product-description" class="form-control" type="text" maxlength="140"/>
                         <br> Enter product price: <br> <br> <input style="height: 40px" id="product-price" class="form-control" type="number" min=0 oninput="validity.valid||(value='');" />
                         <div class="categradio">
                             <br> Select a category:
@@ -1104,13 +1105,13 @@
                 </div>
                 <div class="col-md-4">
                     <div id="itemimage_des">
-                            <div id="item_title" class="prod-title"></div>
+                            <div id="item_title" class="prod-title" style="word-wrap: break-word;"></div>
                             <div id="ctgr" class="prod-ctgr"></div>
                             <br>
                             <div id="descript" class="prod-descr"></div>
                             <br>
                             <button id="pr" class="prod-pr" disabled></button>
-                            <div id="userEmail"></div>
+                            <div id="userEmail"  style="word-wrap: break-word;"></div>
                             <div id="userPhone"></div>
                         </div>
                 </div>

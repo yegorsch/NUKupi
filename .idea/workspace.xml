@@ -9,8 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/f/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/f/icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/icon.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/f/main.html" afterPath="$PROJECT_DIR$/src/main/webapp/f/main.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/favicon.ico" afterPath="$PROJECT_DIR$/src/main/webapp/favicon.ico" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,12 +32,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="92" lean-forward="false" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="92" />
+            <state relative-caret-position="102">
+              <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="56" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,10 +59,10 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-219">
-              <caret line="1528" column="5" lean-forward="false" selection-start-line="1528" selection-start-column="5" selection-end-line="1528" selection-end-column="5" />
+            <state relative-caret-position="235">
+              <caret line="447" column="4" lean-forward="false" selection-start-line="447" selection-start-column="4" selection-end-line="447" selection-end-column="4" />
               <folding>
-                <marker date="1523654876723" expanded="true" signature="36397:36419" ph="..." />
+                <marker date="1523708038926" expanded="true" signature="36549:36571" ph="..." />
               </folding>
             </state>
           </provider>
@@ -51,31 +71,9 @@
       <file leaf-file-name="SendMail.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            <state relative-caret-position="663">
+              <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grid.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/grid.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5134">
-              <caret line="302" column="1" lean-forward="false" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="400" column="71" lean-forward="true" selection-start-line="400" selection-start-column="71" selection-end-line="400" selection-end-column="71" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -95,16 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>imgupload1</find>
-      <find>addprod</find>
-      <find>drag</find>
-      <find>slide</find>
-      <find>show</find>
-      <find>modal</find>
-      <find>change</find>
-      <find>iner</find>
-      <find>clean</find>
-      <find>My Pro</find>
       <find>NU KU</find>
       <find>myproduct</find>
       <find>my product</find>
@@ -125,6 +113,16 @@
       <find>filters</find>
       <find>mainimg</find>
       <find>price</find>
+      <find>slider</find>
+      <find>myRange</find>
+      <find>sliderO</find>
+      <find>product</find>
+      <find>Add Pro</find>
+      <find>20</find>
+      <find>white</find>
+      <find>innerc</find>
+      <find>h5</find>
+      <find>span</find>
     </findStrings>
     <replaceStrings>
       <replace>ProductCollection</replace>
@@ -189,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ApplicationMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/ProductInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/ImageService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/IDService.java" />
         <option value="$PROJECT_DIR$/src/test/Utils/FiltererTest.java" />
@@ -210,6 +207,7 @@
         <option value="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/f/main.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -275,10 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -359,10 +353,22 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="f" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NUKupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,7 +412,9 @@
       <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp" />
       <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp\f" />
+      <recent name="C:\Users\alinoleumm\IdeaProjects\NUKupi\src\main\webapp\WEB-INF" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Models" />
@@ -926,7 +934,8 @@
       <workItem from="1523453020151" duration="23467000" />
       <workItem from="1523533579235" duration="22310000" />
       <workItem from="1523630964183" duration="19827000" />
-      <workItem from="1523698522815" duration="814000" />
+      <workItem from="1523698522815" duration="1433000" />
+      <workItem from="1523700522622" duration="7152000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1139,7 +1148,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340309000" />
+    <option name="totallyTimeSpent" value="348080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1172,9 +1181,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25515056" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22028527" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32646593" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1882353" sideWeight="0.45833334" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12079063" sideWeight="0.77812994" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23352855" sideWeight="0.77812994" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21303074" sideWeight="0.22187005" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1230,13 +1239,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/javax/servlet/http/HttpServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-601">
-          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/Formatter.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/logging/FileHandler.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/logging/ConsoleHandler.java" />
@@ -1459,7 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1524,7 +1525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1532,7 +1532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1557,45 +1556,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/grid.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5134">
+        <state relative-caret-position="17">
           <caret line="302" column="1" lean-forward="false" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="92" lean-forward="false" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="92" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-219">
-          <caret line="1528" column="5" lean-forward="false" selection-start-line="1528" selection-start-column="5" selection-end-line="1528" selection-end-column="5" />
+        <state relative-caret-position="235">
+          <caret line="447" column="4" lean-forward="false" selection-start-line="447" selection-start-column="4" selection-end-line="447" selection-end-column="4" />
           <folding>
-            <marker date="1523654876723" expanded="true" signature="36397:36419" ph="..." />
+            <marker date="1523708038926" expanded="true" signature="36549:36571" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state relative-caret-position="663">
+          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="400" column="71" lean-forward="true" selection-start-line="400" selection-start-column="71" selection-end-line="400" selection-end-column="71" />
+        <state relative-caret-position="136">
+          <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

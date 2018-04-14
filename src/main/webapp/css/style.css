@@ -422,10 +422,13 @@ button.del:hover{
 }
 h5{
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     color: #fff;
     text-align: left;
     padding-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 h7{
     font-weight: 400;
@@ -436,10 +439,13 @@ h7{
 }
 .innercontent span{
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     text-align: left;
     display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 #featured .innercontent span{
     font-size: 16px;
