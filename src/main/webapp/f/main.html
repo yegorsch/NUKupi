@@ -392,7 +392,7 @@
                         <div v-for="card in cards" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                             <div v-on:click="showModal_description(card)" class="innerimg" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
                                 <img :src="card.images[0]" class="mainimg"  />
-                                <button class="price">{{ card.price }}</button>
+                                <button class="price">{{ card.price }} ₸</button>
                                 <button class="email" v-show = "(isModerator || isMyProducts) == false" v-on:click="openGmail(card)" ></button>
                                 <button class="del" v-show = "(isModerator || isMyProducts) == true"  v-on:click="del(card)"></button>
 

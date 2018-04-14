@@ -9,7 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a797f5b-76bb-42f9-b14e-cf7152bddae8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/f/main.html" afterPath="$PROJECT_DIR$/src/main/webapp/f/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,17 +29,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
+            <state relative-caret-position="289">
               <caret line="17" column="92" lean-forward="false" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="92" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
+            <state relative-caret-position="-219">
               <caret line="1528" column="5" lean-forward="false" selection-start-line="1528" selection-start-column="5" selection-end-line="1528" selection-end-column="5" />
               <folding>
                 <marker date="1523654876723" expanded="true" signature="36397:36419" ph="..." />
@@ -48,21 +48,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SendMail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="grid.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/grid.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="5134">
               <caret line="302" column="1" lean-forward="false" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="393" column="75" lean-forward="false" selection-start-line="393" selection-start-column="75" selection-end-line="393" selection-end-column="75" />
+            <state relative-caret-position="240">
+              <caret line="400" column="71" lean-forward="true" selection-start-line="400" selection-start-column="71" selection-end-line="400" selection-end-column="71" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -103,7 +113,6 @@
       <find>addpro</find>
       <find>my produc</find>
       <find>image</find>
-      <find>price</find>
       <find>email</find>
       <find>search</find>
       <find>addcard</find>
@@ -115,6 +124,7 @@
       <find>searchwith</find>
       <find>filters</find>
       <find>mainimg</find>
+      <find>price</find>
     </findStrings>
     <replaceStrings>
       <replace>ProductCollection</replace>
@@ -198,8 +208,8 @@
         <option value="$PROJECT_DIR$/src/main/java/REST/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/ProductDatabaseClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/f/main.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/f/main.html" />
       </list>
     </option>
   </component>
@@ -265,9 +275,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,6 +333,14 @@
               <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NUKupi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NUKupi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -344,7 +363,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -907,7 +925,8 @@
       <workItem from="1523420360242" duration="4237000" />
       <workItem from="1523453020151" duration="23467000" />
       <workItem from="1523533579235" duration="22310000" />
-      <workItem from="1523630964183" duration="19681000" />
+      <workItem from="1523630964183" duration="19827000" />
+      <workItem from="1523698522815" duration="814000" />
     </task>
     <task id="LOCAL-00001" summary="Product model and ProductService create">
       <created>1519311839229</created>
@@ -1120,7 +1139,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339349000" />
+    <option name="totallyTimeSpent" value="340309000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1153,9 +1172,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25515056" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30110934" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22028527" sideWeight="0.7375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1882353" sideWeight="0.45833334" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29355782" sideWeight="0.77812994" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12079063" sideWeight="0.77812994" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21303074" sideWeight="0.22187005" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1436,13 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Models/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1545,7 +1557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/grid.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="5134">
           <caret line="302" column="1" lean-forward="false" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
           <folding />
         </state>
@@ -1553,28 +1565,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
+        <state relative-caret-position="289">
           <caret line="17" column="92" lean-forward="false" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-219">
+          <caret line="1528" column="5" lean-forward="false" selection-start-line="1528" selection-start-column="5" selection-end-line="1528" selection-end-column="5" />
+          <folding>
+            <marker date="1523654876723" expanded="true" signature="36397:36419" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/f/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="393" column="75" lean-forward="false" selection-start-line="393" selection-start-column="75" selection-end-line="393" selection-end-column="75" />
+        <state relative-caret-position="240">
+          <caret line="400" column="71" lean-forward="true" selection-start-line="400" selection-start-column="71" selection-end-line="400" selection-end-column="71" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="1528" column="5" lean-forward="false" selection-start-line="1528" selection-start-column="5" selection-end-line="1528" selection-end-column="5" />
-          <folding>
-            <marker date="1523654876723" expanded="true" signature="36397:36419" ph="..." />
           </folding>
         </state>
       </provider>
