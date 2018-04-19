@@ -1,7 +1,9 @@
 <!doctype html>
-<html>
+<html class="no-js">
 
 <head>
+    <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+    <link rel="stylesheet" type="text/css" href="../css/component.css" />
     <meta charset="utf-8">
     <title>NUKUPI</title>
     <!--META-->
@@ -14,6 +16,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet' type='text/css'>
 
     <!--CSS-->
+
     <link rel="stylesheet" type="text/css" href="../css/grid.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/responsive.css">
@@ -217,9 +220,10 @@
             document.getElementById("product-name").value = "";
             document.getElementById("product-description").value = "";
             document.getElementById("product-price").value = null;
-            document.getElementById("imgupload1").value = null;
+            document.getElementById("imgupload1").value = "";
+            document.getElementById("imgLabel").innerHTML = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"17\" viewBox=\"0 0 20 17\"><path d=\"M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z\"/></svg> <span>Choose images&hellip;</span>";
             document.querySelector('input[name="radio"]:checked').checked = false;
-        }
+            }
 
     </script>
 
@@ -318,6 +322,14 @@
                         <button @keyup.enter="searchWithWord()" v-on:click="searchWithWord()"   class="btnsubmit os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.5s" ><img src="img/lup.png" alt=""/>SEARCH
                     </button>
                     </div>
+                    <br> <br>
+                    <div class="row" id = "dynamicSlider" >
+                    <div class="slidecontainer" v-show="isMyProducts == false">
+                        <!--<p>Price filter:</p> <br>-->
+                        <input type="range" min="0" max="10000" step="1" value="10000" class="slider" id="myRange" v-model="value">
+                        <br> <br> <p><span id="sliderOutputVal" v-text="total">No price filter</span></p>
+                    </div>
+                </div>
                 </div>
             </div>
 
@@ -378,14 +390,14 @@
     <section id="destination">
         <div class="container">
             <!--SLIDE CONTAINER HERE-->
-            <div class="row" id = "dynamicSlider" >
-                <div class="slidecontainer" v-show="isMyProducts == false">
+            <!--<div class="row" id = "dynamicSlider" >-->
+                <!--<div class="slidecontainer" v-show="isMyProducts == false">-->
 
-                    <p>Price filter:</p>
-                    <input type="range" min="0" max="10000" value="10000" class="slider" id="myRange">
-                    <p><span id="sliderOutputVal">No price filter</span></p>
-                </div>
-            </div>
+                    <!--<p>Price filter:</p>-->
+                    <!--<input type="range" min="0" max="10000" step="1" value="10000" class="slider" id="myRange" v-model="value">-->
+                    <!--<p><span id="sliderOutputVal" v-text="total">No price filter</span></p>-->
+                <!--</div>-->
+            <!--</div>-->
             <div id="maxORIGDIV">
                 <div class="row">
 
@@ -446,19 +458,7 @@
         // slider = x;
         // slider.value.defaultValue.t = "Choose value";
 
-        slider.oninput = function() {
-            if (this.value == 0) {
-                output.innerHTML = "free";
-                curQuery.defPrice = this.value;
-            } else if (this.value < 10000) {
-                output.innerHTML = "Less than: " + String(this.value) + "₸";
-                curQuery.defPrice = this.value;
-            } else {
-                output.innerHTML = "No price filter";
-                curQuery.defPrice = 27000000;
-            }
-            
-        }
+
 
     </script>
     <!--Filter bar-->
@@ -471,10 +471,29 @@
             el: '#dynamicSlider',
             data() {
                 return {
-                    isMyProducts: false
+                    isMyProducts: false,
+                    value: 27000000
+                }
+            },
+            computed: {
+                total: function () {
+                    if (this.value == 0) {
+                        var priceOutput = "Free";
+                        curQuery.defPrice = this.value;
+                        return priceOutput;
+                    } else if (this.value < 10000){
+                        var priceOutput = "Less than: " + String(this.value) + "₸";
+                        curQuery.defPrice = this.value;
+                        return priceOutput;
+
+                    } else {
+                        var priceOutput = "No price filter";
+                        return priceOutput;
+                        curQuery.defPrice = 27000000;
+                    }
+
                 }
             }
-
         });
 
          var dynamicDropDown = new Vue({
@@ -1043,16 +1062,17 @@
                             </table>
                         </div>
                         <br> <br>
-                        
-                    <div class="input-image">
-                        <forma>
 
-                            <label>Upload Image</label>
-                            <forma><br> <br>
-                                <input type="file" id="imgupload1" multiple/>
+                        <div class="input-image">
+                            <forma>
+
+                                <label>Upload Image</label><br><br><br>
+                                    <input type="file" name="file-1[]" id="imgupload1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
+                                    <label id="imgLabel" for="imgupload1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose images&hellip;</span></label>
+                                    <script src="../js/custom-file-input.js"></script>
+                                </forma>
                             </forma>
-                        </forma>
-                    </div>
+                        </div>
                         
                         
 
