@@ -1,5 +1,6 @@
 package DB;
 
+import DB.QueryCreators.UserQueryCreator;
 import Models.User;
 import Models.UserCollection;
 import Utils.Hasher;
@@ -13,17 +14,12 @@ import java.sql.Statement;
 public class UserDatabaseClient extends DatabaseClient {
 
     public UserDatabaseClient() {
-        super();
+        UserQueryCreator.getInstance().setConnection(conn);
     }
 
     public boolean runQueryEmail(String email) {
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select user_id " +
-                            "from user " +
-                            "where email='" + email + "'" + ";"
-            );
+            ResultSet rs = UserQueryCreator.getInstance().getUserByEmailQuery(email).executeQuery();
             if (rs.next() == true) {
                 return true;
             }
@@ -36,12 +32,7 @@ public class UserDatabaseClient extends DatabaseClient {
     public String runQueryUserIdByEmail(String email) {
         String userId = "";
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select user_id " +
-                            "from user " +
-                            "where email='" + email + "'" + ";"
-            );
+            ResultSet rs = UserQueryCreator.getInstance().getUserByEmailQuery(email).executeQuery();
             if (rs.next())
                 userId = rs.getString("user_id");
         } catch (Exception e) {
@@ -54,11 +45,7 @@ public class UserDatabaseClient extends DatabaseClient {
         String info = "";
         try {
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select email, phone_number " +
-                            "from user " +
-                            "where user_id='" + userId + "'" + ";"
-            );
+            ResultSet rs = UserQueryCreator.getInstance().userInfoByIdQuery(userId).executeQuery();
             if (rs.next())
                 info = rs.getString("email") + "," + rs.getString("phone_number");
         } catch (Exception e) {
@@ -67,47 +54,10 @@ public class UserDatabaseClient extends DatabaseClient {
         return info;
     }
 
-    public String runQueryUserEmailById(String userId) {
-        String info = "";
-        try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select email " +
-                            "from user " +
-                            "where user_id='" + userId + "'" + ";"
-            );
-            if (rs.next())
-                info = rs.getString("email") + "," + rs.getString("phone_number");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return info;
-    }
-
-    public String runQueryUserPasswordByEmail(String email) {
-        String password = "";
-        try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select password " +
-                            "from user " +
-                            "where email='" + email + "'" + ";"
-            );
-            if (rs.next())
-                password = rs.getString("password");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return password;
-    }
 
     public boolean runQueryUpdateUserPassword(String userId, String newPassword) {
         try {
-            Statement stmt = conn.createStatement();
-            int count = stmt.executeUpdate(
-                    "update user set password='" + newPassword + "'" +
-                            " where user_id='" + userId + "';"
-            );
+            int count = UserQueryCreator.getInstance().updatePasswordQuery(userId, newPassword).executeUpdate();
             if (count > 0) {
                 return true;
             }
@@ -138,12 +88,7 @@ public class UserDatabaseClient extends DatabaseClient {
 
     public boolean runQueryLogIn(String email, String password) {
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select user_id " +
-                            "from user " +
-                            "where email='" + email + "'" + " and password='" + password + "'" + ";"
-            );
+            ResultSet rs = UserQueryCreator.getInstance().loginQuery(email, password).executeQuery();
             if (rs.next() == true) {
                 return true;
             }
@@ -156,12 +101,7 @@ public class UserDatabaseClient extends DatabaseClient {
 
     public boolean runQueryCheckPassword(String userId, String password) {
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select user_id " +
-                            "from user " +
-                            "where user_id='" + userId + "'" + " and password='" + password + "'" + ";"
-            );
+            ResultSet rs = UserQueryCreator.getInstance().checkPasswordQuery(userId, password).executeQuery();
             if (rs.next() == true) {
                 return true;
             }
@@ -210,10 +150,7 @@ public class UserDatabaseClient extends DatabaseClient {
     public UserCollection runQueryUserById(String userId) {
         UserCollection users = new UserCollection();
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select * from user where user_id='"+userId+"';"
-            );
+            ResultSet rs = UserQueryCreator.getInstance().userByIDQuery(userId).executeQuery();
             fillUsers(users, rs);
             rs.close();
         } catch (Exception e) {
@@ -225,12 +162,7 @@ public class UserDatabaseClient extends DatabaseClient {
     public String runQueryIfModerator(String userId) {
         String type = "";
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(
-                    "select type " +
-                            "from user " +
-                            "where user_id='" + userId + "'" + ";"
-            );
+            ResultSet rs = UserQueryCreator.getInstance().userIfModeratorQuery(userId).executeQuery();
             if (rs.next())
                 type = rs.getString("type");
         } catch (Exception e) {
