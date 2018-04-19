@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="asd">
+  <component name="PublishConfigData" serverName="Server">
     <serverData>
-      <paths name="asd">
+      <paths name="Server">
         <serverdata>
           <mappings>
-            <mapping deploy="/artifact" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/apache-tomcat-8.5.27" local="$PROJECT_DIR$" web="/Nukupi" />
           </mappings>
         </serverdata>
       </paths>

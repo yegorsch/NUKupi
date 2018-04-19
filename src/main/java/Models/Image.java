@@ -1,11 +1,9 @@
 package Models;
 
-import Utils.IDGenerator;
+import Utils.UniqueStringGenerator;
 import com.google.gson.Gson;
 
-import javax.ws.rs.FormParam;
 import java.time.Instant;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -23,7 +21,7 @@ public class Image extends JsonModel {
     private static final String JSON_SIZE = "size";
 
     public Image(String productID) {
-        ID = IDGenerator.generateIDWithLength(15);
+        ID = UniqueStringGenerator.generateIDWithLength(15);
         dateAdded = Instant.now().getEpochSecond();
         size = 0;
         data = new byte[0];

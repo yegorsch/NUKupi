@@ -1,0 +1,21 @@
+
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ν”Λ«ϊÿÿÿÿ8ΐλπƒ«,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ρ§Μµ8ΐλπƒ«,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(μο‡ΐϋÿÿÿÿ8ΐλπƒ«,
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(χ«Ή8ΐλπƒ«,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ν”Λ«ϊÿÿÿÿ8ΐλπƒ«,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(μο‡ΐϋÿÿÿÿ8ΐλπƒ«,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Άσε‘ÿÿÿÿÿ8ΐλπƒ«,
+Jsquid:S1481")Remove this unused "stmt" local variable.(μο‡ΐϋÿÿÿÿ8ΐλπƒ«,
+Ysquid:S1854"8Remove this useless assignment to local variable "stmt".(μο‡ΐϋÿÿÿÿ8ΐλπƒ«,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ΞΑώÿÿÿÿ8ΐλπƒ«,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ΞΑώÿÿÿÿ8ΐλπƒ«,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΦΗΠρ8ΐλπƒ«,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ΟΥψϊÿÿÿÿ8ΐλπƒ«,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒκΟο8ΐλπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ΐλπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ΐλπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ΐλπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ΐλπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ΐλπƒ«,

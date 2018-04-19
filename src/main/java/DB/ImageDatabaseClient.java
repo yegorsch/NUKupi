@@ -1,5 +1,6 @@
 package DB;
 
+import DB.QueryCreators.ImageQueryCreator;
 import Models.Image;
 
 import java.sql.PreparedStatement;
@@ -7,6 +8,10 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class ImageDatabaseClient extends DatabaseClient {
+
+    public ImageDatabaseClient() {
+        ImageQueryCreator.getInstance().setConnection(conn);
+    }
 
     public boolean runQueryInsertImage(Image image) {
         try {
@@ -46,10 +51,10 @@ public class ImageDatabaseClient extends DatabaseClient {
         return null;
     }
 
-    public boolean runQueryDeleteImage(String image_id) {
+    public boolean runQueryDeleteImage(String product_id) {
         try {
-            PreparedStatement stmt = conn.prepareStatement("delete from image where image_id = (?);");
-            stmt.setString(1, image_id);
+            PreparedStatement stmt = conn.prepareStatement("delete from image where i_product_id = (?);");
+            stmt.setString(1, product_id);
             int status = stmt.executeUpdate();
             if (status == 0) {
                 return false;

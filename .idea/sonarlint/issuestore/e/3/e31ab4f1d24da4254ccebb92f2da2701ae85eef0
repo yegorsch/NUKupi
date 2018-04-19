@@ -1,0 +1,6 @@
+
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ó¸È²þÿÿÿÿ8¢ÿðž«,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(õóâà8¢ÿðž«,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ï¤î¦8¢ÿðž«,
+Ssquid:S1135"2Complete the task associated to this TODO comment.(´®‘Ãüÿÿÿÿ8¢ÿðž«,

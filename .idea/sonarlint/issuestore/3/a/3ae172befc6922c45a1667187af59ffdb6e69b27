@@ -1,0 +1,29 @@
+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(àø™ğ8Ú‡¹™«,
+tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Ñ•¢ÿÿÿÿÿ8Ú‡¹™«,
+Osquid:S1068"3Remove this unused "USER_TYPE_QUERY" private field.(—ŞÂ8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ÈÍè‡8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ª„Áü8Ú‡¹™«,
+vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(Ñ•¢ÿÿÿÿÿ8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(—ŞÂ8Ú‡¹™«,
+Osquid:S1068"3Remove this unused "ALL_USERS_QUERY" private field.(”½”ì8Ú‡¹™«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ú‡¹™«,
+Hsquid:S1172"-Remove this unused method parameter "userId".(è¡Èo8Ú‡¹™«,
+ssquid:S1192"RDefine a constant instead of duplicating this literal "where user_id=(?)" 3 times.(Ë˜À©ùÿÿÿÿ8Ú‡¹™«,
+qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(î£´Ô8Ú‡¹™«,
+vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(ñ´‘ñûÿÿÿÿ8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Şâùé8Ú‡¹™«,
+tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(¢ĞŒ‰úÿÿÿÿ8Ú‡¹™«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ú‡¹™«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ú‡¹™«,
+Psquid:S1068"4Remove this unused "USER_BY_ID_QUERY" private field.(³Êü8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(”½”ì8Ú‡¹™«,
+lsquid:S1192"KDefine a constant instead of duplicating this literal "from user " 6 times.(õà””ûÿÿÿÿ8Ú‡¹™«,
+Psquid:S1068"4Remove this unused "INSER_USER_QUERY" private field.(ÈÍè‡8Ú‡¹™«,
+ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(„ö·öøÿÿÿÿ8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ı‰†¢8Ú‡¹™«,
+Ysquid:S1068"8Remove this unused "CHECK_PASSWORD_QUERY" private field.(¢ĞŒ‰úÿÿÿÿ8Ú‡¹™«,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ú‡¹™«,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(³Êü8Ú‡¹™«,
+lsquid:S1192"PDefine a constant instead of duplicating this literal "select user_id " 3 times.(ª„Áü8Ú‡¹™«,

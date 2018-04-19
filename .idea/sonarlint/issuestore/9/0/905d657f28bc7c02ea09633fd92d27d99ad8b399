@@ -1,0 +1,12 @@
+
+ssquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ν”Λ«ϊÿÿÿÿ8—ιπƒ«,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¥θΠ»ϊÿÿÿÿ8—ιπƒ«,
+psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ν”Λ«ϊÿÿÿÿ8—ιπƒ«,
+hsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(μο‡ΐϋÿÿÿÿ8—ιπƒ«,
+ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΎγΗ•8—ιπƒ«,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Άσε‘ÿÿÿÿÿ8—ιπƒ«,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒκΟο8—ιπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8—ιπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8—ιπƒ«,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8—ιπƒ«,

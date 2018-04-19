@@ -1,30 +1,19 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>NUKUPI</title>
-    <!--META-->
+    <meta charset="UTF-8">
+    <title>NU Kupi</title>
     <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
     <!--FONT-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300,600,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet'
           type='text/css'>
 
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/grid.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    
-    
-<!--
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4..0/css/bootstrap-theme.min.css">
--->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -34,456 +23,192 @@
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
 
-     <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
-    <!--SLIDER-->
-    
-      <script>
-        function addProduct() {
+    <script type="text/javascript">
+        function registerUser() {
+
             var serv_request = new XMLHttpRequest();
-            serv_request.open('POST', '/Nukupi/rest/products', false);
+            serv_request.open('POST', '/Nukupi/f/rest/users/', false);
             serv_request.setRequestHeader("Content-type", "application/json");
-            var name = document.getElementById("product-name").value;
-            var description = document.getElementById("product-description").value;
-            var price = document.getElementById("product-price").value;
-            var category = document.querySelector('input[name="radio"]:checked').value;
-            var image = [];
+            var email = document.getElementById("user-email").value;
+            var name = document.getElementById("user-name").value;
+            var phone = document.getElementById("user-phone").value;
             var data = {
-                title: name,
-                description: description,
-                images: image,
-                category: category,
-                price: Number(price),
-                authorID: "3"
+                email: email,
+                name: name,
+                phone_number: phone
             }
-            console.log(data);
-            serv_request.onreadystatechange = function () {
-                if (serv_request.readyState == 4 && serv_request.status == 200) {
-                    console.log(name);
+
+            var regEmail = /@nu\.edu\.kz$/;
+            var regPhone = /^([0-9]){11}/;
+            var regName = /^([A-Za-z])+/;
+
+            if (email != null && name != null && phone != null && regEmail.test(email) && regPhone.test(phone) && regName.test(name))
+            {
+                console.log("valid");
+                serv_request.onreadystatechange = function () {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        console.log("Success");
+                        document.getElementById("messageTittle").innerHTML = "Verification";
+                        document.getElementById("messageBody").innerHTML = "Please, check your e-mail. You'll receive temporary password to access your account.";
+                        document.getElementById("user-email").value = "";
+                        document.getElementById("user-name").value = "";
+                        document.getElementById("user-phone").value = "";
+                    } else {
+                        document.getElementById("messageTittle").innerHTML = "We're sorry. Sign up error. Try again.";
+                        document.getElementById("messageBody").innerHTML = "This email is already registered. Click forgot your password to recover access to the account.";
+                        document.getElementById("user-email").value = "";
+                        document.getElementById("user-name").value = "";
+                        document.getElementById("user-phone").value = "";
+                    }
+
                 }
-            }
-            serv_request.send(JSON.stringify(data));
-            
-            universalCall();
-        }
-            // serv_request.send("  {\n" +
-            //     "    \"title\": "+name+",\n" +
-            //     "    \"description\": "+description+",\n" +
-            //     "    \"category\": "+category+",\n" +
-            //     "    \"price\": "+price+",\n" +
-            //     "    \"images\": "+image+",\n" +
-            //     "    \"authorID\": 3,\n" +
-            //     "  }");
-    </script>
+                serv_request.send(JSON.stringify(data));
 
-
-</head>
-<body onload="universalCall();">
-<div class="se-pre-con">
-    <div class="cssload-loader"></div>
-</div>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <a href="#banner" class="logo"><img src="img/NMlogo.png" alt=""/></a>
-            </div>
-                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                    <ul>
-                        <li>
-                        <button class="addproduct" data-toggle="modal" data-target="#DemoModal" id = "open-modal">ADD PRODUCT</button>
-                            <button class="addproduct">LOG OUT</button>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-    </div>
-</header>
-<section id="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s">NU KUPI</h1>
-                <div>
-                    <input type="text" id="searchPlace" name="email" placeholder="what u r looking for?"
-                           class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s"/>
-                    <button class="btnsubmit os-animation" data-os-animation="fadeInRight"
-                            data-os-animation-delay="0.5s" onclick="universalCall()" ><img src="img/lup.png" alt=""/>SEARCH
-                    </button>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-</section>
-
-<aside>
-    <div class="container">
-        <div class="row">
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="maincounter">
-
-                    <section class="section section--aava">
-                        <form class="checkBoxes" name="checkBoxForm">
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
-                                    <label for="toggleButton" data-on-text="Food" data-off-text="Food"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton2" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
-                                    <label for="toggleButton2" data-on-text="Clothes" data-off-text="Clothes"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton3" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
-                                    <label for="toggleButton3" data-on-text="Domestic" data-off-text="Domestic"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                            <div class="innercounter">
-                                <div class="toggle-button toggle-button--aava">
-                                    <input id="toggleButton4" name="checkBoxGroup" type="checkbox"
-                                           onclick="filterCheckbox(this)">
-                                    <label for="toggleButton4" data-on-text="Other" data-off-text="Other"></label>
-                                    <div class="toggle-button__icon"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </section>
-                    <!--</div>-->
-                </div>
-
-            </div>
-        </div>
-    </div>
-</aside>
-<section id="destination">
-    <div class="container">
-        <!--SLIDE CONTAINER HERE-->
-        <div class="row">
-            <div class="slidecontainer">
-
-                <p>Price filter:</p>
-                <input type="range" min="0" max="10000" value="10000" class="slider" id="myRange">
-                <p><span id="sliderOutputVal">No price filter</span></p>
-            </div>
-        </div>
-        <div class="row" id="maxORIGDIV" >
-        </div>
-        <!--<button class="explore os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.6s">EXPLORE MORE DESTINATIONS</button>-->
-    </div>
-</section>
-
-
-<footer>
-    <div class="container">
-
-    </div>
-</footer>
-
-
-<script type="text/javascript" src="js/script.js"></script>
-<script src="js/countUp.js"></script>
-<script type="text/javascript" src="js/waypoints.min.js"></script>
-<!--slider-->
-<script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("sliderOutputVal");
-//    var defPrice = document.getElementById("myRange").defaultValue;
-    var mydata = JSON;
-    var curQuery = {currTitle:"",
-                    currentCat:"",
-                    initialUrl:"/Nukupi/rest/products/filters",
-                    curUrl: "",
-                    defPrice: document.getElementById("myRange").defaultValue};
-    
-    // slider = x;
-    // slider.value.defaultValue.t = "Choose value";
-   
-    slider.oninput = function () {
-        if (this.value == 0) {
-            output.innerHTML = "free";
-        } else if (this.value < 10000) {
-            output.innerHTML = "Less than: " + String(this.value) + "₸";
-        } else {
-            output.innerHTML = "No price filter";
-        }
-        curQuery.defPrice = this.value;
-    }
-</script>
-<!--Filter bar-->
-<script>
-    var filterArr = [0, 0, 0, 0];
-    var categories = ["food","clothes","domestic","other"];
-    
-
-    
-//    var currTitle = "";
-//    var currentCat = "";
-//    var initialUrl = "http://188.166.91.64:8080/Nukupi_war/rest/products/filters";
-//    var curUrl = "";
-    
-    
-    function filterCheckbox(element) {
-        // Get the checkbox
-        var group = document.checkBoxForm.checkBoxGroup;
-
-        for (var i = 0; i < group.length; i++) {
-            if (group[i] != element) {
-                group[i].checked = false;
-                filterArr[i] = 0;
             } else {
-                if (group[i].checked == false) {
-                    filterArr[i] = 0;
-                } else {
-                    filterArr[i] = 1;
-                }
+                document.getElementById("messageTittle").innerHTML = "Please, follow the template";
+                document.getElementById("messageBody").innerHTML = "<b>E-mail:</b> example@nu.edu.kz<br><b>Name:</b> Albina Li<br><b>Phone (11 digits):</b> 87071112233 <br><br> ***All fields are required";
             }
+
+
         }
-        
-        curQuery.currentCat = "";
-        for (var i = 0; i < group.length; i++) {
-            if(filterArr[i]==1){
-                curQuery.currentCat = categories[i];
-            }
-        }
-        
-        universalCall();
-    }
-    
-    
-    function getTitle(){
-        curQuery.currTitle = document.getElementById("searchPlace").value;
-    }
-    
-    function universalCall(){
-        getTitle();
-        insertParam("title", curQuery.currTitle);
-        insertParam("price", curQuery.defPrice);
-        insertParam("category", curQuery.currentCat);
-        
-//         console.log("I am here 0");
-        freeAllCards(function() {
-//            console.log("I am here 1");
-            var finalUrl = curQuery.initialUrl.concat(curQuery.curUrl);
-//           console.log(curQuery.currTitle);
-            
-            getFiltered(finalUrl, function() {
-//                console.log("I am here 2");
-                
-                 doIt(function() {
-//                    console.log("I am here 3");
-                 });
-                
-            });
-            
-        });
-    }
 
-</script>
-<!--RETRIEVE CARDS-->
-<script>
-    
-            function insertParam(key,value)
-        {
-                key = encodeURIComponent(key); value = encodeURIComponent(value);
-
-                var s = curQuery.curUrl;
-                var kvp = key+"="+value;
-
-                var r = new RegExp("(&|\\?)"+key+"=[^\&]*");
-
-                s = s.replace(r,"$1"+kvp);
-
-                if(!RegExp.$1) {s += (s.length>0 ? '&' : '?') + kvp;};
-
-                //again, do what you will here
-                curQuery.curUrl = s;
-        }
-        
-    
-        function getFiltered(thisUrl,callback2) {
+        function loginUser() {
+            $('#DemoModal2').modal({ show: false});
             var serv_request = new XMLHttpRequest();
-            serv_request.open('GET', thisUrl,false);
-            
-            serv_request.onreadystatechange = function () {
-                if (serv_request.readyState == XMLHttpRequest.DONE && serv_request.status == 200) {
-                    mydata = JSON.parse(serv_request.responseText);
-                }
-                console.log("I am here 3");
-                
-            }
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
 
-                console.log(thisUrl);
-                
+            if (username != null && password != null){
+                serv_request.open('GET', '/Nukupi/f/rest/users/login?email='+username+"&password="+password, false);
+                serv_request.setRequestHeader("Content-type", "application/json");
+
+                serv_request.onreadystatechange = function () {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        console.log("Success");
+                        window.location.replace("/Nukupi/f/main.html");
+                    } else {
+                        document.getElementById("messageTittle").innerHTML = "Login error";
+                        document.getElementById("messageBody").innerHTML = "We could find you. Please, insert your university e-mail and recieved password. Or click forgot your password to recover the access to the account.";
+                        $('#DemoModal2').modal('show');
+                        document.getElementById("username").value = "";
+                        document.getElementById("password").value = "";
+                    }
+
+                }
                 serv_request.send(null);
-                console.log(mydata);
-            callback2();
-            
-        }
-
-
-        function freeAllCards(callback){
-            var myNode = document.getElementById("maxORIGDIV");
-                while (myNode.firstChild) {
-                myNode.removeChild(myNode.firstChild);
-
+            } else {
+                document.getElementById("messageTittle").innerHTML = "Login error";
+                document.getElementById("messageBody").innerHTML = "Please, insert your university e-mail and recieved password. Or click forgot your password to recover the access to the account.";
+                $('#DemoModal2').modal('show');
             }
-           callback(); 
-            
+
+
+
         }
-        
-        function doIt(callback){   
-            console.log("json");
-            var tagNames= ["firstDiv","secondDiv","firstImg","firstButton","thirdDiv","nameId","descId"];
-            
-            for (i = 0; i < mydata.length; i++) {
-    
-                for (j = 0; j < tagNames.length; j++) {
-                    
-                    tagNames[j]= tagNames[j]+ String(i);
-                    
+
+        function forgotPassword(){
+            var serv_request = new XMLHttpRequest();
+            var emailF = document.getElementById("emailF").value;
+
+            if(emailF != ''){
+                serv_request.open('GET', '/Nukupi/f/rest/users/forgotpassword?email='+emailF, false);
+                serv_request.setRequestHeader("Content-type", "application/json");
+                serv_request.onreadystatechange = function() {
+                    if (serv_request.readyState == 4 && serv_request.status == 200) {
+                        user_id = serv_request.responseText;
+                        window.alert("Password is succesfully send to your email address");
+                        document.getElementById("emailF").value = "";
+                    } else {
+                        window.alert("Something went wrong. Please, try again");
+                        document.getElementById("emailF").value = "";
+                    }
                 }
-
-                var mydiv1 = document.getElementById("maxORIGDIV");
-                var div1 = document.createElement('div');
-                div1.id = tagNames[0];
-                div1.classList.add('col-lg-4', 'col-md-4', 'col-sm-6', 'col-xs-12');
-                mydiv1.appendChild(div1);
-
-                var mydiv2 = document.getElementById(tagNames[0]);
-                var div2 = document.createElement('div');
-                div2.id = tagNames[1];
-                
-//                console.log(tagNames);
-                div2.classList.add('innerimg', 'os-animation', 'animated' ,'zoomIn');
-                div2.setAttribute('data-os-animation',"zoomIn");
-                div2.setAttribute('data-os-animation-delay',"0.5s");
-                div2.setAttribute('style','animation-delay: 0.5s;');
-//                console.log(div2);
-                mydiv2.appendChild(div2);
-                
-                var mydiv3 = document.getElementById(tagNames[1]);
-                var div3 = document.createElement('img');
-                div3.id = tagNames[2];
-                div3.classList.add ('mainimg');
-                div3.setAttribute('src',"img/other.jpg");
-                if(mydata[i].category.toUpperCase() === "FOOD"){
-                    div3.setAttribute('src',"img/food.jpg");
-                }
-                if(mydata[i].category.toUpperCase() === "DOMESTIC"){
-                    div3.setAttribute('src',"img/domestic.jpg");
-                }
-                if(mydata[i].category.toUpperCase() === "CLOTHES"){
-                    div3.setAttribute('src',"img/clothes.jpg");
-                }
-                
-                
-                div3.setAttribute('alt',"");
-                mydiv3.appendChild(div3);
-
-
-                var div4 = document.createElement('button');
-                var t = document.createTextNode(String(mydata[i].price)); 
-                
-                div4.appendChild(t);
-
-                div4.id = tagNames[3];
-                div4.classList.add('price');
-                mydiv3.appendChild(div4);
-
-                var div5 = document.createElement('div');
-                div5.id = tagNames[4];
-                div5.classList.add('innercontent');
-                mydiv3.appendChild(div5);
-
-
-                var mydiv6 = document.getElementById(tagNames[4]);
-                var div6 = document.createElement('h5');
-                div6.id = tagNames[5];
-                var t2 = document.createTextNode(mydata[i].title); 
-                console.log(t2);
-                div6.appendChild(t2);
-                mydiv6.appendChild(div6);
-
-                var div7 = document.createElement('span');
-                div7.id = tagNames[6];
-                var t3 = document.createTextNode(mydata[i].description); 
-                div7.appendChild(t3);
-                mydiv6.appendChild(div7);
-                    
-                
+                serv_request.send(null);
+            } else {
+                window.alert("Please, fill the field");
             }
-            
-            callback();
+
         }
-            
-</script>
+    </script>
+</head>
+<body>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/login.css">
+<div class="logo"></div>
+<div class="login-block">
+    <h1>NU Kupi</h1>
+    <input type="email" value="" placeholder="example@nu.edu.kz" id="username" />
+    <input type="password" value="" placeholder="Password" id="password" />
+    <button onclick="loginUser()">Log in</button>
+    <button data-toggle="modal" data-target="#DemoModal">Sign up</button>
+    <a href="" data-toggle="modal" data-target="#fPasswordModal"><center>forgot your password?</center></a>
+</div>
 
 
-<!--Requests-->
-    
-    <!-- Modal -->
+
+<!-- Modal -->
 <div class="modal fade" id="DemoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">ADD PRODUCT FORM</h5>
+                <h5 class="modal-title" id="exampleModalLabel">SIGN UP FORM</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
-                <div class="modal-body">
-                    <form>
-                    Enter product name: <input id="product-name" class="form-control" type="text" />
-                    Enter product description: <input id="product-description" class="form-control" type="text" />
-                    Enter product price: <input id="product-price" class="form-control" type="text" />
-                    <div class="categradio">
-                        Select a category:
-                        <div class="categradio-1">
-                            <input type="radio" name="radio" id="radio1" value = "Food"/>
-                            <label for="radio1">Food</label>
-                        </div>
-                        <div class="categradio-2">
-                            <input type="radio" name="radio" id="radio2" value = "Clothes"/>
-                            <label for="radio2">Clothes</label>
-                        </div>
-                        <div class="categradio-3">
-                            <input type="radio" name="radio" id="radio3" value = "Domestic"/>
-                            <label for="radio3">Domestic</label>
-                        </div>
-                        <div class="categradio-4">
-                            <input type="radio" name="radio" id="radio4" value = "Other"/>
-                            <label for="radio4">Other</label>
-                        </div>
-                    </div>
-                    <div class="input-image">
-                        <form>
-                    <label>Upload Image</label>
-                            <input type="file" id="imgInp" multiple/>
-                        </form>
-                    </div>
-                    <!--<form id="img-show">-->
-                        <!--<img id='img-upload'/>-->
-                    <!--</form>-->
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id = "submit-add-form" onclick="addProduct()" class="btn btn-default" data-dismiss="modal">Submit</button>
-                </div>
+            <div class="modal-body">
+                <form>
+                    E-mail: <input id="user-email" class="form-control" type="email" placeholder="example@nu.edu.kz"/>
+                    Full Name: <input id="user-name" class="form-control" type="text" placeholder="Nu Kupi"/>
+                    Phone Number: <input id="user-phone" class="form-control" type="tel" placeholder="87071112233"/>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id = "submit-sign-up" onclick="registerUser()" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#DemoModal2">Receive password</button>
             </div>
         </div>
     </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="DemoModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageTittle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <div id ="messageBody"><p></p></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id = "confirm" class="btn btn-default" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Forgot password Modal -->
+<div class="modal fade" id="fPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h7 class="modal-title" id="exampleModalLabel">FORGOT PASSWORD FORM</h7>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <forma>
+                    E-mail: <input id="emailF" class="form-control" type="email" />
+                </forma>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="submit-add-form" onclick="forgotPassword()" class="btn btn-default" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>

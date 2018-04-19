@@ -1,12 +1,9 @@
 package DB;
 
-import Models.Image;
-import Models.Product;
-import Models.ProductCollection;
-import com.sun.org.apache.xerces.internal.xs.StringList;
-
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
 
 public class DatabaseClient {
 
