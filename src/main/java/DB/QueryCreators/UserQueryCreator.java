@@ -36,10 +36,7 @@ public class UserQueryCreator {
             "from user " +
             "where user_id=(?) and password=(?)";
 
-    private final static String INSER_USER_QUERY = "insert into user values (?, ?, ?, ?, ?, ?)";
-
-
-    private final static String ALL_USERS_QUERY = "select * from user";
+    private final static String INSERT_USER_QUERY = "insert into user values (?, ?, ?, ?, ?, ?)";
 
     private final static String USER_BY_ID_QUERY = "select * from user where user_id=(?)";
 
@@ -110,4 +107,18 @@ public class UserQueryCreator {
         }
         return p;
     }
+
+
+    public PreparedStatement checkPasswordQuery(String userId, String password) {
+        PreparedStatement p = null;
+        try {
+            p = conn.prepareStatement(CHECK_PASSWORD_QUERY);
+            p.setString(1, userId);
+            p.setString(2, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return p;
+    }
+
 }

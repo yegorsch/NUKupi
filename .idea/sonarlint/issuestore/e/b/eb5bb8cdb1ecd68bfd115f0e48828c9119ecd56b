@@ -1,4 +1,4 @@
 
-Zsquid:S1610"9Convert the abstract class "JsonModel" into an interface.(™¨üªùÿÿÿÿ8ø•üª¨,
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æµ„µ8ø•üª¨,
 ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ùæñÃûÿÿÿÿ8ø•üª¨,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æµ„µ8ø•üª¨,
+Zsquid:S1610"9Convert the abstract class "JsonModel" into an interface.(™¨üªùÿÿÿÿ8ø•üª¨,
