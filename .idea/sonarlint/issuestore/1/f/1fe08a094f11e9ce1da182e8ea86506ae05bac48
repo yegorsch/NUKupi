@@ -1,15 +1,12 @@
 
-Gsquid:S1481"+Remove this unused "images" local variable.(ÖÂ¤8Õìğƒ«,
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖÂ¤8Õìğƒ«,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õìğƒ«,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õìğƒ«,
-ksquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(êÚ¿“8Õìğƒ«,
-bsquid:S1126"AReplace this if-then-else statement by a single return statement.(ìèÊúÿÿÿÿ8Õìğƒ«,
-tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8Õìğƒ«,
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÁ§äûÿÿÿÿ8Õìğƒ«,
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÜêÉ8Õìğƒ«,
-hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ8Õìğƒ«,
-psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¢”àüÿÿÿÿ8Õìğƒ«,
-Vsquid:S1854":Remove this useless assignment to local variable "images".(ÖÂ¤8Õìğƒ«,
-psquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’¶ÈÓşÿÿÿÿ8Õìğƒ«,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õìğƒ«,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖÂ¤8“£úö­,
+hsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ8“£úö­,
+bsquid:S1126"AReplace this if-then-else statement by a single return statement.(ìèÊúÿÿÿÿ8“£úö­,
+Gsquid:S1481"+Remove this unused "images" local variable.(ÖÂ¤8“£úö­,
+Vsquid:S1854":Remove this useless assignment to local variable "images".(ÖÂ¤8“£úö­,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÁ§äûÿÿÿÿ8“£úö­,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÜêÉ8“£úö­,
+tsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÒêÏï8“£úö­,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8“£úö­,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8“£úö­,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8“£úö­,
