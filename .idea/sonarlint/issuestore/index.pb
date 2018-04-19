@@ -92,3 +92,9 @@ e
 5src/main/java/DB/QueryCreators/ImageQueryCreator.java,f/5/f5ea946603d451e425b2ea6794aa73f8aca05798
 R
 "src/main/java/Models/UserInfo.java,e/7/e7903554ba49072f6ed74f0f0593ef1cdcbfb7f9
+T
+$src/test/Utils/ProductQueryTest.java,e/a/ea299cca27c3a686047d37b187467745e909b35d
+O
+src/main/java/Utils/Hasher.java,e/e/ee1228965e2a9677a74945a0d910e172f1cc0fe3
+N
+src/test/Utils/HasherTest.java,2/5/25877c4bd6c27f1e49198aeae606ff6b76236a52

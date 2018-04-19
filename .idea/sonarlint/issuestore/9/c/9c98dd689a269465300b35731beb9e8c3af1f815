@@ -1,8 +1,8 @@
 
-ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÚâĞûÿÿÿÿ8ù•üª¨,
-Vsquid:S1161":Add the "@Override" annotation above this method signature(‡èú×8ù•üª¨,
-vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(´Íæùÿÿÿÿ8ù•üª¨,
-œsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷ô}8ù•üª¨,
-Nsquid:S1135"2Complete the task associated to this TODO comment.(İÄ€Ä8ù•üª¨,
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ù•üª¨,
-8squid:S1118"Hide this public constructor.(÷ô}8ù•üª¨,
+ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÚâĞûÿÿÿÿ8¢ÿğ«,
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢ÿğ«,
+vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(´Íæùÿÿÿÿ8¢ÿğ«,
+œsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷ô}8¢ÿğ«,
+8squid:S1118"Hide this public constructor.(÷ô}8¢ÿğ«,
+Nsquid:S1135"2Complete the task associated to this TODO comment.(İÄ€Ä8¢ÿğ«,
+Vsquid:S1161":Add the "@Override" annotation above this method signature(‡èú×8¢ÿğ«,

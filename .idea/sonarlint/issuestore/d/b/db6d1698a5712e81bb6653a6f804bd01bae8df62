@@ -1,8 +1,8 @@
 
-‚"squid:ClassVariableVisibilityCheck"VMake product_id a static final constant or non-public and provide accessors if needed.(öŸƒš
-gsquid:S00116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Õ²?
 gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öˆµ³
-gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öˆµ³
-ksquid:S00116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öŸƒš
 rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ùæñÃûÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öˆµ³
 ~"squid:ClassVariableVisibilityCheck"SMake user_id a static final constant or non-public and provide accessors if needed.( Õ²?
+‚"squid:ClassVariableVisibilityCheck"VMake product_id a static final constant or non-public and provide accessors if needed.(öŸƒš
+ksquid:S00116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öŸƒš
+gsquid:S00116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Õ²?
