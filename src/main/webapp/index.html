@@ -50,15 +50,9 @@
                         console.log("Success");
                         document.getElementById("messageTittle").innerHTML = "Verification";
                         document.getElementById("messageBody").innerHTML = "Please, check your e-mail. You'll receive temporary password to access your account.";
-                        document.getElementById("user-email").value = "";
-                        document.getElementById("user-name").value = "";
-                        document.getElementById("user-phone").value = "";
                     } else {
                         document.getElementById("messageTittle").innerHTML = "We're sorry. Sign up error. Try again.";
                         document.getElementById("messageBody").innerHTML = "This email is already registered. Click forgot your password to recover access to the account.";
-                        document.getElementById("user-email").value = "";
-                        document.getElementById("user-name").value = "";
-                        document.getElementById("user-phone").value = "";
                     }
 
                 }
@@ -68,8 +62,13 @@
                 document.getElementById("messageTittle").innerHTML = "Please, follow the template";
                 document.getElementById("messageBody").innerHTML = "<b>E-mail:</b> example@nu.edu.kz<br><b>Name:</b> Albina Li<br><b>Phone (11 digits):</b> 87071112233 <br><br> ***All fields are required";
             }
+            cleanRegister();
+        }
 
-
+        function cleanRegister(){
+            document.getElementById("user-email").value = "";
+            document.getElementById("user-name").value = "";
+            document.getElementById("user-phone").value = "";
         }
 
         function loginUser() {
@@ -152,7 +151,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">SIGN UP FORM</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button onclick="cleanRegister()" type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span><span class = "sr-only">Close</span></button>
             </div>
             <div class="modal-body">
@@ -163,7 +162,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" id = "submit-sign-up" onclick="registerUser()" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#DemoModal2">Receive password</button>
+                <button type="button" id = "submit-sign-up" onclick="registerUser(); cleanRegister()" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#DemoModal2">Receive password</button>
             </div>
         </div>
     </div>
