@@ -25,18 +25,16 @@ public class UserQueryCreator {
             "from user " +
             "where email=(?)";
 
-    private final static String UPDATE_PASSWORD_QUERY = "update user set password=(?)" +
-            "where user_id=(?)";
+    private final static String UPDATE_PASSWORD_QUERY = "update user set password=?" +
+            "where user_id=?";
 
     private final static String LOGIN_QUERY = "select user_id " +
             "from user " +
-            "where email=(?) and password=(?)";
+            "where email=? and password=?";
 
     private final static String CHECK_PASSWORD_QUERY = "select user_id " +
             "from user " +
-            "where user_id=(?) and password=(?)";
-
-    private final static String INSERT_USER_QUERY = "insert into user values (?, ?, ?, ?, ?, ?)";
+            "where user_id=? and password=?";
 
     private final static String USER_BY_ID_QUERY = "select * from user where user_id=(?)";
 
@@ -89,7 +87,7 @@ public class UserQueryCreator {
         try {
             p = conn.prepareStatement(UPDATE_PASSWORD_QUERY);
             p.setString(1, password);
-            p.setString(2, password);
+            p.setString(2, userId);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -120,5 +118,29 @@ public class UserQueryCreator {
         }
         return p;
     }
+
+    public PreparedStatement userByIDQuery(String userId) {
+        PreparedStatement p = null;
+        try {
+            p = conn.prepareStatement(USER_BY_ID_QUERY);
+            p.setString(1, userId);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return p;
+    }
+
+    public PreparedStatement userIfModeratorQuery(String userId) {
+        PreparedStatement p = null;
+        try {
+            p = conn.prepareStatement(USER_TYPE_QUERY);
+            p.setString(1, userId);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return p;
+    }
+
+
 
 }
